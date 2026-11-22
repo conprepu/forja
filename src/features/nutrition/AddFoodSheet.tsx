@@ -8,6 +8,7 @@ import { searchOff } from '../../lib/off'
 import { SLOTS, searchFoods } from '../../lib/nutrition'
 import { btn, btnGhost, chip, field } from '../../ui/cls'
 import { Sheet } from '../../ui/Sheet'
+import { DescribePane } from './DescribePane'
 import { FoodAmount } from './FoodAmount'
 import { FoodForm } from './FoodForm'
 import { MealsPane } from './MealsPane'
@@ -15,8 +16,9 @@ import { QuickAdd } from './QuickAdd'
 import { RecipesPane } from './RecipesPane'
 import { Scanner } from './Scanner'
 
-type Tab = 'buscar' | 'recientes' | 'mios' | 'recetas' | 'comidas' | 'rapido'
+type Tab = 'describir' | 'buscar' | 'recientes' | 'mios' | 'recetas' | 'comidas' | 'rapido'
 const TABS: { value: Tab; label: string }[] = [
+  { value: 'describir', label: 'Describir' },
   { value: 'buscar', label: 'Buscar' },
   { value: 'recientes', label: 'Recientes' },
   { value: 'mios', label: 'Míos' },
@@ -40,7 +42,7 @@ const IDLE: Online = { status: 'idle', results: [], message: '' }
 export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
   const foods = useLiveQuery(() => db.foods.toArray(), [])
   const recent = useLiveQuery(() => getRecentFoodIds(db), [])
-  const [tab, setTab] = useState<Tab>('buscar')
+  const [tab, setTab] = useState<Tab>('describir')
   const [q, setQ] = useState('')
   const [picked, setPicked] = useState<Food | null>(null)
   const [creating, setCreating] = useState(false)
@@ -127,6 +129,7 @@ export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
           ))}
         </div>
 
+        {tab === 'describir' && <DescribePane date={date} slot={slot} slotLabel={slotLabel} onAdded={onAdded} onDone={close} />}
         {tab === 'rapido' && <QuickAdd confirmLabel={addLabel} onConfirm={(e) => void add(e)} />}
         {tab === 'recetas' && <RecipesPane date={date} slot={slot} slotLabel={slotLabel} onAdded={onAdded} onDone={close} />}
         {tab === 'comidas' && <MealsPane date={date} slot={slot} onAdded={onAdded} onDone={close} />}

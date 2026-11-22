@@ -11,11 +11,15 @@ interface Props {
 /** Hoja inferior modal: se cierra con el fondo, con "Cerrar" o con Escape. */
 export function Sheet({ open, onClose, title, children }: Props) {
   const panel = useRef<HTMLDivElement>(null)
+  // onClose suele ser una función nueva en cada render del padre. Si el efecto dependiera de ella,
+  // se volvería a ejecutar en cada tecla y robaría el foco del campo (el teclado se cerraba).
+  const onCloseRef = useRef(onClose)
+  onCloseRef.current = onClose
 
   useEffect(() => {
     if (!open) return
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
+      if (e.key === 'Escape') onCloseRef.current()
     }
     document.addEventListener('keydown', onKey)
     const prevOverflow = document.body.style.overflow
@@ -25,7 +29,7 @@ export function Sheet({ open, onClose, title, children }: Props) {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = prevOverflow
     }
-  }, [open, onClose])
+  }, [open])
 
   if (!open) return null
   return (

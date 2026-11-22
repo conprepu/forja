@@ -16,4 +16,5 @@
   color: var(--label-2);
 }
 .disclosure span { color: var(--tint); text-transform: none; font-size: 15px; }
-.subtitle { margin: -4px 0 16px; padding: 0 var(--gutter); color: var(--label-2); font-size: 15px; text-transform: capitalize; }
+.subtitle { margin: -4px 0 16px; padding: 0 var(--gutter); color: var(--label-2); font-size: 15px; }
+.subtitle::first-letter { text-transform: uppercase; }

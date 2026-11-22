@@ -3,7 +3,6 @@ import { Layout } from './Layout'
 import { TodayScreen } from '../features/today/TodayScreen'
 import { WorkoutScreen } from '../features/workout/WorkoutScreen'
 import { NutritionScreen } from '../features/nutrition/NutritionScreen'
-import { ProgressScreen } from '../features/progress/ProgressScreen'
 import { ProfileScreen } from '../features/profile/ProfileScreen'
 
 export const routes: RouteObject[] = [
@@ -15,7 +14,7 @@ export const routes: RouteObject[] = [
       { path: 'hoy', element: <TodayScreen /> },
       { path: 'entreno', element: <WorkoutScreen /> },
       { path: 'comida', element: <NutritionScreen /> },
-      { path: 'progreso', element: <ProgressScreen /> },
+      { path: 'progreso', lazy: async () => ({ Component: (await import('../features/progress/ProgressScreen')).ProgressScreen }) },
       { path: 'perfil', element: <ProfileScreen /> },
       { path: '*', element: <Navigate to="/hoy" replace /> },
     ],

@@ -1,4 +1,7 @@
+import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useRef, useState } from 'react'
+import { getLastBackup, markBackup } from '../../db/prefs'
+import { backupLabel } from '../../lib/backupReminder'
 import { backupToJson, exportBackup, importBackup, parseBackup, wipeAll } from '../../db/backup'
 import { db } from '../../db/db'
 import {
@@ -8,11 +11,11 @@ import {
   type MigrationSummary,
 } from '../../db/migratePrototype'
 import { storageEstimate } from '../../db/storage'
+import { btn, btnDanger, btnPri } from '../../ui/cls'
 import { formatBytes, localDateStamp, saveTextFile } from './files'
 
 type Msg = { kind: 'ok' | 'error'; text: string }
 
-const btn = 'min-h-11 w-full rounded-xl bg-soft px-4 font-semibold disabled:opacity-50'
 
 function summaryText(s: MigrationSummary): string {
   const parts: [number, string, string][] = [
@@ -29,6 +32,7 @@ function summaryText(s: MigrationSummary): string {
 }
 
 export function BackupSection() {
+  const lastBackup = useLiveQuery(() => getLastBackup(db), [])
   const [msg, setMsg] = useState<Msg | null>(null)
   const [busy, setBusy] = useState(false)
   const [persisted, setPersisted] = useState<boolean | null>(null)
@@ -59,6 +63,7 @@ export function BackupSection() {
     run(async () => {
       const json = backupToJson(await exportBackup(db))
       await saveTextFile(`forja-respaldo-${localDateStamp()}.json`, json)
+      await markBackup(db)
       return { kind: 'ok', text: 'Respaldo listo. Guárdalo en Archivos o iCloud.' }
     })
 
@@ -102,8 +107,10 @@ export function BackupSection() {
         lo único que te salva.
       </p>
 
+      <p className="mt-1 text-sm font-semibold">{backupLabel(lastBackup ?? null, Date.now())}</p>
+
       <div className="mt-3 grid gap-2">
-        <button type="button" className={`${btn} bg-acc text-accink`} disabled={busy} onClick={() => void onExport()}>
+        <button type="button" className={btnPri} disabled={busy} onClick={() => void onExport()}>
           Exportar respaldo
         </button>
         <button type="button" className={btn} disabled={busy} onClick={pick(restoreRef)}>
@@ -112,7 +119,7 @@ export function BackupSection() {
         <button type="button" className={btn} disabled={busy} onClick={pick(protoRef)}>
           Importar del prototipo
         </button>
-        <button type="button" className={`${btn} text-p`} disabled={busy} onClick={() => void onWipe()}>
+        <button type="button" className={btnDanger} disabled={busy} onClick={() => void onWipe()}>
           Borrar todos los datos
         </button>
       </div>

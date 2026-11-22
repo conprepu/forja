@@ -11,7 +11,7 @@
   --line: light-dark(#e3e3de, #2a2e32);
   --soft: light-dark(#ececE7, #23272b);
   --acc: light-dark(#2b5cff, #6b8cff);
-  --accink: #fff;
+  --accink: light-dark(#ffffff, #0b0f1a);
   --ok: light-dark(#11895a, #3fcf8e);
   --okbg: light-dark(#e3f5ec, #12301f);
   --p: light-dark(#d93a3f, #ff6b70);

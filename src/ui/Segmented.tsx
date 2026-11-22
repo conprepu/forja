@@ -16,7 +16,7 @@ export function Segmented<T extends string>({ value, onChange, options, label }:
           role="tab"
           aria-selected={value === o.value}
           onClick={() => onChange(o.value)}
-          className={`min-h-11 rounded-[10px] px-1 text-sm font-semibold ${value === o.value ? 'bg-card shadow-sm' : 'text-mut'}`}
+          className={`min-h-11 rounded-[10px] px-0.5 font-semibold ${options.length > 4 ? 'text-[13px]' : 'text-sm'} ${value === o.value ? 'bg-card shadow-sm' : 'text-mut'}`}
         >
           {o.label}
         </button>

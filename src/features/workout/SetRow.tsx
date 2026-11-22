@@ -1,6 +1,7 @@
 import type { ActiveSet, Exercise, WorkoutSet } from '../../db/schema'
 import { setLabel } from '../../lib/workout'
 import { NumField } from '../../ui/NumField'
+import { haptic } from '../../lib/haptics'
 import { unlockAudio } from './sound'
 import { useWorkout } from './store'
 
@@ -110,7 +111,11 @@ export function SetRow({ i, j, sets, ex, cols, prev, showRpe, onTypeMenu, onMiss
         aria-pressed={s.done}
         onClick={() => {
           unlockAudio()
-          if (st().toggleDone(i, j) === 'missing-reps') onMissingReps()
+          const r = st().toggleDone(i, j)
+          if (r === 'missing-reps') {
+            haptic('warn')
+            onMissingReps()
+          } else if (r === 'done') haptic('tap')
         }}
         className={`grid h-11 w-11 place-items-center rounded-xl ${s.done ? 'bg-ok text-white' : 'bg-soft'}`}
       >

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import { routes } from './app/routes'
 import { db } from './db/db'
+import { applyPrefs } from './db/prefs'
 import { startup } from './db/startup'
 import { installFlushOnHide, useWorkout } from './features/workout/store'
 import './styles/index.css'
@@ -24,6 +25,7 @@ function render() {
 async function boot() {
   try {
     await startup(db)
+    await applyPrefs(db)
     await useWorkout.getState().hydrate()
   } catch (e) {
     console.error('No se pudo iniciar la base de datos', e)

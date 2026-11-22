@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { db } from '../../db/db'
 import { createRoutineFromWorkout, type FinishResult } from '../../db/workouts'
+import { haptic } from '../../lib/haptics'
 import { PR_LABEL } from '../../lib/prs'
 import { fmtN, fmtT } from '../../lib/time'
 import { routineItemsFromWorkout } from '../../lib/workout'
@@ -16,6 +17,10 @@ export function FinishSummary({ result, onClose }: { result: FinishResult | null
     onClose()
   }
   const w = result?.workout
+  const prCount = result?.prs.length ?? 0
+  useEffect(() => {
+    if (result) haptic(prCount > 0 ? 'success' : 'tap')
+  }, [result, prCount])
 
   return (
     <Sheet open={!!result} onClose={close} title="¡Entreno terminado!">

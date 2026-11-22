@@ -4,9 +4,10 @@ import { Segmented } from '../../ui/Segmented'
 import { BodyTab } from './BodyTab'
 import { ExercisesTab } from './ExercisesTab'
 import { HistoryTab } from './HistoryTab'
+import { NutritionTab } from './NutritionTab'
 import { SummaryTab } from './SummaryTab'
 
-type Tab = 'resumen' | 'ejercicios' | 'historial' | 'medidas'
+type Tab = 'resumen' | 'ejercicios' | 'historial' | 'comida' | 'medidas'
 
 export function ProgressScreen() {
   const [tab, setTab] = useState<Tab>('resumen')
@@ -20,6 +21,7 @@ export function ProgressScreen() {
           { value: 'resumen', label: 'Resumen' },
           { value: 'ejercicios', label: 'Ejercicios' },
           { value: 'historial', label: 'Historial' },
+          { value: 'comida', label: 'Comida' },
           { value: 'medidas', label: 'Medidas' },
         ]}
       />
@@ -27,6 +29,7 @@ export function ProgressScreen() {
         {tab === 'resumen' && <SummaryTab />}
         {tab === 'ejercicios' && <ExercisesTab />}
         {tab === 'historial' && <HistoryTab />}
+        {tab === 'comida' && <NutritionTab />}
         {tab === 'medidas' && <BodyTab />}
       </div>
     </Screen>

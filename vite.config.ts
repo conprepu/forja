@@ -1,31 +1,32 @@
 /// <reference types="vitest/config" />
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// GitHub Pages sirve la app en /<repo>/. El workflow pasa BASE_PATH; en local es '/'.
+// En GitHub Pages la app vive en /<repo>/; el workflow pasa BASE_PATH. En local es '/'.
 const base = process.env.BASE_PATH ?? '/'
-const version = process.env.npm_package_version ?? '0.0.0'
 
 export default defineConfig({
   base,
-  define: { __APP_VERSION__: JSON.stringify(version) },
   plugins: [
     react(),
+    tailwindcss(),
     VitePWA({
       registerType: 'prompt',
       includeAssets: ['favicon.ico', 'apple-touch-icon-180x180.png', 'icon.svg'],
       manifest: {
-        name: 'TickTick Private',
-        short_name: 'TickTick',
-        description: 'Tareas y hábitos, privados y offline.',
-        lang: 'es',
+        name: 'Forja · Entreno y comida',
+        short_name: 'Forja',
+        description: 'Entreno y nutrición, local y sin cuentas.',
+        lang: 'es-MX',
         display: 'standalone',
         orientation: 'portrait',
         start_url: base,
         scope: base,
-        theme_color: '#f2f2f7',
-        background_color: '#f2f2f7',
+        theme_color: '#2b5cff',
+        background_color: '#f4f4f1',
         icons: [
           { src: 'pwa-64x64.png', sizes: '64x64', type: 'image/png' },
           { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
@@ -36,11 +37,26 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,webmanifest}'],
         navigateFallback: 'index.html',
+        // Archivo e Inter vienen de Google Fonts: se guardan en caché para abrir offline.
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) =>
+              url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'google-fonts',
+              expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 365 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+        ],
       },
     }),
   ],
   test: {
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: ['tests/**/*.test.{ts,tsx}', 'src/**/*.test.{ts,tsx}'],
+    // El módulo virtual del SW no existe fuera del build: en tests se usa un stub.
+    alias: { 'virtual:pwa-register/react': fileURLToPath(new URL('./tests/stubs/pwa-register.ts', import.meta.url)) },
   },
 })

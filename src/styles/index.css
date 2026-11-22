@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+/* Tokens de legacy/prototype.html: blanco gis / carbón, un acento cobalto,
+   colores de macros de etiqueta nutrimental. Archivo para cifras, Inter para texto. */
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#f4f4f1, #0f1112);
+  --card: light-dark(#ffffff, #1a1d20);
+  --ink: light-dark(#121416, #f1f2f3);
+  --mut: light-dark(#686e74, #9aa1a8);
+  --line: light-dark(#e3e3de, #2a2e32);
+  --soft: light-dark(#ececE7, #23272b);
+  --acc: light-dark(#2b5cff, #6b8cff);
+  --accink: #fff;
+  --ok: light-dark(#11895a, #3fcf8e);
+  --okbg: light-dark(#e3f5ec, #12301f);
+  --p: light-dark(#d93a3f, #ff6b70);
+  --c: light-dark(#d98a00, #f7b733);
+  --f: light-dark(#7d4cc9, #b18cf0);
+  --warn: light-dark(#c2410c, #fb923c);
+  --tabbar-h: 62px;
+}
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark'] { color-scheme: dark; }
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-mut: var(--mut);
+  --color-line: var(--line);
+  --color-soft: var(--soft);
+  --color-acc: var(--acc);
+  --color-accink: var(--accink);
+  --color-ok: var(--ok);
+  --color-okbg: var(--okbg);
+  --color-p: var(--p);
+  --color-c: var(--c);
+  --color-f: var(--f);
+  --color-warn: var(--warn);
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-num: Archivo, Inter, sans-serif;
+}
+
+@layer base {
+  * { min-width: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font: 16px/1.5 var(--font-sans);
+    overflow-x: clip;
+    padding-bottom: calc(var(--tabbar-h) + 22px + env(safe-area-inset-bottom));
+  }
+  h1, h2, h3 { font-family: var(--font-num); letter-spacing: -0.01em; }
+  h1 { font-size: 32px; line-height: 1.05; font-weight: 800; }
+  h2 { font-size: 20px; font-weight: 700; }
+  :focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
+}

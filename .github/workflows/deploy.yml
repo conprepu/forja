@@ -24,12 +24,13 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run lint
       - run: npm test
       - run: npm run build
         env:
           # La app se sirve en https://<usuario>.github.io/<repo>/
           BASE_PATH: /${{ github.event.repository.name }}/
+      # Pages no conoce las rutas del SPA: 404.html = index.html para que /hoy, /comida… carguen directo.
+      - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

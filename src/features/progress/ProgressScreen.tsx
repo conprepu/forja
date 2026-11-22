@@ -1,9 +1,34 @@
-import { Empty, Screen } from '../../ui/Screen'
+import { useState } from 'react'
+import { Screen } from '../../ui/Screen'
+import { Segmented } from '../../ui/Segmented'
+import { BodyTab } from './BodyTab'
+import { ExercisesTab } from './ExercisesTab'
+import { HistoryTab } from './HistoryTab'
+import { SummaryTab } from './SummaryTab'
+
+type Tab = 'resumen' | 'ejercicios' | 'historial' | 'medidas'
 
 export function ProgressScreen() {
+  const [tab, setTab] = useState<Tab>('resumen')
   return (
     <Screen title="Progreso">
-      <Empty>Tus PRs y gráficas aparecerán después de tu primer entreno.</Empty>
+      <Segmented
+        label="Sección de progreso"
+        value={tab}
+        onChange={setTab}
+        options={[
+          { value: 'resumen', label: 'Resumen' },
+          { value: 'ejercicios', label: 'Ejercicios' },
+          { value: 'historial', label: 'Historial' },
+          { value: 'medidas', label: 'Medidas' },
+        ]}
+      />
+      <div className="mt-3">
+        {tab === 'resumen' && <SummaryTab />}
+        {tab === 'ejercicios' && <ExercisesTab />}
+        {tab === 'historial' && <HistoryTab />}
+        {tab === 'medidas' && <BodyTab />}
+      </div>
     </Screen>
   )
 }

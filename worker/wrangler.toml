@@ -1,0 +1,7 @@
+name = "forja-off-proxy"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Páginas que pueden usar el proxy (separadas por coma).
+ALLOWED_ORIGINS = "https://conprepu.github.io,http://localhost:4173,http://localhost:5173"

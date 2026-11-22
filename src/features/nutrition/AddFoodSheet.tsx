@@ -1,7 +1,7 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { db } from '../../db/db'
-import { cacheOffFood, lookupBarcode } from '../../db/off'
+import { cacheOffFood, getOffProxy, lookupBarcode } from '../../db/off'
 import { addEntry, deleteCustomFood, getRecentFoodIds } from '../../db/nutrition'
 import type { DiarySlot, Food, FoodEntry } from '../../db/schema'
 import { searchOff } from '../../lib/off'
@@ -42,6 +42,7 @@ const IDLE: Online = { status: 'idle', results: [], message: '' }
 export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
   const foods = useLiveQuery(() => db.foods.toArray(), [])
   const recent = useLiveQuery(() => getRecentFoodIds(db), [])
+  const proxy = useLiveQuery(() => getOffProxy(db), [])
   const [tab, setTab] = useState<Tab>('describir')
   const [q, setQ] = useState('')
   const [picked, setPicked] = useState<Food | null>(null)
@@ -85,7 +86,7 @@ export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
     abort.current = ctl
     setOnline({ status: 'loading', results: [], message: '' })
     try {
-      const results = await searchOff(q, (u, i) => fetch(u, i), ctl.signal)
+      const results = await searchOff(q, proxy ?? null, (u, i) => fetch(u, i), ctl.signal)
       setOnline({ status: 'done', results, message: results.length ? '' : 'Open Food Facts no encontró nada con ese nombre.' })
     } catch (e) {
       if ((e as DOMException)?.name === 'AbortError') return
@@ -200,10 +201,13 @@ export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
 
             {tab === 'buscar' && q.trim().length >= 2 && (
               <section aria-label="Open Food Facts" className="mt-2">
-                {online.status === 'idle' && (
+                {online.status === 'idle' && proxy && (
                   <button type="button" className={`${btn} w-full`} onClick={() => void searchOnline()}>
-                    Buscar “{q.trim()}” en Open Food Facts
+                    Buscar “{q.trim()}” en internet
                   </button>
+                )}
+                {online.status === 'idle' && proxy === null && (
+                  <p className="py-2 text-center text-xs text-mut">Para buscar por nombre en internet, configúralo en Perfil › Búsqueda en internet. Por código de barras ya funciona.</p>
                 )}
                 {online.status === 'loading' && <p role="status" className="py-3 text-center text-sm text-mut">Buscando en Open Food Facts…</p>}
                 {(online.status === 'error' || (online.status === 'done' && online.message)) && (

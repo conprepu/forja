@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { Food } from '../../src/db/schema'
 import { seedFoods } from '../../src/db/seed'
-import { describeMeal, parseChunk, resolveGrams, splitDescription, stem, withFood } from '../../src/lib/describe'
+import { describeMeal, parseChunk, rankWebResults, relevantTo, resolveGrams, splitDescription, stem, withFood } from '../../src/lib/describe'
 
 const foods: Food[] = seedFoods.map((f) => ({ ...f, source: 'local' as const }))
 const run = (t: string, recent: string[] = []) => describeMeal(t, foods, recent)
@@ -135,6 +135,29 @@ describe('describeMeal', () => {
   it('vacío o solo muletillas', () => {
     expect(run('')).toEqual([])
     expect(run('me comí')).toEqual([])
+  })
+})
+
+describe('relevantTo (filtrar resultados de internet)', () => {
+  const f = (name: string, brand?: string): Food => ({ id: 'x', name, ...(brand ? { brand } : {}), per100: { kcal: 1, p: 1, c: 1, f: 1 }, servings: [], source: 'off' })
+  it('al menos una palabra en común, sin acentos ni plurales', () => {
+    expect(relevantTo(f('Maíz para pozole Ovarb'), 'pozole')).toBe(true)
+    expect(relevantTo(f('Tacos al pastor'), 'taco')).toBe(true)
+    expect(relevantTo(f('Nutella'), 'pozole')).toBe(false)
+  })
+  it('también considera la marca', () => {
+    expect(relevantTo(f('Sopa', 'Sushi Daily'), 'sushi')).toBe(true)
+  })
+})
+
+describe('rankWebResults', () => {
+  const f = (id: string, name: string): Food => ({ id, name, per100: { kcal: 1, p: 1, c: 1, f: 1 }, servings: [], source: 'off' })
+  it('descarta lo irrelevante y pone primero el nombre más parecido', () => {
+    const r = rankWebResults([f('a', 'Arroz para sushi Vitasia'), f('b', 'Nutella'), f('c', 'Sushi'), f('d', 'Maki de pepino')], 'sushi')
+    expect(r.map((x) => x.id)).toEqual(['c', 'a'])
+  })
+  it('sin resultados relevantes queda vacío', () => {
+    expect(rankWebResults([f('b', 'Nutella')], 'pozole')).toEqual([])
   })
 })
 

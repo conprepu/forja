@@ -33,7 +33,9 @@ export function parseOffProduct(raw: unknown): Food | null {
   if (kcal == null) return null
 
   const name = [raw.product_name, raw.generic_name].find((x): x is string => typeof x === 'string' && x.trim() !== '')?.trim()
-  const brand = typeof raw.brands === 'string' ? raw.brands.split(',')[0]?.trim() : undefined
+  // la API clásica manda "Ferrero, Nutella"; el buscador nuevo, ["Ferrero", "Nutella"]
+  const brandsRaw = Array.isArray(raw.brands) ? raw.brands[0] : typeof raw.brands === 'string' ? raw.brands.split(',')[0] : undefined
+  const brand = typeof brandsRaw === 'string' && brandsRaw.trim() ? brandsRaw.trim() : undefined
   const fiber = n(nut.fiber_100g)
   const grams = n(raw.serving_quantity)
   const label = typeof raw.serving_size === 'string' ? raw.serving_size.trim() : ''
@@ -55,9 +57,9 @@ export function parseOffProductResponse(json: unknown): Food | null {
   return parseOffProduct(isObj(json.product) ? { code: json.code, ...json.product } : null)
 }
 
-/** Respuesta de búsqueda: descarta productos sin datos y repetidos. */
+/** Respuesta de búsqueda (`products` en la API clásica, `hits` en el proxy): descarta productos sin datos y repetidos. */
 export function parseOffSearchResponse(json: unknown): Food[] {
-  const products = isObj(json) && Array.isArray(json.products) ? json.products : []
+  const products = isObj(json) ? (Array.isArray(json.hits) ? json.hits : Array.isArray(json.products) ? json.products : []) : []
   const seen = new Set<string>()
   const out: Food[] = []
   for (const p of products) {
@@ -73,8 +75,26 @@ export function parseOffSearchResponse(json: unknown): Food[] {
 export const productUrl = (barcode: string): string =>
   `${OFF_BASE}/api/v2/product/${encodeURIComponent(barcode)}.json?fields=${FIELDS}`
 
-export const searchUrl = (query: string, pageSize = 20): string =>
-  `${OFF_BASE}/cgi/search.pl?search_terms=${encodeURIComponent(query.trim())}&search_simple=1&action=process&json=1&page_size=${pageSize}&sort_by=unique_scans_n&fields=${FIELDS}`
+/**
+ * La búsqueda por nombre de Open Food Facts no permite peticiones desde el navegador (CORS),
+ * así que va por un proxy propio (ver worker/README.md).
+ */
+export const proxySearchUrl = (proxyBase: string, query: string, limit = 25): string =>
+  `${proxyBase}/search?q=${encodeURIComponent(query.trim())}&limit=${limit}`
+
+/** Acepta https://… (o http://localhost) y quita la barra final. null si no sirve. */
+export function normalizeProxyUrl(input: string): string | null {
+  const t = input.trim().replace(/\/+$/, '')
+  if (!t) return null
+  try {
+    const u = new URL(t)
+    const local = u.hostname === 'localhost' || u.hostname === '127.0.0.1'
+    if (u.protocol !== 'https:' && !(local && u.protocol === 'http:')) return null
+    return `${u.origin}${u.pathname === '/' ? '' : u.pathname}`
+  } catch {
+    return null
+  }
+}
 
 type Fetch = (url: string, init?: { signal?: AbortSignal }) => Promise<{ ok: boolean; status: number; json(): Promise<unknown> }>
 
@@ -96,7 +116,7 @@ async function getJson(fetchFn: Fetch, url: string, signal?: AbortSignal): Promi
   }
   if (res.status === 404) return { status: 0 }
   if (res.status >= 500) {
-    throw new OffError('Open Food Facts no está disponible ahora (la búsqueda por nombre suele fallar). Prueba más tarde o escanea el código de barras.')
+    throw new OffError('Open Food Facts no está disponible ahora. Prueba más tarde o escanea el código de barras.')
   }
   if (!res.ok) throw new OffError(`Open Food Facts respondió con un error (${res.status}).`)
   try {
@@ -110,7 +130,8 @@ export async function fetchOffProduct(barcode: string, fetchFn: Fetch = fetch, s
   return parseOffProductResponse(await getJson(fetchFn, productUrl(barcode), signal))
 }
 
-export async function searchOff(query: string, fetchFn: Fetch = fetch, signal?: AbortSignal): Promise<Food[]> {
+export async function searchOff(query: string, proxyBase: string | null, fetchFn: Fetch = fetch, signal?: AbortSignal): Promise<Food[]> {
+  if (!proxyBase) throw new OffError('Configura la búsqueda en internet en Perfil para buscar por nombre.')
   if (query.trim().length < 2) return []
-  return parseOffSearchResponse(await getJson(fetchFn, searchUrl(query), signal))
+  return parseOffSearchResponse(await getJson(fetchFn, proxySearchUrl(proxyBase, query), signal))
 }

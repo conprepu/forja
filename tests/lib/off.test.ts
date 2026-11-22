@@ -7,9 +7,10 @@ import {
   parseOffProduct,
   parseOffProductResponse,
   parseOffSearchResponse,
+  normalizeProxyUrl,
   productUrl,
+  proxySearchUrl,
   searchOff,
-  searchUrl,
 } from '../../src/lib/off'
 import { freshDb } from '../db/helpers'
 
@@ -82,12 +83,23 @@ describe('respuestas de la API', () => {
     expect(parseOffSearchResponse({})).toEqual([])
     expect(parseOffSearchResponse(null)).toEqual([])
   })
+  it('el proxy responde con hits y la marca puede venir como lista', () => {
+    const r = parseOffSearchResponse({ hits: [{ code: '7', product_name: 'Pozole Rojo', brands: ['Del Fuerte', 'X'], nutriments: { 'energy-kj_100g': 418, proteins_100g: 4 } }] })
+    expect(r).toHaveLength(1)
+    expect(r[0]).toMatchObject({ id: 'off-7', name: 'Pozole Rojo', brand: 'Del Fuerte' })
+    expect(r[0]?.per100.kcal).toBe(100)
+  })
   it('las URLs codifican lo que escribe el usuario', () => {
     expect(productUrl('301 762')).toContain('/api/v2/product/301%20762.json')
-    const u = searchUrl('tortilla & queso')
-    expect(u).toContain('search_terms=tortilla%20%26%20queso')
-    expect(u).toContain('json=1')
-    expect(u.startsWith('https://world.openfoodfacts.org/')).toBe(true)
+    expect(proxySearchUrl('https://p.workers.dev', 'tortilla & queso')).toBe('https://p.workers.dev/search?q=tortilla%20%26%20queso&limit=25')
+  })
+  it('normalizeProxyUrl acepta https y localhost, y quita la barra final', () => {
+    expect(normalizeProxyUrl(' https://forja.x.workers.dev/ ')).toBe('https://forja.x.workers.dev')
+    expect(normalizeProxyUrl('http://localhost:8787')).toBe('http://localhost:8787')
+    expect(normalizeProxyUrl('https://a.com/proxy/')).toBe('https://a.com/proxy')
+    expect(normalizeProxyUrl('http://a.com')).toBeNull()
+    expect(normalizeProxyUrl('no es url')).toBeNull()
+    expect(normalizeProxyUrl('')).toBeNull()
   })
 })
 
@@ -99,17 +111,25 @@ describe('red', () => {
     await expect(fetchOffProduct('1', async () => { throw new TypeError('Failed to fetch') })).rejects.toThrow(/No se pudo conectar/)
     await expect(fetchOffProduct('1', async () => ({ ok: true, status: 200, json: async () => { throw new Error('x') } }))).rejects.toThrow(/inválida/)
   })
+  const PROXY = 'https://forja.test.workers.dev'
   it('una búsqueda cancelada relanza AbortError, no OffError', async () => {
     const abort = async () => { throw new DOMException('abort', 'AbortError') }
-    await expect(searchOff('pollo', abort)).rejects.toMatchObject({ name: 'AbortError' })
+    await expect(searchOff('pollo', PROXY, abort)).rejects.toMatchObject({ name: 'AbortError' })
   })
   it('searchOff no consulta con menos de 2 letras', async () => {
     const f = vi.fn()
-    expect(await searchOff(' a ', f)).toEqual([])
+    expect(await searchOff(' a ', PROXY, f)).toEqual([])
     expect(f).not.toHaveBeenCalled()
   })
-  it('searchOff devuelve alimentos', async () => {
-    expect((await searchOff('nutella', async () => ok({ products: [nutella] }))).map((x) => x.name)).toEqual(['Nutella'])
+  it('sin proxy configurado avisa en vez de intentar', async () => {
+    const f = vi.fn()
+    await expect(searchOff('pollo', null, f)).rejects.toThrow(/Configura la búsqueda/)
+    expect(f).not.toHaveBeenCalled()
+  })
+  it('searchOff consulta el proxy y devuelve alimentos', async () => {
+    const f = vi.fn(async (_u: string) => ok({ hits: [nutella] }))
+    expect((await searchOff('nutella', PROXY, f)).map((x) => x.name)).toEqual(['Nutella'])
+    expect(f.mock.calls[0]![0]).toBe(`${PROXY}/search?q=nutella&limit=25`)
   })
 })
 

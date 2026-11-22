@@ -10,6 +10,17 @@ export async function cacheOffFood(db: ForjaDB, food: Food): Promise<Food> {
   return food
 }
 
+const PROXY_KEY = 'offProxy'
+
+/** URL del proxy de búsqueda por nombre, si ya la configuraste en Perfil. */
+export async function getOffProxy(db: ForjaDB): Promise<string | null> {
+  const row = await db.settings.get(PROXY_KEY)
+  return typeof row?.value === 'string' && row.value ? row.value : null
+}
+
+export const setOffProxy = (db: ForjaDB, url: string | null) =>
+  url ? db.settings.put({ key: PROXY_KEY, value: url }) : db.settings.delete(PROXY_KEY)
+
 export const findByBarcode = (db: ForjaDB, barcode: string) => db.foods.where('barcode').equals(barcode).first()
 
 /**

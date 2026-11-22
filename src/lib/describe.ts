@@ -204,6 +204,24 @@ function pickFood(foods: Food[], said: string[], recent: ReadonlyMap<string, num
   return best?.food ?? null
 }
 
+/** ¿El alimento tiene que ver con lo que se buscó? (al menos una palabra en común). Para filtrar resultados de internet. */
+export function relevantTo(food: Food, query: string): boolean {
+  const q = query.split(/\s+/).filter(Boolean).map(stem)
+  const ft = tokensOf(`${food.name} ${food.brand ?? ''}`)
+  return q.some((t) => ft.some((f) => sameToken(t, f)))
+}
+
+/** Resultados de internet relevantes, con el nombre más parecido a lo dicho primero ("Sushi" antes que "Arroz para sushi"). */
+export function rankWebResults(foods: Food[], query: string): Food[] {
+  const q = query.split(/\s+/).filter(Boolean).map(stem)
+  const score = (f: Food) => {
+    const nt = tokensOf(f.name)
+    const all = q.every((t) => nt.some((n) => sameToken(t, n)))
+    return (nt.join(' ') === q.join(' ') ? 10 : 0) + (all ? 3 : 0) + (nt[0] && q.some((t) => sameToken(t, nt[0]!)) ? 1 : 0) - nt.length * 0.2
+  }
+  return foods.filter((f) => relevantTo(f, query)).sort((a, b) => score(b) - score(a))
+}
+
 /** Interpreta la descripción y la empata con alimentos de la base. */
 export function describeMeal(text: string, foods: Food[], recentIds: readonly string[] = []): DescribedItem[] {
   const recent = new Map(recentIds.map((id, i) => [id, i]))

@@ -76,6 +76,9 @@ export interface ActiveSet {
   reps: number | null
   rpe?: number
   done: boolean
+  /** Meta de la rutina ("8-12"), se muestra como placeholder. */
+  targetReps?: string
+  targetWeight?: number
 }
 
 export interface ActiveItem {
@@ -96,6 +99,14 @@ export interface ActiveWorkout {
   items: ActiveItem[]
   /** Fin del descanso en curso (timestamp), nunca un contador de ticks. */
   restEndsAt: number | null
+  /** Duración total del descanso en curso, para la barra de progreso. */
+  restTotalSec?: number | null
+}
+
+export interface Folder {
+  id: string
+  name: string
+  order: number
 }
 
 export interface Pr {

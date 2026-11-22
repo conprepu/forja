@@ -42,6 +42,13 @@
   --font-num: Archivo, Inter, sans-serif;
 }
 
+@theme {
+  --animate-sheet-up: sheet-up 0.22s ease-out;
+  @keyframes sheet-up {
+    from { transform: translateY(40px); opacity: 0.4; }
+  }
+}
+
 @layer base {
   * { min-width: 0; -webkit-tap-highlight-color: transparent; }
   html, body { background: var(--bg); color: var(--ink); }

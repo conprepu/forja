@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import { routes } from './app/routes'
 import { db } from './db/db'
 import { startup } from './db/startup'
+import { installFlushOnHide, useWorkout } from './features/workout/store'
 import './styles/index.css'
 
 // BASE_URL termina en '/'; el router lo quiere sin la barra final.
@@ -18,7 +19,17 @@ function render() {
   )
 }
 
-// La base se abre y se siembra antes de pintar. Si IndexedDB no está disponible, la app igual abre.
-startup(db)
-  .catch((e) => console.error('No se pudo iniciar la base de datos', e))
-  .finally(render)
+// La base se abre, se siembra y se recupera el entreno en curso antes de pintar.
+// Si IndexedDB no está disponible, la app igual abre.
+async function boot() {
+  try {
+    await startup(db)
+    await useWorkout.getState().hydrate()
+  } catch (e) {
+    console.error('No se pudo iniciar la base de datos', e)
+  }
+  render()
+}
+
+installFlushOnHide()
+void boot()

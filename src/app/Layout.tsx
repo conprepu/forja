@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router'
+import { LiveStrip } from './LiveStrip'
 import { TabBar } from './TabBar'
 import { UpdatePrompt } from '../ui/UpdatePrompt'
 
@@ -9,6 +10,7 @@ export function Layout() {
         <Outlet />
       </main>
       <UpdatePrompt />
+      <LiveStrip />
       <TabBar />
     </>
   )

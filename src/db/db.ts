@@ -4,6 +4,7 @@ import type {
   BodyEntry,
   DiaryEntry,
   Exercise,
+  Folder,
   Food,
   Meal,
   Pr,
@@ -17,6 +18,7 @@ import type {
 /** Tablas respaldables, en el orden en que se escriben en el JSON. */
 export const TABLE_NAMES = [
   'exercises',
+  'folders',
   'routines',
   'workouts',
   'activeWorkout',
@@ -33,6 +35,7 @@ export type TableName = (typeof TABLE_NAMES)[number]
 
 export class ForjaDB extends Dexie {
   exercises!: EntityTable<Exercise, 'id'>
+  folders!: EntityTable<Folder, 'id'>
   routines!: EntityTable<Routine, 'id'>
   workouts!: EntityTable<Workout, 'id'>
   activeWorkout!: EntityTable<ActiveWorkout, 'id'>
@@ -62,6 +65,8 @@ export class ForjaDB extends Dexie {
       water: 'date',
       settings: 'key',
     })
+    // v2: carpetas de rutinas. Solo agrega una tabla; no hay datos que migrar.
+    this.version(2).stores({ folders: 'id, order' })
   }
 }
 

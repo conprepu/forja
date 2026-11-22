@@ -22,6 +22,7 @@ export class BackupError extends Error {
 /** Campo que identifica una fila en cada tabla. */
 const PRIMARY_KEY: Record<TableName, string> = {
   exercises: 'id',
+  folders: 'id',
   routines: 'id',
   workouts: 'id',
   activeWorkout: 'id',

@@ -1,4 +1,5 @@
 import { TabBar } from './components/TabBar'
+import { UpdatePrompt } from './components/UpdatePrompt'
 import { useRoute } from './lib/router'
 import { TodayScreen } from './screens/TodayScreen'
 import { ListsScreen } from './screens/ListsScreen'
@@ -20,6 +21,7 @@ export function App() {
   return (
     <>
       {screen}
+      <UpdatePrompt />
       <TabBar active={tab} />
     </>
   )

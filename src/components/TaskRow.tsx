@@ -56,7 +56,7 @@ export function TaskRow({ task, today, onOpen, list }: Props) {
 
   return (
     <div className={s.wrap}>
-      <button type="button" className={s.delete} onClick={() => deleteTask(task.id)} aria-label={`Eliminar ${task.title}`} tabIndex={dx ? 0 : -1}>
+      <button type="button" className={s.delete} hidden={dx === 0} onClick={() => deleteTask(task.id)} aria-label={`Eliminar ${task.title}`}>
         Eliminar
       </button>
       <div

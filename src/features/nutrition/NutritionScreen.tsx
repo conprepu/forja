@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { db } from '../../db/db'
-import { clearSlot, copyEntries, copyYesterday } from '../../db/nutrition'
+import { clearSlot, copyEntries, copyYesterday, saveMealFromSlot } from '../../db/nutrition'
 import type { DiaryEntry, DiarySlot } from '../../db/schema'
 import { addDays, formatDay, todayStr } from '../../lib/dates'
 import { SLOTS, sumMacros } from '../../lib/nutrition'
-import { btn, btnDanger } from '../../ui/cls'
+import { btn, btnDanger, btnPri, field } from '../../ui/cls'
 import { Screen } from '../../ui/Screen'
 import { Sheet } from '../../ui/Sheet'
 import { useToast } from '../../ui/useToast'
@@ -22,6 +22,8 @@ export function NutritionScreen() {
   const [adding, setAdding] = useState<DiarySlot | null>(null)
   const [menu, setMenu] = useState<DiarySlot | null>(null)
   const [editing, setEditing] = useState<DiaryEntry | null>(null)
+  const [saveMeal, setSaveMeal] = useState<DiarySlot | null>(null)
+  const [mealName, setMealName] = useState('')
 
   const eaten = sumMacros(entries)
   const today = todayStr()
@@ -83,6 +85,18 @@ export function NutritionScreen() {
             </button>
             <button
               type="button"
+              className={btn}
+              disabled={inSlot(menu).length === 0}
+              onClick={() => {
+                setMealName('')
+                setSaveMeal(menu)
+                setMenu(null)
+              }}
+            >
+              Guardar como comida
+            </button>
+            <button
+              type="button"
               className={btnDanger}
               disabled={inSlot(menu).length === 0}
               onClick={async () => {
@@ -95,6 +109,25 @@ export function NutritionScreen() {
             </button>
           </div>
         )}
+      </Sheet>
+      <Sheet open={saveMeal != null} onClose={() => setSaveMeal(null)} title="Guardar como comida">
+        <div className="grid gap-3">
+          <label className="grid gap-1 text-sm text-mut">
+            Nombre
+            <input className={`${field} text-ink`} value={mealName} placeholder="Ej. Desayuno de siempre" onChange={(e) => setMealName(e.target.value)} />
+          </label>
+          <button
+            type="button"
+            className={btnPri}
+            onClick={async () => {
+              if (saveMeal) await saveMealFromSlot(db, date, saveMeal, mealName)
+              setSaveMeal(null)
+              show('Comida guardada')
+            }}
+          >
+            Guardar
+          </button>
+        </div>
       </Sheet>
       {toast}
     </Screen>

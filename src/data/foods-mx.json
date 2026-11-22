@@ -1,0 +1,1458 @@
+[
+ {
+  "id": "b0",
+  "name": "Pechuga de pollo cocida",
+  "per100": {
+   "kcal": 165,
+   "p": 31,
+   "c": 0,
+   "f": 3.6
+  },
+  "servings": [
+   {
+    "label": "1 pechuga chica",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "b1",
+  "name": "Pechuga de pollo cruda",
+  "per100": {
+   "kcal": 120,
+   "p": 22.5,
+   "c": 0,
+   "f": 2.6
+  },
+  "servings": [
+   {
+    "label": "1 filete",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b2",
+  "name": "Muslo de pollo cocido",
+  "per100": {
+   "kcal": 209,
+   "p": 26,
+   "c": 0,
+   "f": 10.9
+  },
+  "servings": [
+   {
+    "label": "1 muslo",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "b3",
+  "name": "Carne molida de res 90/10 cocida",
+  "per100": {
+   "kcal": 217,
+   "p": 26,
+   "c": 0,
+   "f": 12
+  },
+  "servings": [
+   {
+    "label": "1 porción",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "b4",
+  "name": "Bistec de res cocido",
+  "per100": {
+   "kcal": 250,
+   "p": 26,
+   "c": 0,
+   "f": 15
+  },
+  "servings": [
+   {
+    "label": "1 bistec",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "b5",
+  "name": "Lomo de cerdo cocido",
+  "per100": {
+   "kcal": 242,
+   "p": 27,
+   "c": 0,
+   "f": 14
+  },
+  "servings": [
+   {
+    "label": "1 porción",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "b6",
+  "name": "Atún en agua",
+  "per100": {
+   "kcal": 116,
+   "p": 26,
+   "c": 0,
+   "f": 1
+  },
+  "servings": [
+   {
+    "label": "1 lata",
+    "grams": 140
+   }
+  ]
+ },
+ {
+  "id": "b7",
+  "name": "Salmón cocido",
+  "per100": {
+   "kcal": 206,
+   "p": 22,
+   "c": 0,
+   "f": 12
+  },
+  "servings": [
+   {
+    "label": "1 filete",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b8",
+  "name": "Tilapia cocida",
+  "per100": {
+   "kcal": 128,
+   "p": 26,
+   "c": 0,
+   "f": 2.7
+  },
+  "servings": [
+   {
+    "label": "1 filete",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b9",
+  "name": "Camarón cocido",
+  "per100": {
+   "kcal": 99,
+   "p": 24,
+   "c": 0.2,
+   "f": 0.3
+  },
+  "servings": [
+   {
+    "label": "1 porción",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "b10",
+  "name": "Huevo entero",
+  "per100": {
+   "kcal": 143,
+   "p": 12.6,
+   "c": 0.7,
+   "f": 9.5
+  },
+  "servings": [
+   {
+    "label": "1 huevo",
+    "grams": 50
+   }
+  ]
+ },
+ {
+  "id": "b11",
+  "name": "Clara de huevo",
+  "per100": {
+   "kcal": 52,
+   "p": 10.9,
+   "c": 0.7,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 clara",
+    "grams": 33
+   }
+  ]
+ },
+ {
+  "id": "b12",
+  "name": "Jamón de pavo",
+  "per100": {
+   "kcal": 104,
+   "p": 17,
+   "c": 2,
+   "f": 3
+  },
+  "servings": [
+   {
+    "label": "1 rebanada",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "b13",
+  "name": "Salchicha de pavo",
+  "per100": {
+   "kcal": 160,
+   "p": 12,
+   "c": 4,
+   "f": 10
+  },
+  "servings": [
+   {
+    "label": "1 salchicha",
+    "grams": 40
+   }
+  ]
+ },
+ {
+  "id": "b14",
+  "name": "Proteína whey",
+  "per100": {
+   "kcal": 400,
+   "p": 80,
+   "c": 8,
+   "f": 6
+  },
+  "servings": [
+   {
+    "label": "1 scoop",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "b15",
+  "name": "Queso panela",
+  "per100": {
+   "kcal": 240,
+   "p": 18,
+   "c": 3,
+   "f": 17
+  },
+  "servings": [
+   {
+    "label": "1 rebanada",
+    "grams": 40
+   }
+  ]
+ },
+ {
+  "id": "b16",
+  "name": "Queso Oaxaca",
+  "per100": {
+   "kcal": 280,
+   "p": 22,
+   "c": 2,
+   "f": 20
+  },
+  "servings": [
+   {
+    "label": "1 porción",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "b17",
+  "name": "Queso manchego",
+  "per100": {
+   "kcal": 370,
+   "p": 25,
+   "c": 1,
+   "f": 30
+  },
+  "servings": [
+   {
+    "label": "1 rebanada",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "b18",
+  "name": "Queso cottage",
+  "per100": {
+   "kcal": 98,
+   "p": 11,
+   "c": 3.4,
+   "f": 4.3
+  },
+  "servings": [
+   {
+    "label": "½ taza",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "b19",
+  "name": "Yogur griego natural",
+  "per100": {
+   "kcal": 59,
+   "p": 10,
+   "c": 3.6,
+   "f": 0.4
+  },
+  "servings": [
+   {
+    "label": "1 vaso",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b20",
+  "name": "Yogur natural",
+  "per100": {
+   "kcal": 61,
+   "p": 3.5,
+   "c": 4.7,
+   "f": 3.3
+  },
+  "servings": [
+   {
+    "label": "1 vaso",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b21",
+  "name": "Leche entera",
+  "per100": {
+   "kcal": 61,
+   "p": 3.2,
+   "c": 4.8,
+   "f": 3.3
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 240
+   }
+  ]
+ },
+ {
+  "id": "b22",
+  "name": "Leche descremada",
+  "per100": {
+   "kcal": 34,
+   "p": 3.4,
+   "c": 5,
+   "f": 0.1
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 240
+   }
+  ]
+ },
+ {
+  "id": "b23",
+  "name": "Leche de almendra sin azúcar",
+  "per100": {
+   "kcal": 15,
+   "p": 0.6,
+   "c": 0.3,
+   "f": 1.2
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 240
+   }
+  ]
+ },
+ {
+  "id": "b24",
+  "name": "Tofu",
+  "per100": {
+   "kcal": 76,
+   "p": 8,
+   "c": 1.9,
+   "f": 4.8
+  },
+  "servings": [
+   {
+    "label": "1 porción",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "b25",
+  "name": "Tortilla de maíz",
+  "per100": {
+   "kcal": 218,
+   "p": 5.7,
+   "c": 44.6,
+   "f": 2.9
+  },
+  "servings": [
+   {
+    "label": "1 tortilla",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "b26",
+  "name": "Tortilla de harina",
+  "per100": {
+   "kcal": 312,
+   "p": 8.3,
+   "c": 51,
+   "f": 8
+  },
+  "servings": [
+   {
+    "label": "1 tortilla",
+    "grams": 45
+   }
+  ]
+ },
+ {
+  "id": "b27",
+  "name": "Arroz blanco cocido",
+  "per100": {
+   "kcal": 130,
+   "p": 2.7,
+   "c": 28,
+   "f": 0.3
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b28",
+  "name": "Arroz integral cocido",
+  "per100": {
+   "kcal": 123,
+   "p": 2.7,
+   "c": 25.6,
+   "f": 1
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b29",
+  "name": "Frijoles negros cocidos",
+  "per100": {
+   "kcal": 132,
+   "p": 8.9,
+   "c": 23.7,
+   "f": 0.5
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 170
+   }
+  ]
+ },
+ {
+  "id": "b30",
+  "name": "Frijoles refritos",
+  "per100": {
+   "kcal": 110,
+   "p": 5.5,
+   "c": 15,
+   "f": 3
+  },
+  "servings": [
+   {
+    "label": "½ taza",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "b31",
+  "name": "Lentejas cocidas",
+  "per100": {
+   "kcal": 116,
+   "p": 9,
+   "c": 20,
+   "f": 0.4
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "b32",
+  "name": "Garbanzos cocidos",
+  "per100": {
+   "kcal": 164,
+   "p": 8.9,
+   "c": 27.4,
+   "f": 2.6
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 160
+   }
+  ]
+ },
+ {
+  "id": "b33",
+  "name": "Avena en hojuelas",
+  "per100": {
+   "kcal": 389,
+   "p": 16.9,
+   "c": 66,
+   "f": 6.9
+  },
+  "servings": [
+   {
+    "label": "½ taza",
+    "grams": 40
+   }
+  ]
+ },
+ {
+  "id": "b34",
+  "name": "Pan integral",
+  "per100": {
+   "kcal": 247,
+   "p": 13,
+   "c": 41,
+   "f": 3.4
+  },
+  "servings": [
+   {
+    "label": "1 rebanada",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "b35",
+  "name": "Bolillo",
+  "per100": {
+   "kcal": 270,
+   "p": 9,
+   "c": 50,
+   "f": 3
+  },
+  "servings": [
+   {
+    "label": "1 pieza",
+    "grams": 70
+   }
+  ]
+ },
+ {
+  "id": "b36",
+  "name": "Pasta cocida",
+  "per100": {
+   "kcal": 158,
+   "p": 5.8,
+   "c": 31,
+   "f": 0.9
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 140
+   }
+  ]
+ },
+ {
+  "id": "b37",
+  "name": "Papa cocida",
+  "per100": {
+   "kcal": 87,
+   "p": 1.9,
+   "c": 20,
+   "f": 0.1
+  },
+  "servings": [
+   {
+    "label": "1 mediana",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b38",
+  "name": "Camote cocido",
+  "per100": {
+   "kcal": 90,
+   "p": 2,
+   "c": 20.7,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 mediano",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b39",
+  "name": "Cereal de hojuelas de maíz",
+  "per100": {
+   "kcal": 357,
+   "p": 7.5,
+   "c": 84,
+   "f": 0.4
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "b40",
+  "name": "Granola",
+  "per100": {
+   "kcal": 471,
+   "p": 10,
+   "c": 64,
+   "f": 20
+  },
+  "servings": [
+   {
+    "label": "⅓ taza",
+    "grams": 40
+   }
+  ]
+ },
+ {
+  "id": "b41",
+  "name": "Tostada horneada",
+  "per100": {
+   "kcal": 400,
+   "p": 8,
+   "c": 75,
+   "f": 6
+  },
+  "servings": [
+   {
+    "label": "1 tostada",
+    "grams": 12
+   }
+  ]
+ },
+ {
+  "id": "b42",
+  "name": "Galletas Marías",
+  "per100": {
+   "kcal": 430,
+   "p": 7,
+   "c": 74,
+   "f": 11
+  },
+  "servings": [
+   {
+    "label": "4 galletas",
+    "grams": 22
+   }
+  ]
+ },
+ {
+  "id": "b43",
+  "name": "Elote cocido",
+  "per100": {
+   "kcal": 96,
+   "p": 3.4,
+   "c": 21,
+   "f": 1.5
+  },
+  "servings": [
+   {
+    "label": "1 elote",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "b44",
+  "name": "Palomitas naturales",
+  "per100": {
+   "kcal": 387,
+   "p": 13,
+   "c": 78,
+   "f": 4.5
+  },
+  "servings": [
+   {
+    "label": "2 tazas",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "b45",
+  "name": "Plátano",
+  "per100": {
+   "kcal": 89,
+   "p": 1.1,
+   "c": 22.8,
+   "f": 0.3
+  },
+  "servings": [
+   {
+    "label": "1 mediano",
+    "grams": 118
+   }
+  ]
+ },
+ {
+  "id": "b46",
+  "name": "Manzana",
+  "per100": {
+   "kcal": 52,
+   "p": 0.3,
+   "c": 13.8,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 mediana",
+    "grams": 180
+   }
+  ]
+ },
+ {
+  "id": "b47",
+  "name": "Naranja",
+  "per100": {
+   "kcal": 47,
+   "p": 0.9,
+   "c": 11.8,
+   "f": 0.1
+  },
+  "servings": [
+   {
+    "label": "1 mediana",
+    "grams": 130
+   }
+  ]
+ },
+ {
+  "id": "b48",
+  "name": "Papaya",
+  "per100": {
+   "kcal": 43,
+   "p": 0.5,
+   "c": 10.8,
+   "f": 0.3
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b49",
+  "name": "Mango",
+  "per100": {
+   "kcal": 60,
+   "p": 0.8,
+   "c": 15,
+   "f": 0.4
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 165
+   }
+  ]
+ },
+ {
+  "id": "b50",
+  "name": "Fresas",
+  "per100": {
+   "kcal": 32,
+   "p": 0.7,
+   "c": 7.7,
+   "f": 0.3
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b51",
+  "name": "Uvas",
+  "per100": {
+   "kcal": 69,
+   "p": 0.7,
+   "c": 18,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b52",
+  "name": "Sandía",
+  "per100": {
+   "kcal": 30,
+   "p": 0.6,
+   "c": 7.6,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b53",
+  "name": "Piña",
+  "per100": {
+   "kcal": 50,
+   "p": 0.5,
+   "c": 13,
+   "f": 0.1
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 165
+   }
+  ]
+ },
+ {
+  "id": "b54",
+  "name": "Aguacate",
+  "per100": {
+   "kcal": 160,
+   "p": 2,
+   "c": 8.5,
+   "f": 14.7
+  },
+  "servings": [
+   {
+    "label": "½ aguacate",
+    "grams": 75
+   }
+  ]
+ },
+ {
+  "id": "b55",
+  "name": "Brócoli cocido",
+  "per100": {
+   "kcal": 35,
+   "p": 2.4,
+   "c": 7.2,
+   "f": 0.4
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 90
+   }
+  ]
+ },
+ {
+  "id": "b56",
+  "name": "Espinaca",
+  "per100": {
+   "kcal": 23,
+   "p": 2.9,
+   "c": 3.6,
+   "f": 0.4
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "b57",
+  "name": "Lechuga",
+  "per100": {
+   "kcal": 15,
+   "p": 1.4,
+   "c": 2.9,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 50
+   }
+  ]
+ },
+ {
+  "id": "b58",
+  "name": "Jitomate",
+  "per100": {
+   "kcal": 18,
+   "p": 0.9,
+   "c": 3.9,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 mediano",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "b59",
+  "name": "Pepino",
+  "per100": {
+   "kcal": 15,
+   "p": 0.7,
+   "c": 3.6,
+   "f": 0.1
+  },
+  "servings": [
+   {
+    "label": "½ pepino",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "b60",
+  "name": "Zanahoria",
+  "per100": {
+   "kcal": 41,
+   "p": 0.9,
+   "c": 9.6,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 mediana",
+    "grams": 60
+   }
+  ]
+ },
+ {
+  "id": "b61",
+  "name": "Calabacita",
+  "per100": {
+   "kcal": 17,
+   "p": 1.2,
+   "c": 3.1,
+   "f": 0.3
+  },
+  "servings": [
+   {
+    "label": "1 pieza",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "b62",
+  "name": "Nopales cocidos",
+  "per100": {
+   "kcal": 15,
+   "p": 1.4,
+   "c": 3.3,
+   "f": 0.1
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b63",
+  "name": "Cebolla",
+  "per100": {
+   "kcal": 40,
+   "p": 1.1,
+   "c": 9.3,
+   "f": 0.1
+  },
+  "servings": [
+   {
+    "label": "¼ cebolla",
+    "grams": 50
+   }
+  ]
+ },
+ {
+  "id": "b64",
+  "name": "Salsa roja o verde",
+  "per100": {
+   "kcal": 30,
+   "p": 1,
+   "c": 5,
+   "f": 0.8
+  },
+  "servings": [
+   {
+    "label": "2 cdas",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "b65",
+  "name": "Aceite de oliva",
+  "per100": {
+   "kcal": 884,
+   "p": 0,
+   "c": 0,
+   "f": 100
+  },
+  "servings": [
+   {
+    "label": "1 cda",
+    "grams": 14
+   }
+  ]
+ },
+ {
+  "id": "b66",
+  "name": "Aceite vegetal",
+  "per100": {
+   "kcal": 884,
+   "p": 0,
+   "c": 0,
+   "f": 100
+  },
+  "servings": [
+   {
+    "label": "1 cda",
+    "grams": 14
+   }
+  ]
+ },
+ {
+  "id": "b67",
+  "name": "Mantequilla",
+  "per100": {
+   "kcal": 717,
+   "p": 0.9,
+   "c": 0.1,
+   "f": 81
+  },
+  "servings": [
+   {
+    "label": "1 cdita",
+    "grams": 10
+   }
+  ]
+ },
+ {
+  "id": "b68",
+  "name": "Crema de cacahuate",
+  "per100": {
+   "kcal": 588,
+   "p": 25,
+   "c": 20,
+   "f": 50
+  },
+  "servings": [
+   {
+    "label": "1 cda",
+    "grams": 16
+   }
+  ]
+ },
+ {
+  "id": "b69",
+  "name": "Almendras",
+  "per100": {
+   "kcal": 579,
+   "p": 21,
+   "c": 22,
+   "f": 50
+  },
+  "servings": [
+   {
+    "label": "1 puño",
+    "grams": 28
+   }
+  ]
+ },
+ {
+  "id": "b70",
+  "name": "Nueces",
+  "per100": {
+   "kcal": 654,
+   "p": 15,
+   "c": 14,
+   "f": 65
+  },
+  "servings": [
+   {
+    "label": "1 puño",
+    "grams": 28
+   }
+  ]
+ },
+ {
+  "id": "b71",
+  "name": "Cacahuates",
+  "per100": {
+   "kcal": 567,
+   "p": 26,
+   "c": 16,
+   "f": 49
+  },
+  "servings": [
+   {
+    "label": "1 puño",
+    "grams": 28
+   }
+  ]
+ },
+ {
+  "id": "b72",
+  "name": "Crema",
+  "per100": {
+   "kcal": 200,
+   "p": 2.4,
+   "c": 4.6,
+   "f": 19
+  },
+  "servings": [
+   {
+    "label": "1 cda",
+    "grams": 15
+   }
+  ]
+ },
+ {
+  "id": "b73",
+  "name": "Mayonesa",
+  "per100": {
+   "kcal": 680,
+   "p": 1,
+   "c": 0.6,
+   "f": 75
+  },
+  "servings": [
+   {
+    "label": "1 cda",
+    "grams": 14
+   }
+  ]
+ },
+ {
+  "id": "b74",
+  "name": "Chía",
+  "per100": {
+   "kcal": 486,
+   "p": 17,
+   "c": 42,
+   "f": 31
+  },
+  "servings": [
+   {
+    "label": "1 cda",
+    "grams": 12
+   }
+  ]
+ },
+ {
+  "id": "b75",
+  "name": "Taco al pastor",
+  "per100": {
+   "kcal": 225,
+   "p": 11,
+   "c": 17.5,
+   "f": 11.3
+  },
+  "servings": [
+   {
+    "label": "1 taco",
+    "grams": 80
+   }
+  ]
+ },
+ {
+  "id": "b76",
+  "name": "Quesadilla de queso",
+  "per100": {
+   "kcal": 300,
+   "p": 13,
+   "c": 26,
+   "f": 16
+  },
+  "servings": [
+   {
+    "label": "1 quesadilla",
+    "grams": 90
+   }
+  ]
+ },
+ {
+  "id": "b77",
+  "name": "Torta de jamón",
+  "per100": {
+   "kcal": 250,
+   "p": 11,
+   "c": 30,
+   "f": 9
+  },
+  "servings": [
+   {
+    "label": "1 torta",
+    "grams": 230
+   }
+  ]
+ },
+ {
+  "id": "b78",
+  "name": "Chilaquiles verdes",
+  "per100": {
+   "kcal": 180,
+   "p": 5,
+   "c": 20,
+   "f": 9
+  },
+  "servings": [
+   {
+    "label": "1 plato",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "b79",
+  "name": "Enchiladas de pollo",
+  "per100": {
+   "kcal": 190,
+   "p": 9,
+   "c": 18,
+   "f": 9
+  },
+  "servings": [
+   {
+    "label": "3 piezas",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "b80",
+  "name": "Pozole",
+  "per100": {
+   "kcal": 90,
+   "p": 6,
+   "c": 9,
+   "f": 3
+  },
+  "servings": [
+   {
+    "label": "1 plato",
+    "grams": 400
+   }
+  ]
+ },
+ {
+  "id": "b81",
+  "name": "Pizza de pepperoni",
+  "per100": {
+   "kcal": 270,
+   "p": 11.5,
+   "c": 30,
+   "f": 11.5
+  },
+  "servings": [
+   {
+    "label": "1 rebanada",
+    "grams": 110
+   }
+  ]
+ },
+ {
+  "id": "b82",
+  "name": "Hamburguesa",
+  "per100": {
+   "kcal": 250,
+   "p": 13,
+   "c": 24,
+   "f": 11
+  },
+  "servings": [
+   {
+    "label": "1 pieza",
+    "grams": 220
+   }
+  ]
+ },
+ {
+  "id": "b83",
+  "name": "Barra de proteína",
+  "per100": {
+   "kcal": 350,
+   "p": 30,
+   "c": 40,
+   "f": 10
+  },
+  "servings": [
+   {
+    "label": "1 barra",
+    "grams": 60
+   }
+  ]
+ },
+ {
+  "id": "b84",
+  "name": "Chocolate amargo 70%",
+  "per100": {
+   "kcal": 598,
+   "p": 7.8,
+   "c": 46,
+   "f": 43
+  },
+  "servings": [
+   {
+    "label": "2 cuadros",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "b85",
+  "name": "Refresco de cola",
+  "per100": {
+   "kcal": 42,
+   "p": 0,
+   "c": 10.6,
+   "f": 0
+  },
+  "servings": [
+   {
+    "label": "1 lata",
+    "grams": 355
+   }
+  ]
+ },
+ {
+  "id": "b86",
+  "name": "Jugo de naranja",
+  "per100": {
+   "kcal": 45,
+   "p": 0.7,
+   "c": 10.4,
+   "f": 0.2
+  },
+  "servings": [
+   {
+    "label": "1 vaso",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "b87",
+  "name": "Cerveza",
+  "per100": {
+   "kcal": 43,
+   "p": 0.5,
+   "c": 3.6,
+   "f": 0
+  },
+  "servings": [
+   {
+    "label": "1 lata",
+    "grams": 355
+   }
+  ]
+ },
+ {
+  "id": "b88",
+  "name": "Café negro",
+  "per100": {
+   "kcal": 2,
+   "p": 0.3,
+   "c": 0,
+   "f": 0
+  },
+  "servings": [
+   {
+    "label": "1 taza",
+    "grams": 240
+   }
+  ]
+ },
+ {
+  "id": "b89",
+  "name": "Azúcar",
+  "per100": {
+   "kcal": 387,
+   "p": 0,
+   "c": 100,
+   "f": 0
+  },
+  "servings": [
+   {
+    "label": "1 cdita",
+    "grams": 5
+   }
+  ]
+ },
+ {
+  "id": "b90",
+  "name": "Miel",
+  "per100": {
+   "kcal": 304,
+   "p": 0.3,
+   "c": 82,
+   "f": 0
+  },
+  "servings": [
+   {
+    "label": "1 cda",
+    "grams": 21
+   }
+  ]
+ }
+]

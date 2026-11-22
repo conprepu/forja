@@ -55,6 +55,8 @@ export default defineConfig({
   ],
   test: {
     environment: 'node',
+    // Dexie lee indexedDB al importarse: el fake tiene que cargarse antes que cualquier test.
+    setupFiles: ['fake-indexeddb/auto'],
     include: ['tests/**/*.test.{ts,tsx}', 'src/**/*.test.{ts,tsx}'],
     // El módulo virtual del SW no existe fuera del build: en tests se usa un stub.
     alias: { 'virtual:pwa-register/react': fileURLToPath(new URL('./tests/stubs/pwa-register.ts', import.meta.url)) },

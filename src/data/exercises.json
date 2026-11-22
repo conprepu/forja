@@ -1,0 +1,530 @@
+[
+ {
+  "id": "bench",
+  "name": "Press de banca",
+  "muscle": "Pecho",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "incb",
+  "name": "Press inclinado",
+  "muscle": "Pecho",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "dbb",
+  "name": "Press de banca",
+  "muscle": "Pecho",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "dbi",
+  "name": "Press inclinado",
+  "muscle": "Pecho",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "fly",
+  "name": "Aperturas",
+  "muscle": "Pecho",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "cross",
+  "name": "Cruce de poleas",
+  "muscle": "Pecho",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "mpress",
+  "name": "Press de pecho",
+  "muscle": "Pecho",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "pec",
+  "name": "Pec deck",
+  "muscle": "Pecho",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "dips",
+  "name": "Fondos",
+  "muscle": "Pecho",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "push",
+  "name": "Lagartijas",
+  "muscle": "Pecho",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "pull",
+  "name": "Dominadas",
+  "muscle": "Espalda",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "apull",
+  "name": "Dominadas asistidas",
+  "muscle": "Espalda",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "lat",
+  "name": "Jalón al pecho",
+  "muscle": "Espalda",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "brow",
+  "name": "Remo con barra",
+  "muscle": "Espalda",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "dbrow",
+  "name": "Remo con mancuerna",
+  "muscle": "Espalda",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "crow",
+  "name": "Remo sentado",
+  "muscle": "Espalda",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "mrow",
+  "name": "Remo en máquina",
+  "muscle": "Espalda",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "trow",
+  "name": "Remo T",
+  "muscle": "Espalda",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "dl",
+  "name": "Peso muerto",
+  "muscle": "Espalda",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "pullo",
+  "name": "Pullover",
+  "muscle": "Espalda",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "hyper",
+  "name": "Hiperextensiones",
+  "muscle": "Espalda",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "ohp",
+  "name": "Press militar",
+  "muscle": "Hombros",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "dbsp",
+  "name": "Press de hombro",
+  "muscle": "Hombros",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "msp",
+  "name": "Press de hombro",
+  "muscle": "Hombros",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "lra",
+  "name": "Elevaciones laterales",
+  "muscle": "Hombros",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "lrc",
+  "name": "Elevaciones laterales",
+  "muscle": "Hombros",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "rdelt",
+  "name": "Deltoide posterior",
+  "muscle": "Hombros",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "face",
+  "name": "Face pull",
+  "muscle": "Hombros",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "front",
+  "name": "Elevaciones frontales",
+  "muscle": "Hombros",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "shrug",
+  "name": "Encogimientos",
+  "muscle": "Hombros",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "bcurl",
+  "name": "Curl con barra",
+  "muscle": "Bíceps",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "dcurl",
+  "name": "Curl con mancuernas",
+  "muscle": "Bíceps",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "ham",
+  "name": "Curl martillo",
+  "muscle": "Bíceps",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "prea",
+  "name": "Curl predicador",
+  "muscle": "Bíceps",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "ccurl",
+  "name": "Curl en polea",
+  "muscle": "Bíceps",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "icurl",
+  "name": "Curl inclinado",
+  "muscle": "Bíceps",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "tpush",
+  "name": "Extensión de tríceps",
+  "muscle": "Tríceps",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "skull",
+  "name": "Press francés",
+  "muscle": "Tríceps",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "ohe",
+  "name": "Extensión sobre cabeza",
+  "muscle": "Tríceps",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "cgb",
+  "name": "Press cerrado",
+  "muscle": "Tríceps",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "kick",
+  "name": "Patada de tríceps",
+  "muscle": "Tríceps",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "bdip",
+  "name": "Fondos en banco",
+  "muscle": "Tríceps",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "squat",
+  "name": "Sentadilla",
+  "muscle": "Cuádriceps",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "fsq",
+  "name": "Sentadilla frontal",
+  "muscle": "Cuádriceps",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "lp",
+  "name": "Prensa de piernas",
+  "muscle": "Cuádriceps",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "hack",
+  "name": "Sentadilla hack",
+  "muscle": "Cuádriceps",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "lext",
+  "name": "Extensión de cuádriceps",
+  "muscle": "Cuádriceps",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "lunge",
+  "name": "Zancadas",
+  "muscle": "Cuádriceps",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "bss",
+  "name": "Sentadilla búlgara",
+  "muscle": "Cuádriceps",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "gob",
+  "name": "Sentadilla goblet",
+  "muscle": "Cuádriceps",
+  "equipment": "Kettlebell",
+  "type": "weight_reps"
+ },
+ {
+  "id": "rdl",
+  "name": "Peso muerto rumano",
+  "muscle": "Isquios",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "lcurl",
+  "name": "Curl femoral acostado",
+  "muscle": "Isquios",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "scurl",
+  "name": "Curl femoral sentado",
+  "muscle": "Isquios",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "gm",
+  "name": "Buenos días",
+  "muscle": "Isquios",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "hip",
+  "name": "Hip thrust",
+  "muscle": "Glúteos",
+  "equipment": "Barra",
+  "type": "weight_reps"
+ },
+ {
+  "id": "gkick",
+  "name": "Patada de glúteo",
+  "muscle": "Glúteos",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "abd",
+  "name": "Abducción",
+  "muscle": "Glúteos",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "bridge",
+  "name": "Puente de glúteo",
+  "muscle": "Glúteos",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "calf",
+  "name": "Elevación de talones de pie",
+  "muscle": "Pantorrillas",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "scalf",
+  "name": "Elevación de talones sentado",
+  "muscle": "Pantorrillas",
+  "equipment": "Máquina",
+  "type": "weight_reps"
+ },
+ {
+  "id": "plank",
+  "name": "Plancha",
+  "muscle": "Core",
+  "equipment": "Peso corporal",
+  "type": "time"
+ },
+ {
+  "id": "crunch",
+  "name": "Crunch",
+  "muscle": "Core",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "hlr",
+  "name": "Elevación de piernas colgado",
+  "muscle": "Core",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "wheel",
+  "name": "Rueda abdominal",
+  "muscle": "Core",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "ccr",
+  "name": "Crunch en polea",
+  "muscle": "Core",
+  "equipment": "Polea",
+  "type": "weight_reps"
+ },
+ {
+  "id": "rtw",
+  "name": "Russian twist",
+  "muscle": "Core",
+  "equipment": "Peso corporal",
+  "type": "weight_reps",
+  "bodyweight": true
+ },
+ {
+  "id": "wcurl",
+  "name": "Curl de muñeca",
+  "muscle": "Antebrazo",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "farm",
+  "name": "Caminata del granjero",
+  "muscle": "Antebrazo",
+  "equipment": "Mancuernas",
+  "type": "weight_reps"
+ },
+ {
+  "id": "tread",
+  "name": "Caminadora",
+  "muscle": "Cardio",
+  "equipment": "Máquina",
+  "type": "distance"
+ },
+ {
+  "id": "bike",
+  "name": "Bicicleta estática",
+  "muscle": "Cardio",
+  "equipment": "Máquina",
+  "type": "distance"
+ },
+ {
+  "id": "ell",
+  "name": "Elíptica",
+  "muscle": "Cardio",
+  "equipment": "Máquina",
+  "type": "distance"
+ },
+ {
+  "id": "rowm",
+  "name": "Remo",
+  "muscle": "Cardio",
+  "equipment": "Máquina",
+  "type": "distance"
+ },
+ {
+  "id": "run",
+  "name": "Correr",
+  "muscle": "Cardio",
+  "equipment": "Peso corporal",
+  "type": "distance"
+ },
+ {
+  "id": "rope",
+  "name": "Saltar la cuerda",
+  "muscle": "Cardio",
+  "equipment": "Peso corporal",
+  "type": "time"
+ }
+]

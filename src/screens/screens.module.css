@@ -1,0 +1,19 @@
+.iconBtn {
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  color: var(--tint);
+}
+.textBtn { height: var(--tap); padding: 0 8px; color: var(--tint); }
+.spacer { height: 12px; }
+.disclosure {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--label-2);
+}
+.disclosure span { color: var(--tint); text-transform: none; font-size: 15px; }
+.subtitle { margin: -4px 0 16px; padding: 0 var(--gutter); color: var(--label-2); font-size: 15px; text-transform: capitalize; }

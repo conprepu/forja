@@ -33,6 +33,8 @@ export type Task = {
   priority: Priority
   recurrence: Recurrence | null
   completedAt: Timestamp | null
+  /** Ocurrencia creada al completar esta tarea repetitiva (se borra si se desmarca). */
+  spawnedTaskId: ID | null
   order: number
   createdAt: Timestamp
   updatedAt: Timestamp

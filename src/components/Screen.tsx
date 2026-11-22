@@ -23,7 +23,7 @@ export function Screen({ title, children, action, back }: Props) {
             </button>
           )}
         </div>
-        {back && <div className={s.navTitle}>{title}</div>}
+        <div className={s.navTitle}>{back ? title : ''}</div>
         <div className={`${s.navSide} ${s.right}`}>{action}</div>
       </header>
       {!back && <h1 className={s.largeTitle}>{title}</h1>}

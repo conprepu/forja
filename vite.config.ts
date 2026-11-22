@@ -5,9 +5,11 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // GitHub Pages sirve la app en /<repo>/. El workflow pasa BASE_PATH; en local es '/'.
 const base = process.env.BASE_PATH ?? '/'
+const version = process.env.npm_package_version ?? '0.0.0'
 
 export default defineConfig({
   base,
+  define: { __APP_VERSION__: JSON.stringify(version) },
   plugins: [
     react(),
     VitePWA({

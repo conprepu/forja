@@ -1,5 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useState } from 'react'
+import { BackupReminder } from '../components/BackupReminder'
 import { EmptyState, Group } from '../components/Group'
 import { IconPlus } from '../components/icons'
 import { Screen } from '../components/Screen'
@@ -41,6 +42,8 @@ export function TodayScreen() {
       )}
 
       <TodayHabits today={today} />
+
+      <BackupReminder />
 
       {doneToday.length > 0 && (
         <Group header={

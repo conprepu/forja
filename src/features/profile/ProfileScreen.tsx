@@ -1,10 +1,11 @@
-import { Empty, Screen } from '../../ui/Screen'
+import { Screen } from '../../ui/Screen'
 import { BackupSection } from './BackupSection'
+import { GoalsSection } from './GoalsSection'
 
 export function ProfileScreen() {
   return (
     <Screen title="Perfil">
-      <Empty>Aquí irán tus datos y metas.</Empty>
+      <GoalsSection />
       <BackupSection />
     </Screen>
   )

@@ -1,9 +1,9 @@
 // Todas las escrituras a la base pasan por aquí. Los componentes solo leen con useLiveQuery.
 import { db as defaultDb, newId, nowStamp, type AppDB } from './db'
-import type { ColorName, ID, List, Task } from './types'
+import type { ColorName, Habit, ID, List, Task } from './types'
 import { INBOX_ID } from './types'
 import { nextOccurrence } from '../lib/recurrence'
-import { todayISO } from '../lib/dates'
+import { todayISO, type ISODate } from '../lib/dates'
 
 export type TaskDraft = Pick<Task, 'listId' | 'title' | 'notes' | 'dueDate' | 'dueTime' | 'priority' | 'recurrence'>
 
@@ -84,5 +84,40 @@ export async function deleteList(id: ID, db: AppDB = defaultDb) {
   await db.transaction('rw', db.lists, db.tasks, async () => {
     await db.tasks.where('listId').equals(id).delete()
     await db.lists.delete(id)
+  })
+}
+
+// ── Hábitos ──────────────────────────────────────────────────────────────
+
+export type HabitDraft = Pick<Habit, 'name' | 'color' | 'schedule'>
+
+export async function createHabit(draft: HabitDraft, db: AppDB = defaultDb): Promise<ID> {
+  const habit: Habit = { ...draft, name: draft.name.trim(), id: newId(), order: Date.now(), archivedAt: null, createdAt: nowStamp() }
+  await db.habits.add(habit)
+  return habit.id
+}
+
+export async function updateHabit(id: ID, draft: HabitDraft, db: AppDB = defaultDb) {
+  await db.habits.update(id, { ...draft, name: draft.name.trim() })
+}
+
+/** Borra el hábito y todo su historial. */
+export async function deleteHabit(id: ID, db: AppDB = defaultDb) {
+  await db.transaction('rw', db.habits, db.habitLogs, async () => {
+    await db.habitLogs.where('habitId').equals(id).delete()
+    await db.habits.delete(id)
+  })
+}
+
+/** Marca o desmarca el hábito en una fecha. Devuelve el nuevo estado. */
+export async function toggleHabit(habitId: ID, date: ISODate, db: AppDB = defaultDb): Promise<boolean> {
+  return db.transaction('rw', db.habitLogs, async () => {
+    const existing = await db.habitLogs.where('[habitId+date]').equals([habitId, date]).first()
+    if (existing) {
+      await db.habitLogs.delete(existing.id)
+      return false
+    }
+    await db.habitLogs.add({ id: newId(), habitId, date })
+    return true
   })
 }

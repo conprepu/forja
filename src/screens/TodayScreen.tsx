@@ -10,6 +10,7 @@ import type { List, Task } from '../db/types'
 import { parseISODate } from '../lib/dates'
 import { selectToday } from '../lib/today'
 import { useToday } from '../lib/useToday'
+import { TodayHabits } from './TodayHabits'
 import s from './screens.module.css'
 
 const fmtLong = new Intl.DateTimeFormat('es', { weekday: 'long', day: 'numeric', month: 'long' })
@@ -38,6 +39,8 @@ export function TodayScreen() {
       {tasks && overdue.length + dueToday.length === 0 && (
         <EmptyState title="Nada pendiente hoy" hint="Toca + para añadir una tarea para hoy." />
       )}
+
+      <TodayHabits today={today} />
 
       {doneToday.length > 0 && (
         <Group header={

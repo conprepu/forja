@@ -1,7 +1,7 @@
 import 'fake-indexeddb/auto'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { AppDB } from './db'
-import { createList, createTask, deleteList, emptyDraft, setTaskDone } from './repo'
+import { createHabit, createList, createTask, deleteHabit, deleteList, emptyDraft, setTaskDone, toggleHabit } from './repo'
 import { INBOX_ID } from './types'
 
 let db: AppDB
@@ -55,5 +55,18 @@ describe('listas', () => {
   })
   it('la bandeja no se puede borrar', async () => {
     await expect(deleteList(INBOX_ID, db)).rejects.toThrow()
+  })
+})
+
+describe('hábitos', () => {
+  it('toggleHabit marca y desmarca', async () => {
+    const id = await createHabit({ name: 'Leer', color: 'green', schedule: { kind: 'daily' } }, db)
+    expect(await toggleHabit(id, '2026-11-22', db)).toBe(true)
+    expect(await db.habitLogs.count()).toBe(1)
+    expect(await toggleHabit(id, '2026-11-22', db)).toBe(false)
+    expect(await db.habitLogs.count()).toBe(0)
+    await toggleHabit(id, '2026-11-21', db)
+    await deleteHabit(id, db)
+    expect(await db.habitLogs.count()).toBe(0)
   })
 })

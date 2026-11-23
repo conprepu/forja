@@ -9,7 +9,7 @@ export const THEMES: readonly { value: Theme; label: string }[] = [
 export const parseTheme = (v: unknown): Theme => (v === 'light' || v === 'dark' ? v : 'auto')
 
 // Mismos colores de fondo que los tokens de index.css (para la barra de estado del teléfono).
-const BG = { light: '#efede0', dark: '#06070a' } as const
+const BG = { light: '#e8ebf5', dark: '#05060f' } as const
 
 /** Color de la barra de estado: el del tema elegido, o el del sistema en automático. */
 export const themeColor = (theme: Theme, systemDark: boolean): string => BG[theme === 'auto' ? (systemDark ? 'dark' : 'light') : theme]

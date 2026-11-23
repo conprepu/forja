@@ -21,7 +21,7 @@ interface Props {
   color?: string
 }
 
-export function LineSeries({ data, xKey, yKey, name, unit = '', label, height = 200, color = 'var(--acc)' }: Props) {
+export function LineSeries({ data, xKey, yKey, name, unit = '', label, height = 200, color = 'var(--cy)' }: Props) {
   return (
     <figure role="img" aria-label={label} className="m-0">
       <ResponsiveContainer width="100%" height={height}>
@@ -37,7 +37,7 @@ export function LineSeries({ data, xKey, yKey, name, unit = '', label, height = 
   )
 }
 
-export function BarSeries({ data, xKey, yKey, name, unit = '', label, height = 160, color = 'var(--acc)' }: Props) {
+export function BarSeries({ data, xKey, yKey, name, unit = '', label, height = 160, color = 'var(--cy)' }: Props) {
   return (
     <figure role="img" aria-label={label} className="m-0">
       <ResponsiveContainer width="100%" height={height}>

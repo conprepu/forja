@@ -86,7 +86,7 @@ export function NutritionTab() {
                     formatter={(v) => [`${v} kcal`, 'Calorías']}
                   />
                   <ReferenceLine y={goals.kcal} stroke="var(--c)" strokeDasharray="4 4" />
-                  <Bar dataKey="kcal" fill="var(--acc)" radius={0} isAnimationActive={false} />
+                  <Bar dataKey="kcal" fill="var(--cy)" radius={0} isAnimationActive={false} />
                 </BarChart>
               </ResponsiveContainer>
             </figure>

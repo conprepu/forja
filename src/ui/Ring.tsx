@@ -18,7 +18,7 @@ export function Ring({ value, goal, size = 150, label }: Props) {
   const over = goal > 0 && value > goal
   const left = Math.round(goal - value)
   const filled = over ? TICKS : Math.round(progress(value, goal) * TICKS)
-  const on = over ? 'var(--warn)' : 'var(--acc)'
+  const on = over ? 'var(--warn)' : 'var(--cy)'
 
   return (
     <div className="relative shrink-0" style={{ width: size, height: size }} role="img" aria-label={label}>
@@ -41,7 +41,7 @@ export function Ring({ value, goal, size = 150, label }: Props) {
             />
           )
         })}
-        <circle cx={mid} cy={mid} r={inner - 7} fill="none" stroke="var(--cy)" strokeWidth={1} strokeDasharray="2 5" opacity={0.7} />
+        <circle cx={mid} cy={mid} r={inner - 7} fill="none" stroke="var(--acc)" strokeWidth={1} strokeDasharray="2 5" opacity={0.7} />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center" aria-hidden="true">
         <b className={`font-num text-[36px] leading-none font-bold ${over ? 'text-warn' : ''}`}>{Math.abs(left).toLocaleString('es-MX')}</b>

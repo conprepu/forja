@@ -11,7 +11,7 @@ App personal (PWA) de entreno estilo Hevy Premium + tracking de calorías y macr
 - Mobile-first para iPhone: targets de 44 px o más, `env(safe-area-inset-*)`, teclado numérico (`inputmode="decimal"`) en peso, reps y gramos.
 - El entreno activo debe sobrevivir a recargar o cerrar la app (persistido en Dexie).
 - Los timers se basan en timestamps (`endsAt`), nunca en contar ticks.
-- Diseño: estilo HUD de Cyberpunk 2077 (decisión del usuario, 2026-11-22; sustituye a los tokens de `legacy/prototype.html`). Tokens en `src/styles/index.css`: amarillo neón `--acc` (relleno) y `--accfg` (texto), cian `--cy`, Rajdhani para títulos y números, Share Tech Mono solo para datos, Inter para texto. Clases `hud`, `cut-sm`, `ui-btn`. Colores de macros: P rojo, C ámbar, G morado. Contexto del producto en `PRODUCT.md`.
+- Diseño: estilo HUD de Cyberpunk 2077 (decisión del usuario, 2026-11-22; sustituye a los tokens de `legacy/prototype.html`). Tokens en `src/styles/index.css`: rojo `--acc` (relleno de acción), azul `--accfg` (acento en texto), cian `--cy` (datos y progreso), amarillo solo como aviso (`--warn`), Rajdhani para títulos y números, Share Tech Mono solo para datos, Inter para texto. Clases `hud`, `cut-sm`, `ui-btn`. Colores de macros: P rojo, C ámbar, G morado. Contexto del producto en `PRODUCT.md`.
 
 ## Comandos
 - `npm run dev`: servidor local

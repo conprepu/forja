@@ -1,29 +1,30 @@
 @import 'tailwindcss';
 
 /* Forja · HUD estilo Cyberpunk 2077.
-   Mundo principal: oscuro (pantalla de cyberdeck) con amarillo neón, cian y rojo.
-   El tema claro es la versión "luz de día": papel amarillento, tinta negra, amarillo como relleno.
-   --acc es relleno (botones, barras); --accfg es el acento cuando se usa como texto o trazo. */
+   Mundo principal: oscuro (pantalla de cyberdeck) azul marino casi negro, con rojo y azul/cian como colores de marca.
+   Rojo = acción y marca (botones, marcas de panel); azul y cian = información, progreso y acentos de texto;
+   amarillo = solo señal de aviso. El tema claro es la versión "luz de día": papel azulado, tinta oscura.
+   --acc es relleno; --accfg es el acento cuando se usa como texto o trazo. */
 :root {
   color-scheme: light dark;
-  --bg: light-dark(#efede0, #06070a);
-  --card: light-dark(#faf9f2, #0d0f14);
-  --ink: light-dark(#0b0c10, #eef1f5);
-  --mut: light-dark(#575a63, #8d97a6);
-  --line: light-dark(#c4c0aa, #262b36);
-  --soft: light-dark(#e2dfcc, #161922);
-  --acc: #fcee0a;
-  --accfg: light-dark(#675f00, #fcee0a);
-  --accink: #0a0a00;
-  --cy: light-dark(#00697a, #00f0ff);
+  --bg: light-dark(#e8ebf5, #05060f);
+  --card: light-dark(#f7f8fd, #0a0d1c);
+  --ink: light-dark(#0a0d1c, #eaf0ff);
+  --mut: light-dark(#4f5875, #8a97bd);
+  --line: light-dark(#bcc3dc, #232c52);
+  --soft: light-dark(#dde2f1, #121830);
+  --acc: light-dark(#d9002f, #ff2d55);
+  --accfg: light-dark(#0a3fc4, #5b8cff);
+  --accink: light-dark(#ffffff, #0b0005);
+  --cy: light-dark(#00708f, #00f0ff);
   --ok: light-dark(#00805b, #25f5b0);
-  --okbg: light-dark(#d5f0e4, #06271f);
+  --okbg: light-dark(#d3efe6, #052420);
   --p: light-dark(#c8002b, #ff3358);
   --c: light-dark(#a85d00, #ff9f1c);
   --f: light-dark(#6a2fc2, #b985ff);
-  --warn: light-dark(#b33e00, #ff7a1a);
-  --glow: light-dark(transparent, rgb(252 238 10 / 0.55));
-  --scrim: light-dark(rgb(11 12 16 / 0.55), rgb(0 0 0 / 0.78));
+  --warn: light-dark(#8a6d00, #fcee0a);
+  --glow: light-dark(transparent, rgb(255 45 85 / 0.6));
+  --scrim: light-dark(rgb(10 13 28 / 0.55), rgb(0 0 8 / 0.78));
   --tabbar-h: 62px;
   --cut: 10px;
 }
@@ -82,10 +83,10 @@
   html {
     background: var(--bg);
     color: var(--ink);
-    /* Resplandor ambiental: amarillo arriba a la derecha, cian abajo a la izquierda. */
+    /* Resplandor ambiental: rojo arriba a la derecha, azul abajo a la izquierda. */
     background-image:
-      radial-gradient(60% 40% at 100% 0%, light-dark(rgb(242 227 0 / 0.16), rgb(252 238 10 / 0.07)), transparent 70%),
-      radial-gradient(70% 45% at 0% 100%, light-dark(rgb(0 105 122 / 0.08), rgb(0 240 255 / 0.06)), transparent 70%);
+      radial-gradient(60% 40% at 100% 0%, light-dark(rgb(217 0 47 / 0.09), rgb(255 45 85 / 0.10)), transparent 70%),
+      radial-gradient(70% 45% at 0% 100%, light-dark(rgb(10 63 196 / 0.10), rgb(60 100 255 / 0.12)), transparent 70%);
     background-attachment: fixed;
   }
   body {
@@ -134,7 +135,7 @@
 
 @layer components {
   /* Panel HUD: esquinas cortadas (arriba a la derecha y abajo a la izquierda), borde de 1 px,
-     marca amarilla en la esquina superior izquierda. */
+     marca roja en la esquina superior izquierda. */
   .hud {
     --cut: 14px;
     position: relative;
@@ -211,7 +212,7 @@
     text-transform: uppercase;
   }
 
-  /* Subtítulo de panel: barra amarilla corta + línea que se desvanece. */
+  /* Subtítulo de panel: barra roja corta + línea que se desvanece. */
   .hud-rule {
     height: 1px;
     background: linear-gradient(to right, var(--acc) 0 36px, var(--line) 36px);

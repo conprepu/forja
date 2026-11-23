@@ -67,7 +67,7 @@ export function DaySummary({ date, eaten, goals, waterMl }: Props) {
               aria-label={i < filled ? `Quitar vaso ${i + 1}` : `Agregar vaso ${i + 1}`}
               aria-pressed={i < filled}
               onClick={() => void addWater(db, date, i < filled ? -ML_PER_GLASS : ML_PER_GLASS)}
-              className={`h-11 w-11 cut-sm ${i < filled ? 'bg-acc' : 'bg-soft'}`}
+              className={`h-11 w-11 cut-sm ${i < filled ? 'bg-cy' : 'bg-soft'}`}
             />
           ))}
         </div>

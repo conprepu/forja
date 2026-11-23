@@ -81,7 +81,7 @@ export function SummaryTab() {
               <li key={m.muscle} className="grid grid-cols-[96px_1fr_28px] items-center gap-2 text-sm">
                 <span className="truncate">{m.muscle}</span>
                 <span className="h-2.5 overflow-hidden rounded-full bg-soft" aria-hidden="true">
-                  <span className="block h-full rounded-full bg-acc" style={{ width: `${(m.sets / topSets) * 100}%` }} />
+                  <span className="block h-full rounded-full bg-cy" style={{ width: `${(m.sets / topSets) * 100}%` }} />
                 </span>
                 <b className="text-right font-num">{m.sets}</b>
               </li>

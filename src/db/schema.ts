@@ -145,6 +145,10 @@ export interface Food {
   per100: Macros & { fiber?: number }
   servings: { label: string; grams: number }[]
   source: FoodSource
+  /** Otras formas de nombrarlo ("tocino", "bacon"): ayudan a reconocerlo al describir la comida. */
+  aka?: string[]
+  /** Palabras sueltas para las que este es el alimento de siempre ("leche" → leche entera). */
+  dflt?: string[]
 }
 
 /** Macros ya calculados al momento de registrar: editar un alimento no altera el historial. */

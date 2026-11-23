@@ -1,0 +1,2459 @@
+[
+  {
+    "id": "hamburguesa",
+    "name": "Hamburguesa",
+    "words": [
+      "hamburguesa",
+      "hamburgesa",
+      "burger"
+    ],
+    "plural": 2,
+    "assume": "Supuse una hamburguesa de res sencilla.",
+    "base": [
+      {
+        "f": "Pan de hamburguesa",
+        "g": 60,
+        "k": [
+          "pan",
+          "bollo"
+        ]
+      },
+      {
+        "f": "Carne para hamburguesa cocida",
+        "g": 100,
+        "k": [
+          "carne",
+          "res",
+          "patty"
+        ],
+        "main": true
+      },
+      {
+        "f": "Jitomate",
+        "g": 30,
+        "k": [
+          "jitomate",
+          "tomate"
+        ]
+      },
+      {
+        "f": "Lechuga",
+        "g": 10,
+        "k": [
+          "lechuga"
+        ]
+      },
+      {
+        "f": "Cebolla",
+        "g": 10,
+        "k": [
+          "cebolla"
+        ]
+      },
+      {
+        "f": "Mayonesa",
+        "g": 10,
+        "k": [
+          "mayonesa",
+          "mayo",
+          "aderezo"
+        ]
+      },
+      {
+        "f": "Cátsup",
+        "g": 10,
+        "k": [
+          "catsup",
+          "ketchup"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "pollo"
+        ],
+        "label": "de pollo",
+        "main": [
+          {
+            "f": "Pechuga de pollo cocida",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "pavo"
+        ],
+        "label": "de pavo",
+        "main": [
+          {
+            "f": "Pavo molido cocido",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "pescado"
+        ],
+        "label": "de pescado",
+        "main": [
+          {
+            "f": "Pescado empanizado frito",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "arrachera",
+          "angus"
+        ],
+        "label": "de arrachera",
+        "main": [
+          {
+            "f": "Arrachera cocida",
+            "g": 110
+          }
+        ]
+      },
+      {
+        "words": [
+          "vegetariana",
+          "vegana",
+          "veggie",
+          "lentejas",
+          "garbanzo"
+        ],
+        "label": "vegetariana",
+        "main": [
+          {
+            "f": "Garbanzos cocidos",
+            "g": 100
+          }
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "tocino",
+          "bacon",
+          "beicon"
+        ],
+        "items": [
+          {
+            "f": "Tocino frito",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "queso",
+          "cheddar",
+          "quesos"
+        ],
+        "items": [
+          {
+            "f": "Queso amarillo",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "huevo"
+        ],
+        "items": [
+          {
+            "f": "Huevo frito",
+            "g": 46
+          }
+        ]
+      },
+      {
+        "words": [
+          "guacamole"
+        ],
+        "items": [
+          {
+            "f": "Guacamole",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "aguacate"
+        ],
+        "items": [
+          {
+            "f": "Aguacate",
+            "g": 40
+          }
+        ]
+      },
+      {
+        "words": [
+          "pina"
+        ],
+        "items": [
+          {
+            "f": "Piña",
+            "g": 40
+          }
+        ]
+      },
+      {
+        "words": [
+          "champinon",
+          "hongo",
+          "setas"
+        ],
+        "items": [
+          {
+            "f": "Champiñones",
+            "g": 40
+          }
+        ]
+      },
+      {
+        "words": [
+          "jalapeno",
+          "chile"
+        ],
+        "items": [
+          {
+            "f": "Chile jalapeño",
+            "g": 14
+          }
+        ]
+      },
+      {
+        "words": [
+          "pepinillo",
+          "pickle"
+        ],
+        "items": [
+          {
+            "f": "Pepinillos",
+            "g": 15
+          }
+        ]
+      },
+      {
+        "words": [
+          "bbq"
+        ],
+        "items": [
+          {
+            "f": "Salsa BBQ",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "chorizo"
+        ],
+        "items": [
+          {
+            "f": "Chorizo",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "jamon"
+        ],
+        "items": [
+          {
+            "f": "Jamón de cerdo",
+            "g": 28
+          }
+        ]
+      },
+      {
+        "words": [
+          "mostaza"
+        ],
+        "items": [
+          {
+            "f": "Mostaza",
+            "g": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hotdog",
+    "name": "Hot dog",
+    "words": [
+      "hot dog",
+      "hotdog",
+      "jocho",
+      "dogo",
+      "perro caliente"
+    ],
+    "plural": 2,
+    "assume": "Supuse un hot dog sencillo con salchicha.",
+    "base": [
+      {
+        "f": "Pan de hot dog",
+        "g": 45,
+        "k": [
+          "pan"
+        ]
+      },
+      {
+        "f": "Salchicha",
+        "g": 45,
+        "k": [
+          "salchicha"
+        ],
+        "main": true
+      },
+      {
+        "f": "Cátsup",
+        "g": 10,
+        "k": [
+          "catsup",
+          "ketchup"
+        ]
+      },
+      {
+        "f": "Mostaza",
+        "g": 5,
+        "k": [
+          "mostaza"
+        ]
+      },
+      {
+        "f": "Mayonesa",
+        "g": 10,
+        "k": [
+          "mayonesa",
+          "mayo"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "sonora",
+          "dogo",
+          "completo",
+          "completa",
+          "envuelto"
+        ],
+        "label": "estilo Sonora",
+        "add": [
+          {
+            "f": "Tocino frito",
+            "g": 20
+          },
+          {
+            "f": "Frijoles refritos",
+            "g": 30
+          },
+          {
+            "f": "Jitomate",
+            "g": 25
+          },
+          {
+            "f": "Cebolla",
+            "g": 15
+          },
+          {
+            "f": "Aguacate",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "pavo"
+        ],
+        "label": "de pavo",
+        "main": [
+          {
+            "f": "Salchicha de pavo",
+            "g": 40
+          }
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "queso"
+        ],
+        "items": [
+          {
+            "f": "Queso amarillo",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "tocino",
+          "bacon"
+        ],
+        "items": [
+          {
+            "f": "Tocino frito",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "frijol"
+        ],
+        "items": [
+          {
+            "f": "Frijoles refritos",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "jitomate",
+          "tomate"
+        ],
+        "items": [
+          {
+            "f": "Jitomate",
+            "g": 25
+          }
+        ]
+      },
+      {
+        "words": [
+          "cebolla"
+        ],
+        "items": [
+          {
+            "f": "Cebolla",
+            "g": 15
+          }
+        ]
+      },
+      {
+        "words": [
+          "aguacate"
+        ],
+        "items": [
+          {
+            "f": "Aguacate",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "guacamole"
+        ],
+        "items": [
+          {
+            "f": "Guacamole",
+            "g": 25
+          }
+        ]
+      },
+      {
+        "words": [
+          "pico de gallo",
+          "pico"
+        ],
+        "items": [
+          {
+            "f": "Pico de gallo",
+            "g": 25
+          }
+        ]
+      },
+      {
+        "words": [
+          "jalapeno",
+          "chile"
+        ],
+        "items": [
+          {
+            "f": "Chile jalapeño",
+            "g": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "taco",
+    "name": "Taco",
+    "words": [
+      "taco"
+    ],
+    "plural": 3,
+    "orden": 4,
+    "doble": [
+      "tortilla"
+    ],
+    "assume": "Supuse tacos al pastor; di “de bistec”, “de pollo”, “de carnitas”… para cambiarlo.",
+    "base": [
+      {
+        "f": "Tortilla de maíz",
+        "g": 30,
+        "k": [
+          "tortilla"
+        ]
+      },
+      {
+        "f": "Carne al pastor",
+        "g": 50,
+        "k": [
+          "carne"
+        ],
+        "main": true
+      },
+      {
+        "f": "Piña",
+        "g": 10,
+        "k": [
+          "pina"
+        ]
+      },
+      {
+        "f": "Cebolla",
+        "g": 5,
+        "k": [
+          "cebolla"
+        ]
+      },
+      {
+        "f": "Cilantro",
+        "g": 3,
+        "k": [
+          "cilantro"
+        ]
+      },
+      {
+        "f": "Salsa roja o verde",
+        "g": 15,
+        "k": [
+          "salsa"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "quesabirria",
+          "quesabirrias"
+        ],
+        "label": "de quesabirria",
+        "main": [
+          {
+            "f": "Barbacoa de res",
+            "g": 50
+          }
+        ],
+        "add": [
+          {
+            "f": "Queso Oaxaca",
+            "g": 25
+          },
+          {
+            "f": "Aceite vegetal",
+            "g": 5
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "campechano",
+          "campechanos"
+        ],
+        "label": "campechano",
+        "main": [
+          {
+            "f": "Bistec de res cocido",
+            "g": 30
+          },
+          {
+            "f": "Chorizo",
+            "g": 25
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "gobernador"
+        ],
+        "label": "gobernador",
+        "main": [
+          {
+            "f": "Camarones empanizados",
+            "g": 40
+          }
+        ],
+        "add": [
+          {
+            "f": "Queso Oaxaca",
+            "g": 20
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "canasta",
+          "sudado",
+          "sudados"
+        ],
+        "label": "de canasta",
+        "replace": [
+          {
+            "f": "Taco de canasta",
+            "g": 45
+          }
+        ]
+      },
+      {
+        "words": [
+          "dorado",
+          "dorados",
+          "flauta",
+          "flautas"
+        ],
+        "label": "dorado",
+        "main": [
+          {
+            "f": "Pollo desmenuzado",
+            "g": 40
+          }
+        ],
+        "add": [
+          {
+            "f": "Aceite vegetal",
+            "g": 5
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "pastor",
+          "adobada"
+        ],
+        "label": "al pastor",
+        "main": [
+          {
+            "f": "Carne al pastor",
+            "g": 50
+          }
+        ]
+      },
+      {
+        "words": [
+          "arrachera",
+          "asada",
+          "carne asada"
+        ],
+        "label": "de carne asada",
+        "main": [
+          {
+            "f": "Arrachera cocida",
+            "g": 50
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "bistec",
+          "res"
+        ],
+        "label": "de bistec",
+        "main": [
+          {
+            "f": "Bistec de res cocido",
+            "g": 50
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "carnitas",
+          "puerco",
+          "cerdo"
+        ],
+        "label": "de carnitas",
+        "main": [
+          {
+            "f": "Carnitas de cerdo",
+            "g": 55
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "suadero"
+        ],
+        "label": "de suadero",
+        "main": [
+          {
+            "f": "Suadero cocido",
+            "g": 50
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "barbacoa",
+          "birria"
+        ],
+        "label": "de barbacoa",
+        "main": [
+          {
+            "f": "Barbacoa de res",
+            "g": 55
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "cochinita",
+          "pibil"
+        ],
+        "label": "de cochinita",
+        "main": [
+          {
+            "f": "Cochinita pibil",
+            "g": 55
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "pollo"
+        ],
+        "label": "de pollo",
+        "main": [
+          {
+            "f": "Pollo desmenuzado",
+            "g": 50
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "chorizo"
+        ],
+        "label": "de chorizo",
+        "main": [
+          {
+            "f": "Chorizo",
+            "g": 35
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "lengua"
+        ],
+        "label": "de lengua",
+        "main": [
+          {
+            "f": "Lengua de res cocida",
+            "g": 50
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "pescado",
+          "baja"
+        ],
+        "label": "de pescado",
+        "main": [
+          {
+            "f": "Pescado empanizado frito",
+            "g": 50
+          }
+        ],
+        "add": [
+          {
+            "f": "Col",
+            "g": 15
+          },
+          {
+            "f": "Mayonesa",
+            "g": 8
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "camaron"
+        ],
+        "label": "de camarón",
+        "main": [
+          {
+            "f": "Camarones empanizados",
+            "g": 50
+          }
+        ],
+        "add": [
+          {
+            "f": "Col",
+            "g": 15
+          },
+          {
+            "f": "Mayonesa",
+            "g": 8
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "frijol"
+        ],
+        "label": "de frijol",
+        "main": [
+          {
+            "f": "Frijoles refritos",
+            "g": 50
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "nopal"
+        ],
+        "label": "de nopal",
+        "main": [
+          {
+            "f": "Nopales cocidos",
+            "g": 50
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      },
+      {
+        "words": [
+          "papa"
+        ],
+        "label": "de papa",
+        "main": [
+          {
+            "f": "Papa cocida",
+            "g": 50
+          }
+        ],
+        "drop": [
+          "pina"
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "queso"
+        ],
+        "items": [
+          {
+            "f": "Queso Oaxaca",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "guacamole"
+        ],
+        "items": [
+          {
+            "f": "Guacamole",
+            "g": 25
+          }
+        ]
+      },
+      {
+        "words": [
+          "aguacate"
+        ],
+        "items": [
+          {
+            "f": "Aguacate",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "crema"
+        ],
+        "items": [
+          {
+            "f": "Crema",
+            "g": 10
+          }
+        ]
+      },
+      {
+        "words": [
+          "frijol"
+        ],
+        "items": [
+          {
+            "f": "Frijoles refritos",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "pina"
+        ],
+        "items": [
+          {
+            "f": "Piña",
+            "g": 10
+          }
+        ]
+      },
+      {
+        "words": [
+          "nopal"
+        ],
+        "items": [
+          {
+            "f": "Nopales cocidos",
+            "g": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "torta",
+    "name": "Torta",
+    "words": [
+      "torta"
+    ],
+    "plural": 2,
+    "assume": "Supuse una torta de jamón con queso.",
+    "base": [
+      {
+        "f": "Bolillo",
+        "g": 80,
+        "k": [
+          "pan",
+          "bolillo",
+          "telera"
+        ]
+      },
+      {
+        "f": "Jamón de cerdo",
+        "g": 40,
+        "k": [
+          "jamon"
+        ],
+        "main": true
+      },
+      {
+        "f": "Queso amarillo",
+        "g": 20,
+        "k": [
+          "queso"
+        ],
+        "main": true
+      },
+      {
+        "f": "Mayonesa",
+        "g": 12,
+        "k": [
+          "mayonesa",
+          "mayo"
+        ]
+      },
+      {
+        "f": "Frijoles refritos",
+        "g": 30,
+        "k": [
+          "frijol"
+        ]
+      },
+      {
+        "f": "Aguacate",
+        "g": 30,
+        "k": [
+          "aguacate"
+        ]
+      },
+      {
+        "f": "Jitomate",
+        "g": 25,
+        "k": [
+          "jitomate",
+          "tomate"
+        ]
+      },
+      {
+        "f": "Cebolla",
+        "g": 10,
+        "k": [
+          "cebolla"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "milanesa pollo",
+          "pollo empanizado"
+        ],
+        "label": "de milanesa de pollo",
+        "main": [
+          {
+            "f": "Milanesa de pollo",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "cubana"
+        ],
+        "label": "cubana",
+        "main": [
+          {
+            "f": "Milanesa de res",
+            "g": 70
+          },
+          {
+            "f": "Jamón de cerdo",
+            "g": 30
+          },
+          {
+            "f": "Salchicha",
+            "g": 30
+          },
+          {
+            "f": "Huevo frito",
+            "g": 46
+          },
+          {
+            "f": "Queso amarillo",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "tamal",
+          "guajolota"
+        ],
+        "label": "de tamal",
+        "replace": [
+          {
+            "f": "Bolillo",
+            "g": 80
+          },
+          {
+            "f": "Tamal de carne",
+            "g": 130
+          }
+        ]
+      },
+      {
+        "words": [
+          "milanesa",
+          "empanizada"
+        ],
+        "label": "de milanesa",
+        "main": [
+          {
+            "f": "Milanesa de res",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "pierna",
+          "adobada"
+        ],
+        "label": "de pierna",
+        "main": [
+          {
+            "f": "Lomo de cerdo cocido",
+            "g": 90
+          }
+        ]
+      },
+      {
+        "words": [
+          "pastor"
+        ],
+        "label": "al pastor",
+        "main": [
+          {
+            "f": "Carne al pastor",
+            "g": 90
+          },
+          {
+            "f": "Piña",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "asada",
+          "arrachera",
+          "bistec",
+          "carne"
+        ],
+        "label": "de carne asada",
+        "main": [
+          {
+            "f": "Arrachera cocida",
+            "g": 90
+          }
+        ]
+      },
+      {
+        "words": [
+          "chorizo"
+        ],
+        "label": "de chorizo",
+        "main": [
+          {
+            "f": "Chorizo",
+            "g": 60
+          }
+        ]
+      },
+      {
+        "words": [
+          "huevo"
+        ],
+        "label": "de huevo",
+        "main": [
+          {
+            "f": "Huevo revuelto",
+            "g": 122
+          }
+        ]
+      },
+      {
+        "words": [
+          "salchicha"
+        ],
+        "label": "de salchicha",
+        "main": [
+          {
+            "f": "Salchicha",
+            "g": 90
+          }
+        ]
+      },
+      {
+        "words": [
+          "pollo"
+        ],
+        "label": "de pollo",
+        "main": [
+          {
+            "f": "Pollo desmenuzado",
+            "g": 90
+          }
+        ]
+      },
+      {
+        "words": [
+          "atun"
+        ],
+        "label": "de atún",
+        "main": [
+          {
+            "f": "Ensalada de atún",
+            "g": 90
+          }
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "queso"
+        ],
+        "items": [
+          {
+            "f": "Queso amarillo",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "tocino",
+          "bacon"
+        ],
+        "items": [
+          {
+            "f": "Tocino frito",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "huevo"
+        ],
+        "items": [
+          {
+            "f": "Huevo frito",
+            "g": 46
+          }
+        ]
+      },
+      {
+        "words": [
+          "jamon"
+        ],
+        "items": [
+          {
+            "f": "Jamón de cerdo",
+            "g": 40
+          }
+        ]
+      },
+      {
+        "words": [
+          "salchicha"
+        ],
+        "items": [
+          {
+            "f": "Salchicha",
+            "g": 45
+          }
+        ]
+      },
+      {
+        "words": [
+          "pina"
+        ],
+        "items": [
+          {
+            "f": "Piña",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "chile",
+          "jalapeno"
+        ],
+        "items": [
+          {
+            "f": "Chile jalapeño",
+            "g": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quesadilla",
+    "name": "Quesadilla",
+    "words": [
+      "quesadilla"
+    ],
+    "plural": 2,
+    "doble": [
+      "queso"
+    ],
+    "assume": "Supuse una quesadilla de queso en tortilla de maíz.",
+    "base": [
+      {
+        "f": "Tortilla de maíz",
+        "g": 60,
+        "k": [
+          "tortilla"
+        ]
+      },
+      {
+        "f": "Queso Oaxaca",
+        "g": 40,
+        "k": [
+          "queso"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "flor de calabaza",
+          "flor"
+        ],
+        "label": "de flor de calabaza",
+        "add": [
+          {
+            "f": "Flor de calabaza",
+            "g": 50
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "harina"
+        ],
+        "label": "de harina",
+        "swap": {
+          "tortilla": {
+            "f": "Tortilla de harina",
+            "g": 50
+          }
+        },
+        "asExtra": true
+      },
+      {
+        "words": [
+          "quesabirria",
+          "birria"
+        ],
+        "label": "de birria",
+        "add": [
+          {
+            "f": "Barbacoa de res",
+            "g": 50
+          },
+          {
+            "f": "Aceite vegetal",
+            "g": 5
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "champinon",
+          "hongo",
+          "setas"
+        ],
+        "label": "de champiñones",
+        "add": [
+          {
+            "f": "Champiñones",
+            "g": 40
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "pollo",
+          "tinga"
+        ],
+        "label": "de pollo",
+        "add": [
+          {
+            "f": "Pollo desmenuzado",
+            "g": 40
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "pastor"
+        ],
+        "label": "al pastor",
+        "add": [
+          {
+            "f": "Carne al pastor",
+            "g": 40
+          },
+          {
+            "f": "Piña",
+            "g": 10
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "asada",
+          "arrachera",
+          "bistec",
+          "carne"
+        ],
+        "label": "de carne",
+        "add": [
+          {
+            "f": "Arrachera cocida",
+            "g": 40
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "chorizo"
+        ],
+        "label": "de chorizo",
+        "add": [
+          {
+            "f": "Chorizo",
+            "g": 30
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "jamon"
+        ],
+        "label": "de jamón",
+        "add": [
+          {
+            "f": "Jamón de cerdo",
+            "g": 30
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "frijol"
+        ],
+        "label": "de frijol",
+        "add": [
+          {
+            "f": "Frijoles refritos",
+            "g": 40
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "papa"
+        ],
+        "label": "de papa",
+        "add": [
+          {
+            "f": "Papa cocida",
+            "g": 50
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "nopal"
+        ],
+        "label": "de nopal",
+        "add": [
+          {
+            "f": "Nopales cocidos",
+            "g": 40
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "rajas"
+        ],
+        "label": "de rajas",
+        "add": [
+          {
+            "f": "Rajas de chile poblano",
+            "g": 40
+          }
+        ],
+        "asExtra": true
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "guacamole"
+        ],
+        "items": [
+          {
+            "f": "Guacamole",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "aguacate"
+        ],
+        "items": [
+          {
+            "f": "Aguacate",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "crema"
+        ],
+        "items": [
+          {
+            "f": "Crema",
+            "g": 15
+          }
+        ]
+      },
+      {
+        "words": [
+          "frijol"
+        ],
+        "items": [
+          {
+            "f": "Frijoles refritos",
+            "g": 40
+          }
+        ]
+      },
+      {
+        "words": [
+          "salsa"
+        ],
+        "items": [
+          {
+            "f": "Salsa roja o verde",
+            "g": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "burrito",
+    "name": "Burrito",
+    "words": [
+      "burrito"
+    ],
+    "plural": 2,
+    "assume": "Supuse un burrito de carne asada.",
+    "base": [
+      {
+        "f": "Tortilla de harina",
+        "g": 70,
+        "k": [
+          "tortilla"
+        ]
+      },
+      {
+        "f": "Arrachera cocida",
+        "g": 70,
+        "k": [
+          "carne"
+        ],
+        "main": true
+      },
+      {
+        "f": "Arroz blanco cocido",
+        "g": 40,
+        "k": [
+          "arroz"
+        ]
+      },
+      {
+        "f": "Frijoles refritos",
+        "g": 50,
+        "k": [
+          "frijol"
+        ]
+      },
+      {
+        "f": "Queso Oaxaca",
+        "g": 20,
+        "k": [
+          "queso"
+        ]
+      },
+      {
+        "f": "Pico de gallo",
+        "g": 25,
+        "k": [
+          "pico"
+        ]
+      },
+      {
+        "f": "Crema",
+        "g": 10,
+        "k": [
+          "crema"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "pollo"
+        ],
+        "label": "de pollo",
+        "main": [
+          {
+            "f": "Pollo desmenuzado",
+            "g": 70
+          }
+        ]
+      },
+      {
+        "words": [
+          "pastor"
+        ],
+        "label": "al pastor",
+        "main": [
+          {
+            "f": "Carne al pastor",
+            "g": 70
+          }
+        ]
+      },
+      {
+        "words": [
+          "machaca",
+          "cecina"
+        ],
+        "label": "de machaca",
+        "main": [
+          {
+            "f": "Cecina",
+            "g": 60
+          }
+        ]
+      },
+      {
+        "words": [
+          "camaron"
+        ],
+        "label": "de camarón",
+        "main": [
+          {
+            "f": "Camarón cocido",
+            "g": 70
+          }
+        ]
+      },
+      {
+        "words": [
+          "frijol",
+          "vegetariano"
+        ],
+        "label": "de frijol",
+        "main": [
+          {
+            "f": "Frijoles pintos cocidos",
+            "g": 70
+          }
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "guacamole"
+        ],
+        "items": [
+          {
+            "f": "Guacamole",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "aguacate"
+        ],
+        "items": [
+          {
+            "f": "Aguacate",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "lechuga"
+        ],
+        "items": [
+          {
+            "f": "Lechuga",
+            "g": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sandwich",
+    "name": "Sándwich",
+    "words": [
+      "sandwich",
+      "sandwiche",
+      "sandwichito",
+      "emparedado"
+    ],
+    "plural": 2,
+    "assume": "Supuse un sándwich de jamón de pavo y queso.",
+    "base": [
+      {
+        "f": "Pan de caja blanco",
+        "g": 56,
+        "k": [
+          "pan"
+        ]
+      },
+      {
+        "f": "Jamón de pavo",
+        "g": 40,
+        "k": [
+          "jamon"
+        ],
+        "main": true
+      },
+      {
+        "f": "Queso amarillo",
+        "g": 20,
+        "k": [
+          "queso"
+        ],
+        "main": true
+      },
+      {
+        "f": "Mayonesa",
+        "g": 8,
+        "k": [
+          "mayonesa",
+          "mayo"
+        ]
+      },
+      {
+        "f": "Jitomate",
+        "g": 20,
+        "k": [
+          "jitomate",
+          "tomate"
+        ]
+      },
+      {
+        "f": "Lechuga",
+        "g": 8,
+        "k": [
+          "lechuga"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "crema de cacahuate",
+          "cacahuate",
+          "pb"
+        ],
+        "label": "de crema de cacahuate",
+        "replace": [
+          {
+            "f": "Pan de caja blanco",
+            "g": 56
+          },
+          {
+            "f": "Crema de cacahuate",
+            "g": 32
+          },
+          {
+            "f": "Mermelada",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "atun"
+        ],
+        "label": "de atún",
+        "main": [
+          {
+            "f": "Ensalada de atún",
+            "g": 80
+          }
+        ]
+      },
+      {
+        "words": [
+          "pollo"
+        ],
+        "label": "de pollo",
+        "main": [
+          {
+            "f": "Pollo desmenuzado",
+            "g": 60
+          }
+        ]
+      },
+      {
+        "words": [
+          "huevo"
+        ],
+        "label": "de huevo",
+        "main": [
+          {
+            "f": "Huevo revuelto",
+            "g": 61
+          }
+        ]
+      },
+      {
+        "words": [
+          "club"
+        ],
+        "label": "club",
+        "add": [
+          {
+            "f": "Tocino frito",
+            "g": 20
+          },
+          {
+            "f": "Pollo desmenuzado",
+            "g": 40
+          }
+        ]
+      },
+      {
+        "words": [
+          "aguacate"
+        ],
+        "label": "de aguacate",
+        "main": [
+          {
+            "f": "Aguacate",
+            "g": 60
+          }
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "tocino",
+          "bacon"
+        ],
+        "items": [
+          {
+            "f": "Tocino frito",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "queso"
+        ],
+        "items": [
+          {
+            "f": "Queso amarillo",
+            "g": 20
+          }
+        ]
+      },
+      {
+        "words": [
+          "aguacate"
+        ],
+        "items": [
+          {
+            "f": "Aguacate",
+            "g": 40
+          }
+        ]
+      },
+      {
+        "words": [
+          "mostaza"
+        ],
+        "items": [
+          {
+            "f": "Mostaza",
+            "g": 5
+          }
+        ]
+      },
+      {
+        "words": [
+          "huevo"
+        ],
+        "items": [
+          {
+            "f": "Huevo cocido",
+            "g": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tostada",
+    "name": "Tostada",
+    "words": [
+      "tostada"
+    ],
+    "plural": 2,
+    "assume": "Supuse tostadas de tinga de pollo.",
+    "base": [
+      {
+        "f": "Tostada frita",
+        "g": 15,
+        "k": [
+          "tostada"
+        ]
+      },
+      {
+        "f": "Tinga de pollo",
+        "g": 60,
+        "k": [
+          "tinga"
+        ],
+        "main": true
+      },
+      {
+        "f": "Lechuga",
+        "g": 10,
+        "k": [
+          "lechuga"
+        ]
+      },
+      {
+        "f": "Crema",
+        "g": 10,
+        "k": [
+          "crema"
+        ]
+      },
+      {
+        "f": "Queso fresco",
+        "g": 10,
+        "k": [
+          "queso"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "ceviche"
+        ],
+        "label": "de ceviche",
+        "main": [
+          {
+            "f": "Ceviche de pescado",
+            "g": 80
+          }
+        ],
+        "drop": [
+          "crema",
+          "queso",
+          "lechuga"
+        ]
+      },
+      {
+        "words": [
+          "aguachile"
+        ],
+        "label": "de aguachile",
+        "main": [
+          {
+            "f": "Aguachile de camarón",
+            "g": 80
+          }
+        ],
+        "drop": [
+          "crema",
+          "queso",
+          "lechuga"
+        ]
+      },
+      {
+        "words": [
+          "pollo"
+        ],
+        "label": "de pollo",
+        "main": [
+          {
+            "f": "Pollo desmenuzado",
+            "g": 60
+          }
+        ]
+      },
+      {
+        "words": [
+          "atun"
+        ],
+        "label": "de atún",
+        "main": [
+          {
+            "f": "Ensalada de atún",
+            "g": 70
+          }
+        ]
+      },
+      {
+        "words": [
+          "frijol"
+        ],
+        "label": "de frijol",
+        "main": [
+          {
+            "f": "Frijoles refritos",
+            "g": 50
+          }
+        ]
+      },
+      {
+        "words": [
+          "aguacate"
+        ],
+        "label": "de aguacate",
+        "main": [
+          {
+            "f": "Aguacate",
+            "g": 60
+          }
+        ],
+        "drop": [
+          "crema"
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "aguacate"
+        ],
+        "items": [
+          {
+            "f": "Aguacate",
+            "g": 25
+          }
+        ]
+      },
+      {
+        "words": [
+          "guacamole"
+        ],
+        "items": [
+          {
+            "f": "Guacamole",
+            "g": 25
+          }
+        ]
+      },
+      {
+        "words": [
+          "salsa"
+        ],
+        "items": [
+          {
+            "f": "Salsa roja o verde",
+            "g": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "licuado",
+    "name": "Licuado",
+    "words": [
+      "licuado",
+      "batido",
+      "malteada",
+      "smoothie",
+      "shake"
+    ],
+    "assume": "Supuse un licuado de plátano con leche entera.",
+    "base": [
+      {
+        "f": "Leche entera",
+        "g": 240,
+        "k": [
+          "leche"
+        ]
+      },
+      {
+        "f": "Plátano",
+        "g": 100,
+        "k": [
+          "platano"
+        ],
+        "main": true
+      }
+    ],
+    "variants": [
+      {
+        "words": [
+          "fresa"
+        ],
+        "label": "de fresa",
+        "main": [
+          {
+            "f": "Fresas",
+            "g": 120
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "mango"
+        ],
+        "label": "de mango",
+        "main": [
+          {
+            "f": "Mango",
+            "g": 120
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "papaya"
+        ],
+        "label": "de papaya",
+        "main": [
+          {
+            "f": "Papaya",
+            "g": 120
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "platano"
+        ],
+        "label": "de plátano",
+        "main": [
+          {
+            "f": "Plátano",
+            "g": 100
+          }
+        ],
+        "asExtra": true
+      },
+      {
+        "words": [
+          "agua"
+        ],
+        "label": "con agua",
+        "swap": {
+          "leche": {
+            "f": "Agua",
+            "g": 240
+          }
+        },
+        "asExtra": true
+      },
+      {
+        "words": [
+          "almendra"
+        ],
+        "label": "con leche de almendra",
+        "swap": {
+          "leche": {
+            "f": "Leche de almendra sin azúcar",
+            "g": 240
+          }
+        },
+        "asExtra": true
+      },
+      {
+        "words": [
+          "descremada",
+          "light"
+        ],
+        "label": "con leche descremada",
+        "swap": {
+          "leche": {
+            "f": "Leche descremada",
+            "g": 240
+          }
+        },
+        "asExtra": true
+      },
+      {
+        "words": [
+          "deslactosada"
+        ],
+        "label": "con leche deslactosada",
+        "swap": {
+          "leche": {
+            "f": "Leche deslactosada",
+            "g": 240
+          }
+        },
+        "asExtra": true
+      },
+      {
+        "words": [
+          "soya"
+        ],
+        "label": "con leche de soya",
+        "swap": {
+          "leche": {
+            "f": "Leche de soya",
+            "g": 240
+          }
+        },
+        "asExtra": true
+      }
+    ],
+    "extras": [
+      {
+        "words": [
+          "avena"
+        ],
+        "items": [
+          {
+            "f": "Avena en hojuelas",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "proteina",
+          "whey"
+        ],
+        "items": [
+          {
+            "f": "Proteína whey",
+            "g": 30
+          }
+        ]
+      },
+      {
+        "words": [
+          "crema de cacahuate",
+          "cacahuate"
+        ],
+        "items": [
+          {
+            "f": "Crema de cacahuate",
+            "g": 16
+          }
+        ]
+      },
+      {
+        "words": [
+          "miel"
+        ],
+        "items": [
+          {
+            "f": "Miel",
+            "g": 10
+          }
+        ]
+      },
+      {
+        "words": [
+          "azucar"
+        ],
+        "items": [
+          {
+            "f": "Azúcar",
+            "g": 10
+          }
+        ]
+      },
+      {
+        "words": [
+          "chia"
+        ],
+        "items": [
+          {
+            "f": "Chía",
+            "g": 10
+          }
+        ]
+      },
+      {
+        "words": [
+          "yogur"
+        ],
+        "items": [
+          {
+            "f": "Yogur natural",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "espinaca"
+        ],
+        "items": [
+          {
+            "f": "Espinaca",
+            "g": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cafe",
+    "name": "Café",
+    "words": [
+      "cafe"
+    ],
+    "plural": 1,
+    "assume": "",
+    "base": [
+      {
+        "f": "Café negro",
+        "g": 240,
+        "k": [
+          "cafe"
+        ]
+      }
+    ],
+    "variants": [],
+    "extras": [
+      {
+        "words": [
+          "leche descremada",
+          "descremada"
+        ],
+        "items": [
+          {
+            "f": "Leche descremada",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "leche almendra",
+          "almendra"
+        ],
+        "items": [
+          {
+            "f": "Leche de almendra sin azúcar",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "leche"
+        ],
+        "items": [
+          {
+            "f": "Leche entera",
+            "g": 100
+          }
+        ]
+      },
+      {
+        "words": [
+          "azucar"
+        ],
+        "items": [
+          {
+            "f": "Azúcar",
+            "g": 8
+          }
+        ]
+      },
+      {
+        "words": [
+          "crema"
+        ],
+        "items": [
+          {
+            "f": "Crema",
+            "g": 15
+          }
+        ]
+      },
+      {
+        "words": [
+          "miel"
+        ],
+        "items": [
+          {
+            "f": "Miel",
+            "g": 10
+          }
+        ]
+      }
+    ]
+  }
+]

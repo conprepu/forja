@@ -4,7 +4,7 @@ import type { ForjaDB } from './db'
 import type { Exercise, Food } from './schema'
 
 /** Súbelo cuando cambien exercises.json o foods-mx.json para que se vuelva a sembrar. */
-export const SEED_VERSION = 2
+export const SEED_VERSION = 3
 export const SEED_KEY = 'seedVersion'
 
 type SeedExercise = Omit<Exercise, 'custom'>

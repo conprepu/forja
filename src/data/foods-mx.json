@@ -1,1458 +1,332 @@
 [
- {
-  "id": "b0",
-  "name": "Pechuga de pollo cocida",
-  "per100": {
-   "kcal": 165,
-   "p": 31,
-   "c": 0,
-   "f": 3.6
-  },
-  "servings": [
-   {
-    "label": "1 pechuga chica",
-    "grams": 120
-   }
-  ]
- },
- {
-  "id": "b1",
-  "name": "Pechuga de pollo cruda",
-  "per100": {
-   "kcal": 120,
-   "p": 22.5,
-   "c": 0,
-   "f": 2.6
-  },
-  "servings": [
-   {
-    "label": "1 filete",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b2",
-  "name": "Muslo de pollo cocido",
-  "per100": {
-   "kcal": 209,
-   "p": 26,
-   "c": 0,
-   "f": 10.9
-  },
-  "servings": [
-   {
-    "label": "1 muslo",
-    "grams": 100
-   }
-  ]
- },
- {
-  "id": "b3",
-  "name": "Carne molida de res 90/10 cocida",
-  "per100": {
-   "kcal": 217,
-   "p": 26,
-   "c": 0,
-   "f": 12
-  },
-  "servings": [
-   {
-    "label": "1 porción",
-    "grams": 100
-   }
-  ]
- },
- {
-  "id": "b4",
-  "name": "Bistec de res cocido",
-  "per100": {
-   "kcal": 250,
-   "p": 26,
-   "c": 0,
-   "f": 15
-  },
-  "servings": [
-   {
-    "label": "1 bistec",
-    "grams": 120
-   }
-  ]
- },
- {
-  "id": "b5",
-  "name": "Lomo de cerdo cocido",
-  "per100": {
-   "kcal": 242,
-   "p": 27,
-   "c": 0,
-   "f": 14
-  },
-  "servings": [
-   {
-    "label": "1 porción",
-    "grams": 120
-   }
-  ]
- },
- {
-  "id": "b6",
-  "name": "Atún en agua",
-  "per100": {
-   "kcal": 116,
-   "p": 26,
-   "c": 0,
-   "f": 1
-  },
-  "servings": [
-   {
-    "label": "1 lata",
-    "grams": 140
-   }
-  ]
- },
- {
-  "id": "b7",
-  "name": "Salmón cocido",
-  "per100": {
-   "kcal": 206,
-   "p": 22,
-   "c": 0,
-   "f": 12
-  },
-  "servings": [
-   {
-    "label": "1 filete",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b8",
-  "name": "Tilapia cocida",
-  "per100": {
-   "kcal": 128,
-   "p": 26,
-   "c": 0,
-   "f": 2.7
-  },
-  "servings": [
-   {
-    "label": "1 filete",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b9",
-  "name": "Camarón cocido",
-  "per100": {
-   "kcal": 99,
-   "p": 24,
-   "c": 0.2,
-   "f": 0.3
-  },
-  "servings": [
-   {
-    "label": "1 porción",
-    "grams": 100
-   }
-  ]
- },
- {
-  "id": "b10",
-  "name": "Huevo entero",
-  "per100": {
-   "kcal": 143,
-   "p": 12.6,
-   "c": 0.7,
-   "f": 9.5
-  },
-  "servings": [
-   {
-    "label": "1 huevo",
-    "grams": 50
-   }
-  ]
- },
- {
-  "id": "b11",
-  "name": "Clara de huevo",
-  "per100": {
-   "kcal": 52,
-   "p": 10.9,
-   "c": 0.7,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 clara",
-    "grams": 33
-   }
-  ]
- },
- {
-  "id": "b12",
-  "name": "Jamón de pavo",
-  "per100": {
-   "kcal": 104,
-   "p": 17,
-   "c": 2,
-   "f": 3
-  },
-  "servings": [
-   {
-    "label": "1 rebanada",
-    "grams": 20
-   }
-  ]
- },
- {
-  "id": "b13",
-  "name": "Salchicha de pavo",
-  "per100": {
-   "kcal": 160,
-   "p": 12,
-   "c": 4,
-   "f": 10
-  },
-  "servings": [
-   {
-    "label": "1 salchicha",
-    "grams": 40
-   }
-  ]
- },
- {
-  "id": "b14",
-  "name": "Proteína whey",
-  "per100": {
-   "kcal": 400,
-   "p": 80,
-   "c": 8,
-   "f": 6
-  },
-  "servings": [
-   {
-    "label": "1 scoop",
-    "grams": 30
-   }
-  ]
- },
- {
-  "id": "b15",
-  "name": "Queso panela",
-  "per100": {
-   "kcal": 240,
-   "p": 18,
-   "c": 3,
-   "f": 17
-  },
-  "servings": [
-   {
-    "label": "1 rebanada",
-    "grams": 40
-   }
-  ]
- },
- {
-  "id": "b16",
-  "name": "Queso Oaxaca",
-  "per100": {
-   "kcal": 280,
-   "p": 22,
-   "c": 2,
-   "f": 20
-  },
-  "servings": [
-   {
-    "label": "1 porción",
-    "grams": 30
-   }
-  ]
- },
- {
-  "id": "b17",
-  "name": "Queso manchego",
-  "per100": {
-   "kcal": 370,
-   "p": 25,
-   "c": 1,
-   "f": 30
-  },
-  "servings": [
-   {
-    "label": "1 rebanada",
-    "grams": 30
-   }
-  ]
- },
- {
-  "id": "b18",
-  "name": "Queso cottage",
-  "per100": {
-   "kcal": 98,
-   "p": 11,
-   "c": 3.4,
-   "f": 4.3
-  },
-  "servings": [
-   {
-    "label": "½ taza",
-    "grams": 100
-   }
-  ]
- },
- {
-  "id": "b19",
-  "name": "Yogur griego natural",
-  "per100": {
-   "kcal": 59,
-   "p": 10,
-   "c": 3.6,
-   "f": 0.4
-  },
-  "servings": [
-   {
-    "label": "1 vaso",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b20",
-  "name": "Yogur natural",
-  "per100": {
-   "kcal": 61,
-   "p": 3.5,
-   "c": 4.7,
-   "f": 3.3
-  },
-  "servings": [
-   {
-    "label": "1 vaso",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b21",
-  "name": "Leche entera",
-  "per100": {
-   "kcal": 61,
-   "p": 3.2,
-   "c": 4.8,
-   "f": 3.3
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 240
-   }
-  ]
- },
- {
-  "id": "b22",
-  "name": "Leche descremada",
-  "per100": {
-   "kcal": 34,
-   "p": 3.4,
-   "c": 5,
-   "f": 0.1
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 240
-   }
-  ]
- },
- {
-  "id": "b23",
-  "name": "Leche de almendra sin azúcar",
-  "per100": {
-   "kcal": 15,
-   "p": 0.6,
-   "c": 0.3,
-   "f": 1.2
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 240
-   }
-  ]
- },
- {
-  "id": "b24",
-  "name": "Tofu",
-  "per100": {
-   "kcal": 76,
-   "p": 8,
-   "c": 1.9,
-   "f": 4.8
-  },
-  "servings": [
-   {
-    "label": "1 porción",
-    "grams": 100
-   }
-  ]
- },
- {
-  "id": "b25",
-  "name": "Tortilla de maíz",
-  "per100": {
-   "kcal": 218,
-   "p": 5.7,
-   "c": 44.6,
-   "f": 2.9
-  },
-  "servings": [
-   {
-    "label": "1 tortilla",
-    "grams": 30
-   }
-  ]
- },
- {
-  "id": "b26",
-  "name": "Tortilla de harina",
-  "per100": {
-   "kcal": 312,
-   "p": 8.3,
-   "c": 51,
-   "f": 8
-  },
-  "servings": [
-   {
-    "label": "1 tortilla",
-    "grams": 45
-   }
-  ]
- },
- {
-  "id": "b27",
-  "name": "Arroz blanco cocido",
-  "per100": {
-   "kcal": 130,
-   "p": 2.7,
-   "c": 28,
-   "f": 0.3
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b28",
-  "name": "Arroz integral cocido",
-  "per100": {
-   "kcal": 123,
-   "p": 2.7,
-   "c": 25.6,
-   "f": 1
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b29",
-  "name": "Frijoles negros cocidos",
-  "per100": {
-   "kcal": 132,
-   "p": 8.9,
-   "c": 23.7,
-   "f": 0.5
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 170
-   }
-  ]
- },
- {
-  "id": "b30",
-  "name": "Frijoles refritos",
-  "per100": {
-   "kcal": 110,
-   "p": 5.5,
-   "c": 15,
-   "f": 3
-  },
-  "servings": [
-   {
-    "label": "½ taza",
-    "grams": 120
-   }
-  ]
- },
- {
-  "id": "b31",
-  "name": "Lentejas cocidas",
-  "per100": {
-   "kcal": 116,
-   "p": 9,
-   "c": 20,
-   "f": 0.4
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 200
-   }
-  ]
- },
- {
-  "id": "b32",
-  "name": "Garbanzos cocidos",
-  "per100": {
-   "kcal": 164,
-   "p": 8.9,
-   "c": 27.4,
-   "f": 2.6
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 160
-   }
-  ]
- },
- {
-  "id": "b33",
-  "name": "Avena en hojuelas",
-  "per100": {
-   "kcal": 389,
-   "p": 16.9,
-   "c": 66,
-   "f": 6.9
-  },
-  "servings": [
-   {
-    "label": "½ taza",
-    "grams": 40
-   }
-  ]
- },
- {
-  "id": "b34",
-  "name": "Pan integral",
-  "per100": {
-   "kcal": 247,
-   "p": 13,
-   "c": 41,
-   "f": 3.4
-  },
-  "servings": [
-   {
-    "label": "1 rebanada",
-    "grams": 30
-   }
-  ]
- },
- {
-  "id": "b35",
-  "name": "Bolillo",
-  "per100": {
-   "kcal": 270,
-   "p": 9,
-   "c": 50,
-   "f": 3
-  },
-  "servings": [
-   {
-    "label": "1 pieza",
-    "grams": 70
-   }
-  ]
- },
- {
-  "id": "b36",
-  "name": "Pasta cocida",
-  "per100": {
-   "kcal": 158,
-   "p": 5.8,
-   "c": 31,
-   "f": 0.9
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 140
-   }
-  ]
- },
- {
-  "id": "b37",
-  "name": "Papa cocida",
-  "per100": {
-   "kcal": 87,
-   "p": 1.9,
-   "c": 20,
-   "f": 0.1
-  },
-  "servings": [
-   {
-    "label": "1 mediana",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b38",
-  "name": "Camote cocido",
-  "per100": {
-   "kcal": 90,
-   "p": 2,
-   "c": 20.7,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 mediano",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b39",
-  "name": "Cereal de hojuelas de maíz",
-  "per100": {
-   "kcal": 357,
-   "p": 7.5,
-   "c": 84,
-   "f": 0.4
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 30
-   }
-  ]
- },
- {
-  "id": "b40",
-  "name": "Granola",
-  "per100": {
-   "kcal": 471,
-   "p": 10,
-   "c": 64,
-   "f": 20
-  },
-  "servings": [
-   {
-    "label": "⅓ taza",
-    "grams": 40
-   }
-  ]
- },
- {
-  "id": "b41",
-  "name": "Tostada horneada",
-  "per100": {
-   "kcal": 400,
-   "p": 8,
-   "c": 75,
-   "f": 6
-  },
-  "servings": [
-   {
-    "label": "1 tostada",
-    "grams": 12
-   }
-  ]
- },
- {
-  "id": "b42",
-  "name": "Galletas Marías",
-  "per100": {
-   "kcal": 430,
-   "p": 7,
-   "c": 74,
-   "f": 11
-  },
-  "servings": [
-   {
-    "label": "4 galletas",
-    "grams": 22
-   }
-  ]
- },
- {
-  "id": "b43",
-  "name": "Elote cocido",
-  "per100": {
-   "kcal": 96,
-   "p": 3.4,
-   "c": 21,
-   "f": 1.5
-  },
-  "servings": [
-   {
-    "label": "1 elote",
-    "grams": 100
-   }
-  ]
- },
- {
-  "id": "b44",
-  "name": "Palomitas naturales",
-  "per100": {
-   "kcal": 387,
-   "p": 13,
-   "c": 78,
-   "f": 4.5
-  },
-  "servings": [
-   {
-    "label": "2 tazas",
-    "grams": 25
-   }
-  ]
- },
- {
-  "id": "b45",
-  "name": "Plátano",
-  "per100": {
-   "kcal": 89,
-   "p": 1.1,
-   "c": 22.8,
-   "f": 0.3
-  },
-  "servings": [
-   {
-    "label": "1 mediano",
-    "grams": 118
-   }
-  ]
- },
- {
-  "id": "b46",
-  "name": "Manzana",
-  "per100": {
-   "kcal": 52,
-   "p": 0.3,
-   "c": 13.8,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 mediana",
-    "grams": 180
-   }
-  ]
- },
- {
-  "id": "b47",
-  "name": "Naranja",
-  "per100": {
-   "kcal": 47,
-   "p": 0.9,
-   "c": 11.8,
-   "f": 0.1
-  },
-  "servings": [
-   {
-    "label": "1 mediana",
-    "grams": 130
-   }
-  ]
- },
- {
-  "id": "b48",
-  "name": "Papaya",
-  "per100": {
-   "kcal": 43,
-   "p": 0.5,
-   "c": 10.8,
-   "f": 0.3
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b49",
-  "name": "Mango",
-  "per100": {
-   "kcal": 60,
-   "p": 0.8,
-   "c": 15,
-   "f": 0.4
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 165
-   }
-  ]
- },
- {
-  "id": "b50",
-  "name": "Fresas",
-  "per100": {
-   "kcal": 32,
-   "p": 0.7,
-   "c": 7.7,
-   "f": 0.3
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b51",
-  "name": "Uvas",
-  "per100": {
-   "kcal": 69,
-   "p": 0.7,
-   "c": 18,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b52",
-  "name": "Sandía",
-  "per100": {
-   "kcal": 30,
-   "p": 0.6,
-   "c": 7.6,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b53",
-  "name": "Piña",
-  "per100": {
-   "kcal": 50,
-   "p": 0.5,
-   "c": 13,
-   "f": 0.1
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 165
-   }
-  ]
- },
- {
-  "id": "b54",
-  "name": "Aguacate",
-  "per100": {
-   "kcal": 160,
-   "p": 2,
-   "c": 8.5,
-   "f": 14.7
-  },
-  "servings": [
-   {
-    "label": "½ aguacate",
-    "grams": 75
-   }
-  ]
- },
- {
-  "id": "b55",
-  "name": "Brócoli cocido",
-  "per100": {
-   "kcal": 35,
-   "p": 2.4,
-   "c": 7.2,
-   "f": 0.4
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 90
-   }
-  ]
- },
- {
-  "id": "b56",
-  "name": "Espinaca",
-  "per100": {
-   "kcal": 23,
-   "p": 2.9,
-   "c": 3.6,
-   "f": 0.4
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 30
-   }
-  ]
- },
- {
-  "id": "b57",
-  "name": "Lechuga",
-  "per100": {
-   "kcal": 15,
-   "p": 1.4,
-   "c": 2.9,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 50
-   }
-  ]
- },
- {
-  "id": "b58",
-  "name": "Jitomate",
-  "per100": {
-   "kcal": 18,
-   "p": 0.9,
-   "c": 3.9,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 mediano",
-    "grams": 120
-   }
-  ]
- },
- {
-  "id": "b59",
-  "name": "Pepino",
-  "per100": {
-   "kcal": 15,
-   "p": 0.7,
-   "c": 3.6,
-   "f": 0.1
-  },
-  "servings": [
-   {
-    "label": "½ pepino",
-    "grams": 100
-   }
-  ]
- },
- {
-  "id": "b60",
-  "name": "Zanahoria",
-  "per100": {
-   "kcal": 41,
-   "p": 0.9,
-   "c": 9.6,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 mediana",
-    "grams": 60
-   }
-  ]
- },
- {
-  "id": "b61",
-  "name": "Calabacita",
-  "per100": {
-   "kcal": 17,
-   "p": 1.2,
-   "c": 3.1,
-   "f": 0.3
-  },
-  "servings": [
-   {
-    "label": "1 pieza",
-    "grams": 120
-   }
-  ]
- },
- {
-  "id": "b62",
-  "name": "Nopales cocidos",
-  "per100": {
-   "kcal": 15,
-   "p": 1.4,
-   "c": 3.3,
-   "f": 0.1
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 150
-   }
-  ]
- },
- {
-  "id": "b63",
-  "name": "Cebolla",
-  "per100": {
-   "kcal": 40,
-   "p": 1.1,
-   "c": 9.3,
-   "f": 0.1
-  },
-  "servings": [
-   {
-    "label": "¼ cebolla",
-    "grams": 50
-   }
-  ]
- },
- {
-  "id": "b64",
-  "name": "Salsa roja o verde",
-  "per100": {
-   "kcal": 30,
-   "p": 1,
-   "c": 5,
-   "f": 0.8
-  },
-  "servings": [
-   {
-    "label": "2 cdas",
-    "grams": 30
-   }
-  ]
- },
- {
-  "id": "b65",
-  "name": "Aceite de oliva",
-  "per100": {
-   "kcal": 884,
-   "p": 0,
-   "c": 0,
-   "f": 100
-  },
-  "servings": [
-   {
-    "label": "1 cda",
-    "grams": 14
-   }
-  ]
- },
- {
-  "id": "b66",
-  "name": "Aceite vegetal",
-  "per100": {
-   "kcal": 884,
-   "p": 0,
-   "c": 0,
-   "f": 100
-  },
-  "servings": [
-   {
-    "label": "1 cda",
-    "grams": 14
-   }
-  ]
- },
- {
-  "id": "b67",
-  "name": "Mantequilla",
-  "per100": {
-   "kcal": 717,
-   "p": 0.9,
-   "c": 0.1,
-   "f": 81
-  },
-  "servings": [
-   {
-    "label": "1 cdita",
-    "grams": 10
-   }
-  ]
- },
- {
-  "id": "b68",
-  "name": "Crema de cacahuate",
-  "per100": {
-   "kcal": 588,
-   "p": 25,
-   "c": 20,
-   "f": 50
-  },
-  "servings": [
-   {
-    "label": "1 cda",
-    "grams": 16
-   }
-  ]
- },
- {
-  "id": "b69",
-  "name": "Almendras",
-  "per100": {
-   "kcal": 579,
-   "p": 21,
-   "c": 22,
-   "f": 50
-  },
-  "servings": [
-   {
-    "label": "1 puño",
-    "grams": 28
-   }
-  ]
- },
- {
-  "id": "b70",
-  "name": "Nueces",
-  "per100": {
-   "kcal": 654,
-   "p": 15,
-   "c": 14,
-   "f": 65
-  },
-  "servings": [
-   {
-    "label": "1 puño",
-    "grams": 28
-   }
-  ]
- },
- {
-  "id": "b71",
-  "name": "Cacahuates",
-  "per100": {
-   "kcal": 567,
-   "p": 26,
-   "c": 16,
-   "f": 49
-  },
-  "servings": [
-   {
-    "label": "1 puño",
-    "grams": 28
-   }
-  ]
- },
- {
-  "id": "b72",
-  "name": "Crema",
-  "per100": {
-   "kcal": 200,
-   "p": 2.4,
-   "c": 4.6,
-   "f": 19
-  },
-  "servings": [
-   {
-    "label": "1 cda",
-    "grams": 15
-   }
-  ]
- },
- {
-  "id": "b73",
-  "name": "Mayonesa",
-  "per100": {
-   "kcal": 680,
-   "p": 1,
-   "c": 0.6,
-   "f": 75
-  },
-  "servings": [
-   {
-    "label": "1 cda",
-    "grams": 14
-   }
-  ]
- },
- {
-  "id": "b74",
-  "name": "Chía",
-  "per100": {
-   "kcal": 486,
-   "p": 17,
-   "c": 42,
-   "f": 31
-  },
-  "servings": [
-   {
-    "label": "1 cda",
-    "grams": 12
-   }
-  ]
- },
- {
-  "id": "b75",
-  "name": "Taco al pastor",
-  "per100": {
-   "kcal": 225,
-   "p": 11,
-   "c": 17.5,
-   "f": 11.3
-  },
-  "servings": [
-   {
-    "label": "1 taco",
-    "grams": 80
-   }
-  ]
- },
- {
-  "id": "b76",
-  "name": "Quesadilla de queso",
-  "per100": {
-   "kcal": 300,
-   "p": 13,
-   "c": 26,
-   "f": 16
-  },
-  "servings": [
-   {
-    "label": "1 quesadilla",
-    "grams": 90
-   }
-  ]
- },
- {
-  "id": "b77",
-  "name": "Torta de jamón",
-  "per100": {
-   "kcal": 250,
-   "p": 11,
-   "c": 30,
-   "f": 9
-  },
-  "servings": [
-   {
-    "label": "1 torta",
-    "grams": 230
-   }
-  ]
- },
- {
-  "id": "b78",
-  "name": "Chilaquiles verdes",
-  "per100": {
-   "kcal": 180,
-   "p": 5,
-   "c": 20,
-   "f": 9
-  },
-  "servings": [
-   {
-    "label": "1 plato",
-    "grams": 250
-   }
-  ]
- },
- {
-  "id": "b79",
-  "name": "Enchiladas de pollo",
-  "per100": {
-   "kcal": 190,
-   "p": 9,
-   "c": 18,
-   "f": 9
-  },
-  "servings": [
-   {
-    "label": "3 piezas",
-    "grams": 250
-   }
-  ]
- },
- {
-  "id": "b80",
-  "name": "Pozole",
-  "per100": {
-   "kcal": 90,
-   "p": 6,
-   "c": 9,
-   "f": 3
-  },
-  "servings": [
-   {
-    "label": "1 plato",
-    "grams": 400
-   }
-  ]
- },
- {
-  "id": "b81",
-  "name": "Pizza de pepperoni",
-  "per100": {
-   "kcal": 270,
-   "p": 11.5,
-   "c": 30,
-   "f": 11.5
-  },
-  "servings": [
-   {
-    "label": "1 rebanada",
-    "grams": 110
-   }
-  ]
- },
- {
-  "id": "b82",
-  "name": "Hamburguesa",
-  "per100": {
-   "kcal": 250,
-   "p": 13,
-   "c": 24,
-   "f": 11
-  },
-  "servings": [
-   {
-    "label": "1 pieza",
-    "grams": 220
-   }
-  ]
- },
- {
-  "id": "b83",
-  "name": "Barra de proteína",
-  "per100": {
-   "kcal": 350,
-   "p": 30,
-   "c": 40,
-   "f": 10
-  },
-  "servings": [
-   {
-    "label": "1 barra",
-    "grams": 60
-   }
-  ]
- },
- {
-  "id": "b84",
-  "name": "Chocolate amargo 70%",
-  "per100": {
-   "kcal": 598,
-   "p": 7.8,
-   "c": 46,
-   "f": 43
-  },
-  "servings": [
-   {
-    "label": "2 cuadros",
-    "grams": 20
-   }
-  ]
- },
- {
-  "id": "b85",
-  "name": "Refresco de cola",
-  "per100": {
-   "kcal": 42,
-   "p": 0,
-   "c": 10.6,
-   "f": 0
-  },
-  "servings": [
-   {
-    "label": "1 lata",
-    "grams": 355
-   }
-  ]
- },
- {
-  "id": "b86",
-  "name": "Jugo de naranja",
-  "per100": {
-   "kcal": 45,
-   "p": 0.7,
-   "c": 10.4,
-   "f": 0.2
-  },
-  "servings": [
-   {
-    "label": "1 vaso",
-    "grams": 250
-   }
-  ]
- },
- {
-  "id": "b87",
-  "name": "Cerveza",
-  "per100": {
-   "kcal": 43,
-   "p": 0.5,
-   "c": 3.6,
-   "f": 0
-  },
-  "servings": [
-   {
-    "label": "1 lata",
-    "grams": 355
-   }
-  ]
- },
- {
-  "id": "b88",
-  "name": "Café negro",
-  "per100": {
-   "kcal": 2,
-   "p": 0.3,
-   "c": 0,
-   "f": 0
-  },
-  "servings": [
-   {
-    "label": "1 taza",
-    "grams": 240
-   }
-  ]
- },
- {
-  "id": "b89",
-  "name": "Azúcar",
-  "per100": {
-   "kcal": 387,
-   "p": 0,
-   "c": 100,
-   "f": 0
-  },
-  "servings": [
-   {
-    "label": "1 cdita",
-    "grams": 5
-   }
-  ]
- },
- {
-  "id": "b90",
-  "name": "Miel",
-  "per100": {
-   "kcal": 304,
-   "p": 0.3,
-   "c": 82,
-   "f": 0
-  },
-  "servings": [
-   {
-    "label": "1 cda",
-    "grams": 21
-   }
-  ]
- }
+  {"id":"b0","name":"Pechuga de pollo cocida","per100":{"kcal":165,"p":31,"c":0,"f":3.6},"servings":[{"label":"1 pechuga chica","grams":120}],"aka":["pechuga","pollo a la plancha","pollo asado a la plancha"],"dflt":["pollo"]},
+  {"id":"b1","name":"Pechuga de pollo cruda","per100":{"kcal":120,"p":22.5,"c":0,"f":2.6},"servings":[{"label":"1 filete","grams":150}]},
+  {"id":"b2","name":"Muslo de pollo cocido","per100":{"kcal":209,"p":26,"c":0,"f":10.9},"servings":[{"label":"1 muslo","grams":100}],"aka":["muslo","muslo de pollo"]},
+  {"id":"b3","name":"Carne molida de res 90/10 cocida","per100":{"kcal":217,"p":26,"c":0,"f":12},"servings":[{"label":"1 porción","grams":100}],"aka":["carne molida","molida de res","carne molida de res"]},
+  {"id":"b4","name":"Bistec de res cocido","per100":{"kcal":250,"p":26,"c":0,"f":15},"servings":[{"label":"1 bistec","grams":120}],"aka":["bistec","carne de res","filete de res","steak"],"dflt":["carne","res","bistec"]},
+  {"id":"b5","name":"Lomo de cerdo cocido","per100":{"kcal":242,"p":27,"c":0,"f":14},"servings":[{"label":"1 porción","grams":120}],"aka":["lomo de cerdo","carne de puerco","cerdo"],"dflt":["cerdo","puerco"]},
+  {"id":"b6","name":"Atún en agua","per100":{"kcal":116,"p":26,"c":0,"f":1},"servings":[{"label":"1 lata","grams":140}],"aka":["atun","lata de atun"],"dflt":["atun"]},
+  {"id":"b7","name":"Salmón cocido","per100":{"kcal":206,"p":22,"c":0,"f":12},"servings":[{"label":"1 filete","grams":150}],"aka":["salmon"],"dflt":["salmon"]},
+  {"id":"b8","name":"Tilapia cocida","per100":{"kcal":128,"p":26,"c":0,"f":2.7},"servings":[{"label":"1 filete","grams":150}],"aka":["pescado","filete de pescado","pescado a la plancha","pescado asado"],"dflt":["pescado"]},
+  {"id":"b9","name":"Camarón cocido","per100":{"kcal":99,"p":24,"c":0.2,"f":0.3},"servings":[{"label":"1 porción","grams":100}],"aka":["camarones","camaron"],"dflt":["camaron"]},
+  {"id":"b10","name":"Huevo entero","per100":{"kcal":143,"p":12.6,"c":0.7,"f":9.5},"servings":[{"label":"1 huevo","grams":50}],"aka":["huevo","huevos"],"dflt":["huevo"]},
+  {"id":"b11","name":"Clara de huevo","per100":{"kcal":52,"p":10.9,"c":0.7,"f":0.2},"servings":[{"label":"1 clara","grams":33}]},
+  {"id":"b12","name":"Jamón de pavo","per100":{"kcal":104,"p":17,"c":2,"f":3},"servings":[{"label":"1 rebanada","grams":20}],"aka":["jamon"],"dflt":["jamon"]},
+  {"id":"b13","name":"Salchicha de pavo","per100":{"kcal":160,"p":12,"c":4,"f":10},"servings":[{"label":"1 salchicha","grams":40}],"aka":["salchicha de pavo"]},
+  {"id":"b14","name":"Proteína whey","per100":{"kcal":400,"p":80,"c":8,"f":6},"servings":[{"label":"1 scoop","grams":30}],"aka":["whey","proteina","proteina en polvo","batido de proteina","scoop de proteina","suplemento de proteina"],"dflt":["whey","proteina"]},
+  {"id":"b15","name":"Queso panela","per100":{"kcal":240,"p":18,"c":3,"f":17},"servings":[{"label":"1 rebanada","grams":40}],"aka":["queso","panela"],"dflt":["queso"]},
+  {"id":"b16","name":"Queso Oaxaca","per100":{"kcal":280,"p":22,"c":2,"f":20},"servings":[{"label":"1 porción","grams":30}],"aka":["oaxaca","queso oaxaca","queso de hebra","queso para quesadillas","quesillo"]},
+  {"id":"b17","name":"Queso manchego","per100":{"kcal":370,"p":25,"c":1,"f":30},"servings":[{"label":"1 rebanada","grams":30}],"aka":["manchego","queso manchego","queso gratinado"]},
+  {"id":"b18","name":"Queso cottage","per100":{"kcal":98,"p":11,"c":3.4,"f":4.3},"servings":[{"label":"½ taza","grams":100}]},
+  {"id":"b19","name":"Yogur griego natural","per100":{"kcal":59,"p":10,"c":3.6,"f":0.4},"servings":[{"label":"1 vaso","grams":150}],"aka":["yogurt griego","yogur griego","griego"]},
+  {"id":"b20","name":"Yogur natural","per100":{"kcal":61,"p":3.5,"c":4.7,"f":3.3},"servings":[{"label":"1 vaso","grams":150}],"aka":["yogurt","yogur","yogurt natural"],"dflt":["yogur","yogurt"]},
+  {"id":"b21","name":"Leche entera","per100":{"kcal":61,"p":3.2,"c":4.8,"f":3.3},"servings":[{"label":"1 taza","grams":240}],"aka":["leche","leche de vaca","leche entera"],"dflt":["leche"]},
+  {"id":"b22","name":"Leche descremada","per100":{"kcal":34,"p":3.4,"c":5,"f":0.1},"servings":[{"label":"1 taza","grams":240}]},
+  {"id":"b23","name":"Leche de almendra sin azúcar","per100":{"kcal":15,"p":0.6,"c":0.3,"f":1.2},"servings":[{"label":"1 taza","grams":240}]},
+  {"id":"b24","name":"Tofu","per100":{"kcal":76,"p":8,"c":1.9,"f":4.8},"servings":[{"label":"1 porción","grams":100}],"aka":["tofu","queso de soya"]},
+  {"id":"b25","name":"Tortilla de maíz","per100":{"kcal":218,"p":5.7,"c":44.6,"f":2.9},"servings":[{"label":"1 tortilla","grams":30}],"aka":["tortilla","tortillas","tortilla de maiz"],"dflt":["tortilla"]},
+  {"id":"b26","name":"Tortilla de harina","per100":{"kcal":312,"p":8.3,"c":51,"f":8},"servings":[{"label":"1 tortilla","grams":45}],"aka":["tortilla de harina","tortilla de trigo","tortillas de harina"]},
+  {"id":"b27","name":"Arroz blanco cocido","per100":{"kcal":130,"p":2.7,"c":28,"f":0.3},"servings":[{"label":"1 taza","grams":150}],"aka":["arroz","arroz blanco","arroz hervido"],"dflt":["arroz"]},
+  {"id":"b28","name":"Arroz integral cocido","per100":{"kcal":123,"p":2.7,"c":25.6,"f":1},"servings":[{"label":"1 taza","grams":150}]},
+  {"id":"b29","name":"Frijoles negros cocidos","per100":{"kcal":132,"p":8.9,"c":23.7,"f":0.5},"servings":[{"label":"1 taza","grams":170}],"aka":["frijoles","frijol","frijoles negros"],"dflt":["frijol"]},
+  {"id":"b30","name":"Frijoles refritos","per100":{"kcal":110,"p":5.5,"c":15,"f":3},"servings":[{"label":"½ taza","grams":120}],"aka":["frijoles refritos","refritos"]},
+  {"id":"b31","name":"Lentejas cocidas","per100":{"kcal":116,"p":9,"c":20,"f":0.4},"servings":[{"label":"1 taza","grams":200}]},
+  {"id":"b32","name":"Garbanzos cocidos","per100":{"kcal":164,"p":8.9,"c":27.4,"f":2.6},"servings":[{"label":"1 taza","grams":160}]},
+  {"id":"b33","name":"Avena en hojuelas","per100":{"kcal":389,"p":16.9,"c":66,"f":6.9},"servings":[{"label":"½ taza","grams":40}],"aka":["avena","hojuelas de avena","avena cruda"],"dflt":["avena"]},
+  {"id":"b34","name":"Pan integral","per100":{"kcal":247,"p":13,"c":41,"f":3.4},"servings":[{"label":"1 rebanada","grams":30}],"aka":["pan","pan integral","tostada de pan","pan tostado"],"dflt":["pan"]},
+  {"id":"b35","name":"Bolillo","per100":{"kcal":270,"p":9,"c":50,"f":3},"servings":[{"label":"1 pieza","grams":70}],"aka":["bolillo","telera","birote","pan blanco","bolillos"]},
+  {"id":"b36","name":"Pasta cocida","per100":{"kcal":158,"p":5.8,"c":31,"f":0.9},"servings":[{"label":"1 taza","grams":140}],"aka":["pasta","espagueti","spaghetti","macarrones","fideos","penne","coditos"],"dflt":["pasta","espagueti"]},
+  {"id":"b37","name":"Papa cocida","per100":{"kcal":87,"p":1.9,"c":20,"f":0.1},"servings":[{"label":"1 mediana","grams":150}],"aka":["papa","papas","patata","papa hervida","papas cocidas","papas hervidas"],"dflt":["papa"]},
+  {"id":"b38","name":"Camote cocido","per100":{"kcal":90,"p":2,"c":20.7,"f":0.2},"servings":[{"label":"1 mediano","grams":150}],"aka":["camote","batata"],"dflt":["camote"]},
+  {"id":"b39","name":"Cereal de hojuelas de maíz","per100":{"kcal":357,"p":7.5,"c":84,"f":0.4},"servings":[{"label":"1 taza","grams":30}],"aka":["cereal","corn flakes","hojuelas de maiz"],"dflt":["cereal"]},
+  {"id":"b40","name":"Granola","per100":{"kcal":471,"p":10,"c":64,"f":20},"servings":[{"label":"⅓ taza","grams":40}]},
+  {"id":"b41","name":"Tostada horneada","per100":{"kcal":400,"p":8,"c":75,"f":6},"servings":[{"label":"1 tostada","grams":12}]},
+  {"id":"b42","name":"Galletas Marías","per100":{"kcal":430,"p":7,"c":74,"f":11},"servings":[{"label":"4 galletas","grams":22}],"aka":["galleta","galletas","galletas marias","galleta maria"],"dflt":["galleta"]},
+  {"id":"b43","name":"Elote cocido","per100":{"kcal":96,"p":3.4,"c":21,"f":1.5},"servings":[{"label":"1 elote","grams":100}],"aka":["elote","choclo","mazorca","elote hervido","elote asado"],"dflt":["elote"]},
+  {"id":"b44","name":"Palomitas naturales","per100":{"kcal":387,"p":13,"c":78,"f":4.5},"servings":[{"label":"2 tazas","grams":25}]},
+  {"id":"b45","name":"Plátano","per100":{"kcal":89,"p":1.1,"c":22.8,"f":0.3},"servings":[{"label":"1 mediano","grams":118}],"aka":["banana","platano"]},
+  {"id":"b46","name":"Manzana","per100":{"kcal":52,"p":0.3,"c":13.8,"f":0.2},"servings":[{"label":"1 mediana","grams":180}]},
+  {"id":"b47","name":"Naranja","per100":{"kcal":47,"p":0.9,"c":11.8,"f":0.1},"servings":[{"label":"1 mediana","grams":130}]},
+  {"id":"b48","name":"Papaya","per100":{"kcal":43,"p":0.5,"c":10.8,"f":0.3},"servings":[{"label":"1 taza","grams":150}]},
+  {"id":"b49","name":"Mango","per100":{"kcal":60,"p":0.8,"c":15,"f":0.4},"servings":[{"label":"1 taza","grams":165}]},
+  {"id":"b50","name":"Fresas","per100":{"kcal":32,"p":0.7,"c":7.7,"f":0.3},"servings":[{"label":"1 taza","grams":150}]},
+  {"id":"b51","name":"Uvas","per100":{"kcal":69,"p":0.7,"c":18,"f":0.2},"servings":[{"label":"1 taza","grams":150}]},
+  {"id":"b52","name":"Sandía","per100":{"kcal":30,"p":0.6,"c":7.6,"f":0.2},"servings":[{"label":"1 taza","grams":150}]},
+  {"id":"b53","name":"Piña","per100":{"kcal":50,"p":0.5,"c":13,"f":0.1},"servings":[{"label":"1 taza","grams":165}]},
+  {"id":"b54","name":"Aguacate","per100":{"kcal":160,"p":2,"c":8.5,"f":14.7},"servings":[{"label":"½ aguacate","grams":75}],"aka":["palta","aguacates"]},
+  {"id":"b55","name":"Brócoli cocido","per100":{"kcal":35,"p":2.4,"c":7.2,"f":0.4},"servings":[{"label":"1 taza","grams":90}],"aka":["brocoli"],"dflt":["brocoli"]},
+  {"id":"b56","name":"Espinaca","per100":{"kcal":23,"p":2.9,"c":3.6,"f":0.4},"servings":[{"label":"1 taza","grams":30}]},
+  {"id":"b57","name":"Lechuga","per100":{"kcal":15,"p":1.4,"c":2.9,"f":0.2},"servings":[{"label":"1 taza","grams":50}]},
+  {"id":"b58","name":"Jitomate","per100":{"kcal":18,"p":0.9,"c":3.9,"f":0.2},"servings":[{"label":"1 mediano","grams":120}],"aka":["tomate","tomate rojo","tomate bola","jitomates"],"dflt":["jitomate","tomate"]},
+  {"id":"b59","name":"Pepino","per100":{"kcal":15,"p":0.7,"c":3.6,"f":0.1},"servings":[{"label":"½ pepino","grams":100}]},
+  {"id":"b60","name":"Zanahoria","per100":{"kcal":41,"p":0.9,"c":9.6,"f":0.2},"servings":[{"label":"1 mediana","grams":60}]},
+  {"id":"b61","name":"Calabacita","per100":{"kcal":17,"p":1.2,"c":3.1,"f":0.3},"servings":[{"label":"1 pieza","grams":120}]},
+  {"id":"b62","name":"Nopales cocidos","per100":{"kcal":15,"p":1.4,"c":3.3,"f":0.1},"servings":[{"label":"1 taza","grams":150}],"aka":["nopal","nopales","nopalitos","ensalada de nopales"],"dflt":["nopal"]},
+  {"id":"b63","name":"Cebolla","per100":{"kcal":40,"p":1.1,"c":9.3,"f":0.1},"servings":[{"label":"¼ cebolla","grams":50}]},
+  {"id":"b64","name":"Salsa roja o verde","per100":{"kcal":30,"p":1,"c":5,"f":0.8},"servings":[{"label":"2 cdas","grams":30}],"aka":["salsa","salsa roja","salsa verde","salsa casera","salsa de molcajete"]},
+  {"id":"b65","name":"Aceite de oliva","per100":{"kcal":884,"p":0,"c":0,"f":100},"servings":[{"label":"1 cda","grams":14}],"aka":["aceite","aceite de oliva"],"dflt":["aceite"]},
+  {"id":"b66","name":"Aceite vegetal","per100":{"kcal":884,"p":0,"c":0,"f":100},"servings":[{"label":"1 cda","grams":14}]},
+  {"id":"b67","name":"Mantequilla","per100":{"kcal":717,"p":0.9,"c":0.1,"f":81},"servings":[{"label":"1 cdita","grams":10}]},
+  {"id":"b68","name":"Crema de cacahuate","per100":{"kcal":588,"p":25,"c":20,"f":50},"servings":[{"label":"1 cda","grams":16}],"aka":["mantequilla de cacahuate","peanut butter","crema de cacahuate"]},
+  {"id":"b69","name":"Almendras","per100":{"kcal":579,"p":21,"c":22,"f":50},"servings":[{"label":"1 puño","grams":28}],"aka":["almendra","almendras"],"dflt":["almendra"]},
+  {"id":"b70","name":"Nueces","per100":{"kcal":654,"p":15,"c":14,"f":65},"servings":[{"label":"1 puño","grams":28}],"aka":["nuez","nueces"],"dflt":["nuez"]},
+  {"id":"b71","name":"Cacahuates","per100":{"kcal":567,"p":26,"c":16,"f":49},"servings":[{"label":"1 puño","grams":28}],"aka":["cacahuate","mani","cacahuates"],"dflt":["cacahuate"]},
+  {"id":"b72","name":"Crema","per100":{"kcal":200,"p":2.4,"c":4.6,"f":19},"servings":[{"label":"1 cda","grams":15}],"aka":["crema","crema agria","crema acida"]},
+  {"id":"b73","name":"Mayonesa","per100":{"kcal":680,"p":1,"c":0.6,"f":75},"servings":[{"label":"1 cda","grams":14},{"label":"1 cdita","grams":5}],"aka":["mayo","mayonesa"]},
+  {"id":"b74","name":"Chía","per100":{"kcal":486,"p":17,"c":42,"f":31},"servings":[{"label":"1 cda","grams":12}]},
+  {"id":"b75","name":"Taco al pastor","per100":{"kcal":225,"p":11,"c":17.5,"f":11.3},"servings":[{"label":"1 taco","grams":80}],"aka":["taco de pastor","tacos al pastor"]},
+  {"id":"b76","name":"Quesadilla de queso","per100":{"kcal":300,"p":13,"c":26,"f":16},"servings":[{"label":"1 quesadilla","grams":90}],"aka":["quesadilla"],"dflt":["quesadilla"]},
+  {"id":"b77","name":"Torta de jamón","per100":{"kcal":250,"p":11,"c":30,"f":9},"servings":[{"label":"1 torta","grams":230}],"aka":["torta","torta de jamon"],"dflt":["torta"]},
+  {"id":"b78","name":"Chilaquiles verdes","per100":{"kcal":180,"p":5,"c":20,"f":9},"servings":[{"label":"1 plato","grams":250}],"aka":["chilaquiles","chilaquiles rojos","chilaquiles verdes"]},
+  {"id":"b79","name":"Enchiladas de pollo","per100":{"kcal":190,"p":9,"c":18,"f":9},"servings":[{"label":"3 piezas","grams":250}],"aka":["enchiladas","enchiladas verdes","enchiladas rojas","enchiladas suizas","enchiladas de pollo"]},
+  {"id":"b80","name":"Pozole","per100":{"kcal":90,"p":6,"c":9,"f":3},"servings":[{"label":"1 plato","grams":400}],"aka":["pozole","pozole rojo","pozole verde","pozole blanco"]},
+  {"id":"b81","name":"Pizza de pepperoni","per100":{"kcal":270,"p":11.5,"c":30,"f":11.5},"servings":[{"label":"1 rebanada","grams":110}],"aka":["pizza","rebanada de pizza","pizza de peperoni"],"dflt":["pizza"]},
+  {"id":"b82","name":"Hamburguesa","per100":{"kcal":250,"p":13,"c":24,"f":11},"servings":[{"label":"1 pieza","grams":220}],"aka":["hamburguesa","burger"],"dflt":["hamburguesa"]},
+  {"id":"b83","name":"Barra de proteína","per100":{"kcal":350,"p":30,"c":40,"f":10},"servings":[{"label":"1 barra","grams":60}],"aka":["barra de proteina","barra proteica","protein bar"]},
+  {"id":"b84","name":"Chocolate amargo 70%","per100":{"kcal":598,"p":7.8,"c":46,"f":43},"servings":[{"label":"2 cuadros","grams":20}],"aka":["chocolate","chocolate negro","chocolate oscuro"],"dflt":["chocolate"]},
+  {"id":"b85","name":"Refresco de cola","per100":{"kcal":42,"p":0,"c":10.6,"f":0},"servings":[{"label":"1 lata","grams":355}],"aka":["coca","coca cola","pepsi","refresco","soda","refresco de cola"],"dflt":["refresco","coca","cola","soda"]},
+  {"id":"b86","name":"Jugo de naranja","per100":{"kcal":45,"p":0.7,"c":10.4,"f":0.2},"servings":[{"label":"1 vaso","grams":250}],"aka":["jugo","jugo de naranja","jugo natural"],"dflt":["jugo"]},
+  {"id":"b87","name":"Cerveza","per100":{"kcal":43,"p":0.5,"c":3.6,"f":0},"servings":[{"label":"1 lata","grams":355}],"aka":["chela","cheve","cerveza","birra"]},
+  {"id":"b88","name":"Café negro","per100":{"kcal":2,"p":0.3,"c":0,"f":0},"servings":[{"label":"1 taza","grams":240}],"aka":["cafe","cafe americano","americano","cafe de olla","cafe sin azucar"],"dflt":["cafe"]},
+  {"id":"b89","name":"Azúcar","per100":{"kcal":387,"p":0,"c":100,"f":0},"servings":[{"label":"1 cdita","grams":5},{"label":"1 cda","grams":13}],"aka":["azucar","piloncillo","azucar morena"]},
+  {"id":"b90","name":"Miel","per100":{"kcal":304,"p":0.3,"c":82,"f":0},"servings":[{"label":"1 cda","grams":21}],"aka":["miel","miel de abeja","miel de maple","jarabe de maple"]},
+  {"id":"b91","name":"Pierna de pollo cocida","per100":{"kcal":189,"p":27,"c":0,"f":9},"servings":[{"label":"1 pierna","grams":90}],"aka":["pierna de pollo","pierna y muslo","piernas de pollo"]},
+  {"id":"b92","name":"Pollo rostizado","per100":{"kcal":222,"p":24,"c":0,"f":14},"servings":[{"label":"1 cuarto","grams":150},{"label":"1 porción","grams":120}],"aka":["pollo rostizado","pollo al carbon","pollo a la leña","pollo asado con piel"]},
+  {"id":"b93","name":"Pollo desmenuzado","per100":{"kcal":161,"p":29,"c":0,"f":5},"servings":[{"label":"1 porción","grams":100}],"aka":["pollo deshebrado","pollo desmenuzado","pollo hervido","pollo deshebrado"]},
+  {"id":"b94","name":"Pollo frito","per100":{"kcal":272,"p":24,"c":8,"f":16},"servings":[{"label":"1 pieza","grams":120}],"aka":["pollo frito","pollo crujiente","pollo kfc","pollo estilo kfc"]},
+  {"id":"b95","name":"Alitas de pollo","per100":{"kcal":323,"p":27,"c":2,"f":23},"servings":[{"label":"6 alitas","grams":210},{"label":"1 orden","grams":250}],"aka":["alitas","alas de pollo","wings","alitas bbq","alitas fritas","alitas picantes"]},
+  {"id":"b96","name":"Milanesa de pollo","per100":{"kcal":249,"p":21,"c":12,"f":13},"servings":[{"label":"1 milanesa","grams":150}],"aka":["milanesa de pollo","pollo empanizado","pechuga empanizada","pechuga empanizada"]},
+  {"id":"b97","name":"Milanesa de res","per100":{"kcal":267,"p":22,"c":11,"f":15},"servings":[{"label":"1 milanesa","grams":150}],"aka":["milanesa","milanesa de res","bistec empanizado","milanesas"],"dflt":["milanesa"]},
+  {"id":"b98","name":"Nuggets de pollo","per100":{"kcal":294,"p":15,"c":18,"f":18},"servings":[{"label":"6 piezas","grams":100}],"aka":["nuggets","nugget","nuggets de pollo"]},
+  {"id":"b99","name":"Carne para hamburguesa cocida","per100":{"kcal":253,"p":25,"c":0,"f":17},"servings":[{"label":"1 hamburguesa","grams":100}],"aka":["carne de hamburguesa","carne molida 80/20","carne molida regular","patty","hamburguesa de res sola"]},
+  {"id":"b100","name":"Arrachera cocida","per100":{"kcal":212,"p":26,"c":0,"f":12},"servings":[{"label":"1 porción","grams":120}],"aka":["arrachera","carne asada","carne asada de res","diezmillo"]},
+  {"id":"b101","name":"Costilla de res asada","per100":{"kcal":285,"p":24,"c":0,"f":21},"servings":[{"label":"1 porción","grams":150}],"aka":["costilla de res","costillas de res","costilla de res asada","short rib"]},
+  {"id":"b102","name":"Costilla de cerdo cocida","per100":{"kcal":294,"p":24,"c":0,"f":22},"servings":[{"label":"1 porción","grams":200}],"aka":["costillas de cerdo","costilla de cerdo","costillas de puerco","costillitas","costillas bbq","costillas"]},
+  {"id":"b103","name":"Suadero cocido","per100":{"kcal":241,"p":22,"c":0,"f":17},"servings":[{"label":"1 porción","grams":100}],"aka":["suadero"]},
+  {"id":"b104","name":"Cecina","per100":{"kcal":200,"p":32,"c":0,"f":8},"servings":[{"label":"1 porción","grams":100}],"aka":["cecina","carne seca","machaca","cecina de res"]},
+  {"id":"b105","name":"Chorizo","per100":{"kcal":416,"p":21,"c":2,"f":36},"servings":[{"label":"1 pieza","grams":60}],"aka":["chorizo","chorizo de puerco","chorizo rojo","chorizo verde"]},
+  {"id":"b106","name":"Longaniza","per100":{"kcal":377,"p":18,"c":2,"f":33},"servings":[{"label":"1 pieza","grams":60}],"aka":["longaniza"]},
+  {"id":"b107","name":"Tocino frito","per100":{"kcal":541,"p":37,"c":1.4,"f":42},"servings":[{"label":"3 rebanadas","grams":24}],"aka":["tocino","bacon","beicon","tocineta","tiras de tocino"],"dflt":["tocino","bacon"]},
+  {"id":"b108","name":"Jamón de cerdo","per100":{"kcal":123,"p":18,"c":1.5,"f":5},"servings":[{"label":"1 rebanada","grams":28}],"aka":["jamon de puerco","jamon de cerdo","jamon york","jamon cocido"]},
+  {"id":"b109","name":"Salchicha","per100":{"kcal":290,"p":11,"c":3,"f":26},"servings":[{"label":"1 salchicha","grams":45}],"aka":["salchicha","salchichas","salchicha de res","salchicha de cerdo","salchicha viena","salchicha para hot dog"]},
+  {"id":"b110","name":"Pepperoni","per100":{"kcal":466,"p":19,"c":3,"f":42},"servings":[{"label":"5 rebanadas","grams":15}],"aka":["pepperoni","peperoni"]},
+  {"id":"b111","name":"Salami","per100":{"kcal":290,"p":22,"c":1,"f":22},"servings":[{"label":"1 rebanada","grams":10}],"aka":["salami","salchichon","mortadela"]},
+  {"id":"b112","name":"Chicharrón de cerdo","per100":{"kcal":544,"p":61,"c":0,"f":31},"servings":[{"label":"1 puño","grams":28}],"aka":["chicharron","chicharron de puerco","chicharron de cerdo","chicharron prensado"]},
+  {"id":"b113","name":"Carnitas de cerdo","per100":{"kcal":276,"p":24,"c":0,"f":20},"servings":[{"label":"1 porción","grams":100}],"aka":["carnitas","carnitas de puerco"]},
+  {"id":"b114","name":"Carne al pastor","per100":{"kcal":200,"p":20,"c":3,"f":12},"servings":[{"label":"1 porción","grams":100}],"aka":["carne al pastor","pastor","al pastor"]},
+  {"id":"b115","name":"Barbacoa de res","per100":{"kcal":226,"p":25,"c":0,"f":14},"servings":[{"label":"1 porción","grams":100}],"aka":["barbacoa","barbacoa de res","barbacoa de borrego","birria seca"]},
+  {"id":"b116","name":"Cochinita pibil","per100":{"kcal":195,"p":22,"c":2,"f":11},"servings":[{"label":"1 porción","grams":100}],"aka":["cochinita","cochinita pibil"]},
+  {"id":"b117","name":"Lengua de res cocida","per100":{"kcal":220,"p":19,"c":0,"f":16},"servings":[{"label":"1 porción","grams":100}],"aka":["lengua","lengua de res"]},
+  {"id":"b118","name":"Chuleta de cerdo cocida","per100":{"kcal":216,"p":27,"c":0,"f":12},"servings":[{"label":"1 chuleta","grams":120}],"aka":["chuleta","chuleta de puerco","chuleta de cerdo","chuletas"]},
+  {"id":"b119","name":"Pechuga de pavo cocida","per100":{"kcal":134,"p":30,"c":0,"f":1.5},"servings":[{"label":"1 porción","grams":100}],"aka":["pavo","pechuga de pavo","pavo asado"],"dflt":["pavo"]},
+  {"id":"b120","name":"Pavo molido cocido","per100":{"kcal":198,"p":27,"c":0,"f":10},"servings":[{"label":"1 porción","grams":100}],"aka":["pavo molido","carne molida de pavo"]},
+  {"id":"b121","name":"Pescado empanizado frito","per100":{"kcal":228,"p":15,"c":15,"f":12},"servings":[{"label":"1 filete","grams":100}],"aka":["pescado empanizado","pescado frito","filete de pescado empanizado","filete empanizado","pescado capeado"]},
+  {"id":"b122","name":"Atún fresco cocido","per100":{"kcal":161,"p":29,"c":0,"f":5},"servings":[{"label":"1 filete","grams":150}],"aka":["atun fresco","filete de atun","atun sellado"]},
+  {"id":"b123","name":"Atún en aceite","per100":{"kcal":176,"p":26,"c":0,"f":8},"servings":[{"label":"1 lata","grams":120}],"aka":["atun en aceite"]},
+  {"id":"b124","name":"Sardinas en lata","per100":{"kcal":199,"p":25,"c":0,"f":11},"servings":[{"label":"1 lata","grams":90}],"aka":["sardina","sardinas","sardinas en lata"]},
+  {"id":"b125","name":"Mojarra frita","per100":{"kcal":216,"p":22,"c":5,"f":12},"servings":[{"label":"1 pieza","grams":150}],"aka":["mojarra","mojarra frita","pescado entero frito"]},
+  {"id":"b126","name":"Huachinango cocido","per100":{"kcal":131,"p":26,"c":0,"f":3},"servings":[{"label":"1 filete","grams":150}],"aka":["huachinango","pargo","robalo","mero","filete de huachinango"]},
+  {"id":"b127","name":"Bacalao cocido","per100":{"kcal":101,"p":23,"c":0,"f":1},"servings":[{"label":"1 filete","grams":150}],"aka":["bacalao"]},
+  {"id":"b128","name":"Pulpo cocido","per100":{"kcal":154,"p":30,"c":4,"f":2},"servings":[{"label":"1 porción","grams":100}],"aka":["pulpo"]},
+  {"id":"b129","name":"Surimi","per100":{"kcal":85,"p":10,"c":9,"f":1},"servings":[{"label":"1 barra","grams":20}],"aka":["surimi","cangrejo","palito de cangrejo","kanikama"]},
+  {"id":"b130","name":"Camarones empanizados","per100":{"kcal":248,"p":18,"c":17,"f":12},"servings":[{"label":"6 piezas","grams":120}],"aka":["camarones empanizados","camaron empanizado","camarones fritos","camarones capeados"]},
+  {"id":"b131","name":"Ceviche de pescado","per100":{"kcal":77,"p":12,"c":5,"f":1},"servings":[{"label":"1 tostada","grams":80},{"label":"1 plato","grams":200}],"aka":["ceviche","ceviche de pescado","ceviche de camaron"]},
+  {"id":"b132","name":"Aguachile de camarón","per100":{"kcal":81,"p":14,"c":4,"f":1},"servings":[{"label":"1 plato","grams":200}],"aka":["aguachile","aguachile de camaron"]},
+  {"id":"b133","name":"Huevo frito","per100":{"kcal":195,"p":14,"c":1,"f":15},"servings":[{"label":"1 huevo","grams":46}],"aka":["huevo frito","huevos fritos","huevo estrellado","huevos estrellados","huevo al sarten","huevo con aceite"]},
+  {"id":"b134","name":"Huevo revuelto","per100":{"kcal":147,"p":10,"c":2,"f":11},"servings":[{"label":"1 huevo","grams":61}],"aka":["huevo revuelto","huevos revueltos"]},
+  {"id":"b135","name":"Huevo cocido","per100":{"kcal":155,"p":13,"c":1.1,"f":11},"servings":[{"label":"1 huevo","grams":50}],"aka":["huevo cocido","huevos cocidos","huevo hervido","huevos hervidos","huevo duro"]},
+  {"id":"b136","name":"Yema de huevo","per100":{"kcal":321,"p":16,"c":3.6,"f":27},"servings":[{"label":"1 yema","grams":17}],"aka":["yema","yemas"]},
+  {"id":"b137","name":"Huevos a la mexicana","per100":{"kcal":147,"p":9,"c":3,"f":11},"servings":[{"label":"1 porción (2 huevos)","grams":150}],"aka":["huevos a la mexicana","huevo a la mexicana","huevos mexicanos"]},
+  {"id":"b138","name":"Omelette de jamón y queso","per100":{"kcal":162,"p":12,"c":1.5,"f":12},"servings":[{"label":"1 omelette","grams":180}],"aka":["omelette","omelet","omelete","omelette de jamon","omelette de queso"]},
+  {"id":"b139","name":"Queso amarillo","per100":{"kcal":356,"p":20,"c":6,"f":28},"servings":[{"label":"1 rebanada","grams":20}],"aka":["queso amarillo","queso americano","queso en rebanadas","queso de hamburguesa","queso fundido amarillo"]},
+  {"id":"b140","name":"Queso cheddar","per100":{"kcal":402,"p":25,"c":1.3,"f":33},"servings":[{"label":"1 rebanada","grams":28}],"aka":["cheddar","queso cheddar"]},
+  {"id":"b141","name":"Queso mozzarella","per100":{"kcal":295,"p":22,"c":2.2,"f":22},"servings":[{"label":"1 porción","grams":30}],"aka":["mozzarella","mozarela","queso mozzarella","queso para pizza"]},
+  {"id":"b142","name":"Queso fresco","per100":{"kcal":291,"p":18,"c":3,"f":23},"servings":[{"label":"1 rebanada","grams":30}],"aka":["queso fresco","queso ranchero","queso cotija","cotija","queso rallado"]},
+  {"id":"b143","name":"Queso crema","per100":{"kcal":346,"p":6,"c":4,"f":34},"servings":[{"label":"1 cda","grams":15}],"aka":["queso crema","philadelphia","queso philadelphia"]},
+  {"id":"b144","name":"Queso parmesano","per100":{"kcal":421,"p":36,"c":4,"f":29},"servings":[{"label":"1 cda","grams":5}],"aka":["parmesano","queso parmesano"]},
+  {"id":"b145","name":"Requesón","per100":{"kcal":96,"p":11,"c":3.4,"f":4.3},"servings":[{"label":"½ taza","grams":120}],"aka":["requeson"]},
+  {"id":"b146","name":"Leche semidescremada","per100":{"kcal":50,"p":3.4,"c":5,"f":1.8},"servings":[{"label":"1 taza","grams":240}],"aka":["leche semidescremada","leche light","leche semi"]},
+  {"id":"b147","name":"Leche deslactosada","per100":{"kcal":62,"p":3.3,"c":4.8,"f":3.3},"servings":[{"label":"1 taza","grams":240}],"aka":["leche deslactosada","leche sin lactosa","deslactosada"]},
+  {"id":"b148","name":"Leche condensada","per100":{"kcal":330,"p":8,"c":55,"f":8.7},"servings":[{"label":"1 cda","grams":20}],"aka":["leche condensada","lechera"]},
+  {"id":"b149","name":"Leche evaporada","per100":{"kcal":136,"p":6.8,"c":10,"f":7.6},"servings":[{"label":"1 cda","grams":15}],"aka":["leche evaporada","media crema","carnation"]},
+  {"id":"b150","name":"Leche de soya","per100":{"kcal":40,"p":3,"c":3,"f":1.8},"servings":[{"label":"1 taza","grams":240}],"aka":["leche de soya","leche de soja"]},
+  {"id":"b151","name":"Leche de avena","per100":{"kcal":46,"p":1,"c":7,"f":1.5},"servings":[{"label":"1 taza","grams":240}],"aka":["leche de avena"]},
+  {"id":"b152","name":"Yogur con fruta","per100":{"kcal":88,"p":3.5,"c":15,"f":1.5},"servings":[{"label":"1 vaso","grams":150}],"aka":["yogur con fruta","yogurt con fruta","yogur de fresa","yogurt de fresa","yogur sabor","yogurt sabor"]},
+  {"id":"b153","name":"Yogur bebible","per100":{"kcal":73,"p":2.8,"c":12,"f":1.5},"servings":[{"label":"1 botella","grams":220}],"aka":["yogur bebible","yogurt bebible","yoghurt bebible","yakult"]},
+  {"id":"b154","name":"Helado de vainilla","per100":{"kcal":209,"p":3.5,"c":24,"f":11},"servings":[{"label":"1 bola","grams":66}],"aka":["helado","nieve","helado de vainilla","helado de chocolate","bola de helado"]},
+  {"id":"b155","name":"Paleta helada de fruta","per100":{"kcal":80,"p":0.3,"c":20,"f":0},"servings":[{"label":"1 paleta","grams":70}],"aka":["paleta","paleta de hielo","paleta de fruta","paleta helada","paleta de agua","paleta de crema"]},
+  {"id":"b156","name":"Margarina","per100":{"kcal":717,"p":0.2,"c":0.7,"f":80},"servings":[{"label":"1 cdita","grams":5}],"aka":["margarina"]},
+  {"id":"b157","name":"Flan","per100":{"kcal":149,"p":4,"c":22,"f":5},"servings":[{"label":"1 rebanada","grams":100}],"aka":["flan","flan napolitano"]},
+  {"id":"b158","name":"Gelatina","per100":{"kcal":62,"p":1.5,"c":14,"f":0},"servings":[{"label":"1 vasito","grams":120}],"aka":["gelatina","gelatina de sabor"]},
+  {"id":"b159","name":"Arroz con leche","per100":{"kcal":127,"p":3,"c":22,"f":3},"servings":[{"label":"1 vaso","grams":200}],"aka":["arroz con leche"]},
+  {"id":"b160","name":"Pan de hamburguesa","per100":{"kcal":268,"p":9,"c":49,"f":4},"servings":[{"label":"1 pan","grams":60}],"aka":["pan de hamburguesa","bollo de hamburguesa","bollo"]},
+  {"id":"b161","name":"Pan de hot dog","per100":{"kcal":276,"p":10,"c":50,"f":4},"servings":[{"label":"1 pan","grams":45}],"aka":["pan de hot dog","pan para hot dog"]},
+  {"id":"b162","name":"Pan de caja blanco","per100":{"kcal":261,"p":9,"c":49,"f":3.2},"servings":[{"label":"1 rebanada","grams":28}],"aka":["pan blanco","pan bimbo","pan de caja","pan de sandwich","pan molde"]},
+  {"id":"b163","name":"Concha","per100":{"kcal":356,"p":7,"c":55,"f":12},"servings":[{"label":"1 concha","grams":90}],"aka":["concha","pan dulce","conchas","pan de dulce","cuernito de dulce"]},
+  {"id":"b164","name":"Cuernito","per100":{"kcal":405,"p":8,"c":46,"f":21},"servings":[{"label":"1 pieza","grams":60}],"aka":["cuernito","croissant","cruasan","croissant de mantequilla"]},
+  {"id":"b165","name":"Dona","per100":{"kcal":449,"p":5,"c":51,"f":25},"servings":[{"label":"1 dona","grams":60}],"aka":["dona","donas","donut","dona glaseada","donitas"]},
+  {"id":"b166","name":"Bagel","per100":{"kcal":266,"p":10,"c":53,"f":1.5},"servings":[{"label":"1 pieza","grams":95}],"aka":["bagel"]},
+  {"id":"b167","name":"Pan pita","per100":{"kcal":271,"p":9,"c":56,"f":1.2},"servings":[{"label":"1 pieza","grams":60}],"aka":["pan pita","pita"]},
+  {"id":"b168","name":"Saladitas","per100":{"kcal":424,"p":9,"c":70,"f":12},"servings":[{"label":"5 galletas","grams":16}],"aka":["saladitas","galletas saladas","galletas de sal","crackers","galleta salada"]},
+  {"id":"b169","name":"Galletas de chocolate con crema","per100":{"kcal":476,"p":4,"c":70,"f":20},"servings":[{"label":"3 galletas","grams":33}],"aka":["oreo","oreos","galletas oreo","galletas de chocolate","galleta de chocolate","galletas con crema","galletas rellenas"]},
+  {"id":"b170","name":"Galletas de chispas","per100":{"kcal":496,"p":5,"c":65,"f":24},"servings":[{"label":"1 galleta","grams":30}],"aka":["galleta de chispas","galletas con chispas","cookie","cookies","galletas de chispas de chocolate"]},
+  {"id":"b171","name":"Hot cakes","per100":{"kcal":227,"p":6,"c":28,"f":10},"servings":[{"label":"1 hot cake","grams":40}],"aka":["hot cakes","hotcakes","hot cake","panqueques","pancakes","pancake","hotcake"]},
+  {"id":"b172","name":"Waffle","per100":{"kcal":255,"p":6,"c":33,"f":11},"servings":[{"label":"1 waffle","grams":75}],"aka":["waffle","waffles","wafles"]},
+  {"id":"b173","name":"Pan francés (french toast)","per100":{"kcal":227,"p":8,"c":24,"f":11},"servings":[{"label":"1 rebanada","grams":65}],"aka":["pan frances","french toast","torrijas","pan frances con huevo"]},
+  {"id":"b174","name":"Tostada frita","per100":{"kcal":447,"p":7,"c":62,"f":19},"servings":[{"label":"1 tostada","grams":15}],"aka":["tostada","tostadas","tostada de maiz","tostada frita","totopos","totopo"]},
+  {"id":"b175","name":"Papas fritas de bolsa","per100":{"kcal":536,"p":6,"c":53,"f":34},"servings":[{"label":"1 bolsa chica","grams":45}],"aka":["papas de bolsa","papitas","sabritas","papas sabritas","papas fritas de bolsa","chips","papas barcel","papitas de bolsa"]},
+  {"id":"b176","name":"Frituras de maíz (Cheetos, Doritos)","per100":{"kcal":510,"p":6,"c":58,"f":28},"servings":[{"label":"1 bolsa chica","grams":50}],"aka":["cheetos","doritos","takis","churrumais","fritos","frituras","botana","botanas","ruffles","rufles","tostitos"]},
+  {"id":"b177","name":"Papas a la francesa","per100":{"kcal":313,"p":3.4,"c":41,"f":15},"servings":[{"label":"1 porción chica","grams":80},{"label":"1 porción mediana","grams":115},{"label":"1 orden","grams":150}],"aka":["papas a la francesa","papas fritas","papas francesas","french fries","papas fritas de restaurante","papas gajo"]},
+  {"id":"b178","name":"Cereal azucarado","per100":{"kcal":375,"p":5,"c":85,"f":2},"servings":[{"label":"1 taza","grams":36}],"aka":["zucaritas","choco krispis","froot loops","trix","cereal de chocolate","cereal azucarado","cereal de caja","chocapic","lucky charms"]},
+  {"id":"b179","name":"Arroz rojo","per100":{"kcal":147,"p":3,"c":27,"f":3},"servings":[{"label":"1 taza","grams":160}],"aka":["arroz rojo","arroz a la mexicana","arroz mexicano","sopa de arroz"]},
+  {"id":"b180","name":"Arroz frito","per100":{"kcal":189,"p":4,"c":32,"f":5},"servings":[{"label":"1 taza","grams":160}],"aka":["arroz frito","arroz chino","arroz frito chino"]},
+  {"id":"b181","name":"Sopa de fideo","per100":{"kcal":107,"p":3,"c":17,"f":3},"servings":[{"label":"1 plato","grams":200}],"aka":["sopa de fideo","sopa de pasta","fideo","fideos aguados","sopa seca"]},
+  {"id":"b182","name":"Espagueti con salsa roja","per100":{"kcal":151,"p":5,"c":26,"f":3},"servings":[{"label":"1 plato","grams":300}],"aka":["espagueti con salsa","spaghetti con salsa","pasta con salsa roja","pasta con salsa de tomate","espagueti rojo","espagueti a la boloñesa"]},
+  {"id":"b183","name":"Pasta Alfredo","per100":{"kcal":197,"p":5,"c":24,"f":9},"servings":[{"label":"1 plato","grams":300}],"aka":["pasta alfredo","fettuccine alfredo","pasta con crema","espagueti blanco"]},
+  {"id":"b184","name":"Macarrones con queso","per100":{"kcal":176,"p":6,"c":20,"f":8},"servings":[{"label":"1 plato","grams":250}],"aka":["macarrones con queso","mac and cheese","macaroni and cheese","mac n cheese"]},
+  {"id":"b185","name":"Quinoa cocida","per100":{"kcal":119,"p":4.4,"c":21,"f":1.9},"servings":[{"label":"1 taza","grams":185}],"aka":["quinoa","quinua"]},
+  {"id":"b186","name":"Avena cocida con agua","per100":{"kcal":72,"p":2.5,"c":12,"f":1.5},"servings":[{"label":"1 taza","grams":240}],"aka":["avena cocida","avena con agua","avena preparada","avena caliente"]},
+  {"id":"b187","name":"Avena cocida con leche","per100":{"kcal":103,"p":4,"c":15,"f":3},"servings":[{"label":"1 taza","grams":240}],"aka":["avena con leche","avena cocida con leche","avena preparada con leche"]},
+  {"id":"b188","name":"Tamal de carne","per100":{"kcal":184,"p":7,"c":21,"f":8},"servings":[{"label":"1 tamal","grams":130}],"aka":["tamal","tamales","tamal de puerco","tamal de pollo","tamal de carne","tamal verde","tamal rojo","tamal de mole"]},
+  {"id":"b189","name":"Tamal de rajas","per100":{"kcal":180,"p":5,"c":22,"f":8},"servings":[{"label":"1 tamal","grams":130}],"aka":["tamal de rajas","tamal de queso","tamal de rajas con queso"]},
+  {"id":"b190","name":"Tamal dulce","per100":{"kcal":206,"p":3,"c":35,"f":6},"servings":[{"label":"1 tamal","grams":110}],"aka":["tamal dulce","tamal de dulce","tamal de fresa","tamal de pasas"]},
+  {"id":"b191","name":"Atole","per100":{"kcal":84,"p":2.5,"c":14,"f":2},"servings":[{"label":"1 vaso","grams":240}],"aka":["atole","atole de chocolate","atole de vainilla","champurrado","atole de masa"]},
+  {"id":"b192","name":"Frijoles pintos cocidos","per100":{"kcal":143,"p":9,"c":26,"f":0.7},"servings":[{"label":"1 taza","grams":170}],"aka":["frijoles pintos","frijoles de la olla","frijoles bayos","frijoles peruanos","frijoles cocidos","frijoles pinto"]},
+  {"id":"b193","name":"Frijoles charros","per100":{"kcal":125,"p":7,"c":13,"f":5},"servings":[{"label":"1 plato","grams":250}],"aka":["frijoles charros","charros"]},
+  {"id":"b194","name":"Habas cocidas","per100":{"kcal":113,"p":7.6,"c":19,"f":0.7},"servings":[{"label":"1 taza","grams":170}],"aka":["habas","haba"]},
+  {"id":"b195","name":"Ejotes cocidos","per100":{"kcal":38,"p":1.9,"c":7,"f":0.3},"servings":[{"label":"1 taza","grams":125}],"aka":["ejotes","ejote"]},
+  {"id":"b196","name":"Chícharos cocidos","per100":{"kcal":80,"p":5,"c":14,"f":0.4},"servings":[{"label":"½ taza","grams":80}],"aka":["chicharos","chicharo","guisantes","arvejas"]},
+  {"id":"b197","name":"Edamame","per100":{"kcal":129,"p":12,"c":9,"f":5},"servings":[{"label":"1 taza","grams":155}],"aka":["edamame","edamames"]},
+  {"id":"b198","name":"Hummus","per100":{"kcal":178,"p":8,"c":14,"f":10},"servings":[{"label":"2 cdas","grams":30}],"aka":["hummus","humus"]},
+  {"id":"b199","name":"Tomate verde","per100":{"kcal":37,"p":1,"c":6,"f":1},"servings":[{"label":"1 pieza","grams":35}],"aka":["tomate verde","tomatillo","tomatillos"]},
+  {"id":"b200","name":"Chile jalapeño","per100":{"kcal":33,"p":0.9,"c":6.5,"f":0.4},"servings":[{"label":"1 chile","grams":14}],"aka":["jalapeno","jalapenos","chile jalapeno","chile","chiles"]},
+  {"id":"b201","name":"Chile serrano","per100":{"kcal":37,"p":1.7,"c":6.7,"f":0.4},"servings":[{"label":"1 chile","grams":6}],"aka":["serrano","chile serrano"]},
+  {"id":"b202","name":"Rajas de chile poblano","per100":{"kcal":40,"p":1,"c":5,"f":2},"servings":[{"label":"½ taza","grams":70}],"aka":["rajas","chile poblano","poblano","rajas de poblano","rajas con crema"]},
+  {"id":"b203","name":"Pico de gallo","per100":{"kcal":26,"p":1,"c":5,"f":0.2},"servings":[{"label":"¼ taza","grams":50}],"aka":["pico de gallo","pico","salsa mexicana","salsa pico de gallo"]},
+  {"id":"b204","name":"Guacamole","per100":{"kcal":175,"p":2,"c":8,"f":15},"servings":[{"label":"2 cdas","grams":40}],"aka":["guacamole","guacamol"]},
+  {"id":"b205","name":"Ajo","per100":{"kcal":162,"p":6.4,"c":33,"f":0.5},"servings":[{"label":"1 diente","grams":3}],"aka":["ajo","dientes de ajo"]},
+  {"id":"b206","name":"Col","per100":{"kcal":30,"p":1.3,"c":6,"f":0.1},"servings":[{"label":"1 taza","grams":70}],"aka":["col","repollo","col morada","col rallada"]},
+  {"id":"b207","name":"Rábano","per100":{"kcal":17,"p":0.7,"c":3.4,"f":0.1},"servings":[{"label":"1 pieza","grams":10}],"aka":["rabano","rabanos"]},
+  {"id":"b208","name":"Pimiento morrón","per100":{"kcal":33,"p":1,"c":6,"f":0.3},"servings":[{"label":"½ pieza","grams":75}],"aka":["pimiento","chile morron","morron","pimiento morron","pimiento rojo"]},
+  {"id":"b209","name":"Champiñones","per100":{"kcal":28,"p":3.1,"c":3.3,"f":0.3},"servings":[{"label":"1 taza","grams":70}],"aka":["champinones","champinon","hongos","setas","portobello"]},
+  {"id":"b210","name":"Coliflor cocida","per100":{"kcal":28,"p":1.8,"c":4.1,"f":0.5},"servings":[{"label":"1 taza","grams":100}],"aka":["coliflor"]},
+  {"id":"b211","name":"Chayote cocido","per100":{"kcal":24,"p":0.8,"c":4.5,"f":0.3},"servings":[{"label":"1 pieza","grams":200}],"aka":["chayote","chayotes"]},
+  {"id":"b212","name":"Betabel cocido","per100":{"kcal":49,"p":1.7,"c":10,"f":0.2},"servings":[{"label":"1 pieza","grams":80}],"aka":["betabel","remolacha"]},
+  {"id":"b213","name":"Esquites","per100":{"kcal":165,"p":4,"c":17,"f":9},"servings":[{"label":"1 vaso","grams":200}],"aka":["esquites","esquite","elote en vaso","vasito de elote","elote desgranado","elote con mayonesa","elote con mayonesa y queso"]},
+  {"id":"b214","name":"Espárragos cocidos","per100":{"kcal":27,"p":2.4,"c":4,"f":0.2},"servings":[{"label":"5 piezas","grams":90}],"aka":["esparragos","esparrago"]},
+  {"id":"b215","name":"Aceitunas","per100":{"kcal":127,"p":1,"c":6,"f":11},"servings":[{"label":"5 piezas","grams":15}],"aka":["aceitunas","aceituna"]},
+  {"id":"b216","name":"Puré de papa","per100":{"kcal":113,"p":2,"c":15,"f":5},"servings":[{"label":"1 taza","grams":210}],"aka":["pure de papa","pure","puré"]},
+  {"id":"b217","name":"Papa al horno","per100":{"kcal":95,"p":2.5,"c":21,"f":0.1},"servings":[{"label":"1 papa","grams":170}],"aka":["papa al horno","papa horneada","papa asada"]},
+  {"id":"b218","name":"Plátano macho frito","per100":{"kcal":267,"p":1.5,"c":40,"f":12},"servings":[{"label":"1 plátano","grams":100}],"aka":["platano macho","platanos fritos","platano frito","platano macho frito","plantain"]},
+  {"id":"b219","name":"Pepinillos","per100":{"kcal":12,"p":0.5,"c":2,"f":0.2},"servings":[{"label":"3 rebanadas","grams":15}],"aka":["pepinillos","pepinillo","pickles","pepinillos en vinagre"]},
+  {"id":"b220","name":"Pera","per100":{"kcal":63,"p":0.4,"c":15,"f":0.1},"servings":[{"label":"1 pieza","grams":180}],"aka":["pera","peras"]},
+  {"id":"b221","name":"Durazno","per100":{"kcal":46,"p":0.9,"c":10,"f":0.3},"servings":[{"label":"1 pieza","grams":150}],"aka":["durazno","duraznos","melocoton"]},
+  {"id":"b222","name":"Melón","per100":{"kcal":37,"p":0.8,"c":8,"f":0.2},"servings":[{"label":"1 taza","grams":160}],"aka":["melon"]},
+  {"id":"b223","name":"Limón","per100":{"kcal":30,"p":1,"c":10,"f":0.3},"servings":[{"label":"1 limón","grams":60}],"aka":["limon","limones"]},
+  {"id":"b224","name":"Mandarina","per100":{"kcal":58,"p":0.8,"c":13,"f":0.3},"servings":[{"label":"1 pieza","grams":85}],"aka":["mandarina","mandarinas","clementina"]},
+  {"id":"b225","name":"Guayaba","per100":{"kcal":75,"p":2.6,"c":14,"f":1},"servings":[{"label":"1 pieza","grams":55}],"aka":["guayaba","guayabas"]},
+  {"id":"b226","name":"Kiwi","per100":{"kcal":69,"p":1.1,"c":15,"f":0.5},"servings":[{"label":"1 pieza","grams":70}],"aka":["kiwi","kiwis"]},
+  {"id":"b227","name":"Tuna","per100":{"kcal":47,"p":0.7,"c":10,"f":0.5},"servings":[{"label":"1 pieza","grams":80}],"aka":["tuna","tunas"]},
+  {"id":"b228","name":"Arándanos","per100":{"kcal":62,"p":0.7,"c":14,"f":0.3},"servings":[{"label":"1 taza","grams":150}],"aka":["arandanos","arandano","blueberries"]},
+  {"id":"b229","name":"Zarzamoras","per100":{"kcal":50,"p":1.4,"c":10,"f":0.5},"servings":[{"label":"1 taza","grams":140}],"aka":["zarzamora","zarzamoras","moras"]},
+  {"id":"b230","name":"Cerezas","per100":{"kcal":70,"p":1,"c":16,"f":0.2},"servings":[{"label":"1 taza","grams":140}],"aka":["cereza","cerezas"]},
+  {"id":"b231","name":"Ciruela","per100":{"kcal":50,"p":0.7,"c":11,"f":0.3},"servings":[{"label":"1 pieza","grams":65}],"aka":["ciruela","ciruelas"]},
+  {"id":"b232","name":"Dátiles","per100":{"kcal":282,"p":1.8,"c":75,"f":0.2},"servings":[{"label":"1 dátil","grams":8}],"aka":["datil","datiles"]},
+  {"id":"b233","name":"Pasas","per100":{"kcal":299,"p":3,"c":79,"f":0.5},"servings":[{"label":"1 puño","grams":28}],"aka":["pasas","pasa","uvas pasas"]},
+  {"id":"b234","name":"Jícama","per100":{"kcal":40,"p":0.7,"c":9,"f":0.1},"servings":[{"label":"1 taza","grams":130}],"aka":["jicama"]},
+  {"id":"b235","name":"Fruta picada","per100":{"kcal":53,"p":0.7,"c":12,"f":0.2},"servings":[{"label":"1 taza","grams":160}],"aka":["fruta picada","ensalada de frutas","fruta","frutas","copa de fruta","vaso de fruta","coctel de frutas"]},
+  {"id":"b236","name":"Café con leche","per100":{"kcal":32,"p":1.7,"c":3,"f":1.5},"servings":[{"label":"1 taza","grams":240}],"aka":["cafe con leche","cafe latte","cafe lechero","cafe con leche y azucar"]},
+  {"id":"b237","name":"Capuchino","per100":{"kcal":42,"p":2,"c":4,"f":2},"servings":[{"label":"1 taza","grams":240}],"aka":["capuchino","cappuccino","capuccino"]},
+  {"id":"b238","name":"Latte","per100":{"kcal":55,"p":3,"c":5,"f":2.5},"servings":[{"label":"1 vaso","grams":350}],"aka":["latte","latte de vainilla","cafe latte grande"]},
+  {"id":"b239","name":"Frapé de café","per100":{"kcal":103,"p":1,"c":18,"f":3},"servings":[{"label":"1 vaso","grams":350}],"aka":["frappe","frape","frappuccino","frappe de cafe","cafe frio dulce","iced coffee"]},
+  {"id":"b240","name":"Té sin azúcar","per100":{"kcal":0,"p":0,"c":0,"f":0},"servings":[{"label":"1 taza","grams":240}],"aka":["te","te verde","te negro","te de manzanilla","manzanilla","te de hierbabuena","te de jamaica sin azucar","infusion"]},
+  {"id":"b241","name":"Té helado con azúcar","per100":{"kcal":32,"p":0,"c":8,"f":0},"servings":[{"label":"1 vaso","grams":355}],"aka":["te helado","te frio","nestea","ice tea","te helado con azucar","fuze tea"]},
+  {"id":"b242","name":"Agua","per100":{"kcal":0,"p":0,"c":0,"f":0},"servings":[{"label":"1 vaso","grams":250}],"aka":["agua","agua natural","agua simple","agua mineral","agua de garrafon","agua embotellada","agua con gas","agua natural simple","agua purificada","topo chico","ciel"],"dflt":["agua"]},
+  {"id":"b243","name":"Agua de jamaica","per100":{"kcal":32,"p":0,"c":8,"f":0},"servings":[{"label":"1 vaso","grams":355}],"aka":["agua de jamaica","jamaica"]},
+  {"id":"b244","name":"Agua de horchata","per100":{"kcal":50,"p":0.3,"c":11,"f":0.5},"servings":[{"label":"1 vaso","grams":355}],"aka":["agua de horchata","horchata"]},
+  {"id":"b245","name":"Agua fresca de sabor","per100":{"kcal":24,"p":0,"c":6,"f":0},"servings":[{"label":"1 vaso","grams":355}],"aka":["agua fresca","agua de sabor","agua de limon","agua de tamarindo","agua de sandia","agua de melon","agua de pina","agua de naranja","limonada","naranjada","agua de guayaba","agua de mango","agua de fresa"]},
+  {"id":"b246","name":"Jugo de manzana","per100":{"kcal":46,"p":0.1,"c":11,"f":0.1},"servings":[{"label":"1 vaso","grams":250}],"aka":["jugo de manzana","jugo de uva","jugo de piña","jugo de pina","jugo embotellado","jumex","jugo del valle","nectar"]},
+  {"id":"b247","name":"Jugo verde","per100":{"kcal":31,"p":1,"c":7,"f":0.2},"servings":[{"label":"1 vaso","grams":300}],"aka":["jugo verde","jugo de nopal","jugo de apio","jugo de verduras"]},
+  {"id":"b248","name":"Refresco light o zero","per100":{"kcal":1,"p":0,"c":0,"f":0},"servings":[{"label":"1 lata","grams":355}],"aka":["coca zero","coca light","coca cola zero","refresco light","refresco zero","pepsi zero","sprite zero","diet coke","refresco sin azucar","refresco dietetico","coca cola light"]},
+  {"id":"b249","name":"Refresco de sabor","per100":{"kcal":48,"p":0,"c":12,"f":0},"servings":[{"label":"1 lata","grams":355}],"aka":["sprite","fanta","sidral","manzanita","fresca","7up","seven up","jarritos","squirt","refresco de naranja","refresco de limon","refresco de uva","refresco de manzana","mirinda","refresco de sabor","delaware punch","peñafiel"]},
+  {"id":"b250","name":"Bebida energética","per100":{"kcal":45,"p":0,"c":11,"f":0},"servings":[{"label":"1 lata","grams":473}],"aka":["monster","red bull","redbull","energizante","bebida energetica","rockstar","bebida energizante","vive 100"]},
+  {"id":"b251","name":"Bebida deportiva","per100":{"kcal":24,"p":0,"c":6,"f":0},"servings":[{"label":"1 botella","grams":600}],"aka":["gatorade","powerade","bebida deportiva","bebida isotonica","isotonico","electrolit","suero","suero oral"]},
+  {"id":"b252","name":"Cerveza light","per100":{"kcal":29,"p":0.3,"c":1.8,"f":0},"servings":[{"label":"1 lata","grams":355}],"aka":["cerveza light","chela light","cerveza ligera","michelob ultra","corona light","cerveza sin alcohol"]},
+  {"id":"b253","name":"Vino tinto","per100":{"kcal":85,"p":0.1,"c":2.6,"f":0},"servings":[{"label":"1 copa","grams":150}],"aka":["vino","vino tinto","vino blanco","copa de vino","vino rosado"]},
+  {"id":"b254","name":"Tequila, mezcal o whisky","per100":{"kcal":231,"p":0,"c":0,"f":0},"servings":[{"label":"1 caballito","grams":45}],"aka":["tequila","mezcal","whisky","whiskey","ron","vodka","brandy","ginebra","caballito","caballito de tequila","shot","caguama de tequila","licor","cognac","coñac"]},
+  {"id":"b255","name":"Chocolate caliente","per100":{"kcal":87,"p":3,"c":12,"f":3},"servings":[{"label":"1 taza","grams":240}],"aka":["chocolate caliente","chocolate de agua","chocolate de leche","chocomilk","cacao con leche"]},
+  {"id":"b256","name":"Chocolate con leche","per100":{"kcal":535,"p":7.7,"c":59,"f":30},"servings":[{"label":"1 barra","grams":40}],"aka":["chocolate con leche","barra de chocolate","chocolatina","snickers","carlos v","hershey","kit kat","milky way","m&ms","conejo de chocolate"]},
+  {"id":"b257","name":"Gomitas","per100":{"kcal":334,"p":6.5,"c":77,"f":0},"servings":[{"label":"1 puño","grams":30}],"aka":["gomitas","gomita","gummies","dulces de gomita","panditas","ositos de goma"]},
+  {"id":"b258","name":"Caramelos","per100":{"kcal":392,"p":0,"c":98,"f":0},"servings":[{"label":"1 caramelo","grams":5}],"aka":["caramelos","caramelo","dulces","dulce","paleta de caramelo","bolitas de dulce","chicle"]},
+  {"id":"b259","name":"Nutella","per100":{"kcal":535,"p":6,"c":58,"f":31},"servings":[{"label":"1 cda","grams":20}],"aka":["nutella","crema de avellana","crema de chocolate","chocolate para untar"]},
+  {"id":"b260","name":"Mermelada","per100":{"kcal":262,"p":0.4,"c":65,"f":0},"servings":[{"label":"1 cda","grams":20}],"aka":["mermelada","jalea","mermelada de fresa"]},
+  {"id":"b261","name":"Cajeta","per100":{"kcal":314,"p":5,"c":60,"f":6},"servings":[{"label":"1 cda","grams":20}],"aka":["cajeta","dulce de leche","cajeta de cabra"]},
+  {"id":"b262","name":"Churros","per100":{"kcal":330,"p":4,"c":38,"f":18},"servings":[{"label":"1 churro","grams":50}],"aka":["churro","churros","churros con azucar"]},
+  {"id":"b263","name":"Pastel","per100":{"kcal":371,"p":4,"c":55,"f":15},"servings":[{"label":"1 rebanada","grams":100}],"aka":["pastel","pastel de chocolate","pastel de vainilla","rebanada de pastel","pay","cake","panque","pastelito","gansito","pinguinos","marinela"]},
+  {"id":"b264","name":"Brownie","per100":{"kcal":460,"p":5,"c":56,"f":24},"servings":[{"label":"1 pieza","grams":60}],"aka":["brownie","brownies"]},
+  {"id":"b265","name":"Pay de queso","per100":{"kcal":326,"p":6,"c":26,"f":22},"servings":[{"label":"1 rebanada","grams":125}],"aka":["pay de queso","cheesecake","pastel de queso"]},
+  {"id":"b266","name":"Pan de elote","per100":{"kcal":276,"p":4,"c":38,"f":12},"servings":[{"label":"1 rebanada","grams":100}],"aka":["pan de elote","pastel de elote"]},
+  {"id":"b267","name":"Pastel tres leches","per100":{"kcal":238,"p":5,"c":32,"f":10},"servings":[{"label":"1 rebanada","grams":130}],"aka":["tres leches","pastel tres leches","pastel de tres leches"]},
+  {"id":"b268","name":"Cátsup","per100":{"kcal":105,"p":1,"c":25,"f":0.1},"servings":[{"label":"1 cda","grams":17}],"aka":["catsup","ketchup","catchup","cátsup"]},
+  {"id":"b269","name":"Mostaza","per100":{"kcal":68,"p":3.7,"c":5.8,"f":3.3},"servings":[{"label":"1 cdita","grams":5}],"aka":["mostaza"]},
+  {"id":"b270","name":"Aderezo ranch","per100":{"kcal":433,"p":1,"c":6,"f":45},"servings":[{"label":"1 cda","grams":15}],"aka":["ranch","aderezo ranch","aderezo","aderezo cesar","aderezo césar","aderezo para ensalada","vinagreta"]},
+  {"id":"b271","name":"Salsa de soya","per100":{"kcal":53,"p":8,"c":5,"f":0.1},"servings":[{"label":"1 cda","grams":16}],"aka":["salsa de soya","soya","salsa soya"]},
+  {"id":"b272","name":"Salsa BBQ","per100":{"kcal":169,"p":1,"c":40,"f":0.5},"servings":[{"label":"1 cda","grams":20}],"aka":["bbq","salsa bbq","salsa barbacoa","barbecue"]},
+  {"id":"b273","name":"Salsa picante embotellada","per100":{"kcal":14,"p":0.5,"c":3,"f":0},"servings":[{"label":"1 cdita","grams":5}],"aka":["valentina","tabasco","salsa picante","salsa huichol","salsa tapatio","cholula","salsa botanera","salsa embotellada"]},
+  {"id":"b274","name":"Salsa de tomate para pasta","per100":{"kcal":56,"p":1.5,"c":8,"f":2},"servings":[{"label":"½ taza","grams":125}],"aka":["salsa de tomate","salsa para pasta","salsa marinara","salsa boloñesa","salsa pomodoro"]},
+  {"id":"b275","name":"Mole poblano","per100":{"kcal":196,"p":5,"c":17,"f":12},"servings":[{"label":"½ taza","grams":120}],"aka":["mole","mole poblano","mole rojo","mole negro","mole verde","salsa de mole"]},
+  {"id":"b276","name":"Caldo de pollo","per100":{"kcal":10,"p":1,"c":0.5,"f":0.4},"servings":[{"label":"1 taza","grams":240}],"aka":["caldo de pollo","consome","consome de pollo","caldo","caldito"]},
+  {"id":"b277","name":"Mantequilla de almendra","per100":{"kcal":614,"p":21,"c":19,"f":55},"servings":[{"label":"1 cda","grams":16}],"aka":["mantequilla de almendra","crema de almendra"]},
+  {"id":"b278","name":"Linaza","per100":{"kcal":534,"p":18,"c":29,"f":42},"servings":[{"label":"1 cda","grams":10}],"aka":["linaza","semillas de linaza"]},
+  {"id":"b279","name":"Semillas de girasol","per100":{"kcal":584,"p":21,"c":20,"f":51},"servings":[{"label":"1 puño","grams":28}],"aka":["semillas de girasol","pepitas de girasol","girasol"]},
+  {"id":"b280","name":"Pistaches","per100":{"kcal":560,"p":20,"c":28,"f":45},"servings":[{"label":"1 puño","grams":28}],"aka":["pistache","pistaches","pistachos"]},
+  {"id":"b281","name":"Nuez de la India","per100":{"kcal":553,"p":18,"c":30,"f":44},"servings":[{"label":"1 puño","grams":28}],"aka":["nuez de la india","anacardo","anacardos","cajú","castañas de caju"]},
+  {"id":"b282","name":"Nuez pecana","per100":{"kcal":691,"p":9,"c":14,"f":72},"servings":[{"label":"1 puño","grams":28}],"aka":["nuez pecana","pecanas","pecana"]},
+  {"id":"b283","name":"Pepitas de calabaza","per100":{"kcal":559,"p":30,"c":11,"f":49},"servings":[{"label":"1 puño","grams":28}],"aka":["pepitas","pepitas de calabaza","semillas de calabaza"]},
+  {"id":"b284","name":"Aceite de coco","per100":{"kcal":862,"p":0,"c":0,"f":100},"servings":[{"label":"1 cda","grams":14}],"aka":["aceite de coco"]},
+  {"id":"b285","name":"Creatina","per100":{"kcal":0,"p":0,"c":0,"f":0},"servings":[{"label":"1 scoop","grams":5}],"aka":["creatina","creatine","creatina monohidratada"]},
+  {"id":"b286","name":"Mole con pollo","per100":{"kcal":169,"p":14,"c":8,"f":9},"servings":[{"label":"1 plato","grams":300}],"aka":["mole con pollo","pollo en mole","mole poblano con pollo","pollo con mole","mole de olla"]},
+  {"id":"b287","name":"Caldo de res con verduras","per100":{"kcal":46,"p":4,"c":3,"f":2},"servings":[{"label":"1 plato","grams":400}],"aka":["caldo de res","cocido","cocido de res","caldo de res con verduras"]},
+  {"id":"b288","name":"Caldo de pollo con verduras","per100":{"kcal":35,"p":3,"c":3,"f":1.2},"servings":[{"label":"1 plato","grams":350}],"aka":["caldo de pollo con verduras","caldo de pollo con arroz","caldo tlalpeno","caldo de gallina","sopa de pollo"]},
+  {"id":"b289","name":"Sopa de tortilla","per100":{"kcal":76,"p":3,"c":7,"f":4},"servings":[{"label":"1 plato","grams":300}],"aka":["sopa de tortilla","sopa azteca","sopa de tortilla con aguacate"]},
+  {"id":"b290","name":"Menudo","per100":{"kcal":63,"p":7,"c":2,"f":3},"servings":[{"label":"1 plato","grams":400}],"aka":["menudo","pancita","mondongo","menudo rojo"]},
+  {"id":"b291","name":"Birria de res","per100":{"kcal":124,"p":12,"c":1,"f":8},"servings":[{"label":"1 plato","grams":350}],"aka":["birria","birria de res","birria con consome","consome de birria","caldo de birria"]},
+  {"id":"b292","name":"Tinga de pollo","per100":{"kcal":143,"p":14,"c":6,"f":7},"servings":[{"label":"1 porción","grams":100}],"aka":["tinga","tinga de pollo","tinga de res"]},
+  {"id":"b293","name":"Chile relleno","per100":{"kcal":202,"p":9,"c":10,"f":14},"servings":[{"label":"1 pieza","grams":150}],"aka":["chile relleno","chiles rellenos","chile relleno de queso","chile en nogada","chile poblano relleno"]},
+  {"id":"b294","name":"Enfrijoladas","per100":{"kcal":176,"p":8,"c":18,"f":8},"servings":[{"label":"1 plato","grams":250}],"aka":["enfrijoladas","enfrijolada"]},
+  {"id":"b295","name":"Entomatadas","per100":{"kcal":151,"p":7,"c":15,"f":7},"servings":[{"label":"1 plato","grams":250}],"aka":["entomatadas","entomatada"]},
+  {"id":"b296","name":"Sope","per100":{"kcal":218,"p":7,"c":25,"f":10},"servings":[{"label":"1 sope","grams":120}],"aka":["sope","sopes","sopes de frijol","sopes de pollo","sope de carne"]},
+  {"id":"b297","name":"Gordita","per100":{"kcal":273,"p":9,"c":30,"f":13},"servings":[{"label":"1 gordita","grams":100}],"aka":["gordita","gorditas","gordita de chicharron","gordita de frijol","gordita de nata","gorditas de chicharron"]},
+  {"id":"b298","name":"Huarache","per100":{"kcal":231,"p":8,"c":25,"f":11},"servings":[{"label":"1 huarache","grams":200}],"aka":["huarache","huaraches"]},
+  {"id":"b299","name":"Tlayuda","per100":{"kcal":278,"p":10,"c":28,"f":14},"servings":[{"label":"1 tlayuda","grams":300}],"aka":["tlayuda","tlayudas","tlayuda oaxaquena"]},
+  {"id":"b300","name":"Flautas","per100":{"kcal":254,"p":10,"c":22,"f":14},"servings":[{"label":"1 flauta","grams":70}],"aka":["flauta","flautas","tacos dorados","taco dorado","taquitos dorados","tacos fritos","flautas de pollo"]},
+  {"id":"b301","name":"Tostada de tinga","per100":{"kcal":193,"p":10,"c":18,"f":9},"servings":[{"label":"1 tostada","grams":110}],"aka":["tostada de tinga","tostadas de tinga","tostada de pollo","tostadas de pollo","tostada de pata","tostada de carne"]},
+  {"id":"b302","name":"Mollete","per100":{"kcal":217,"p":9,"c":25,"f":9},"servings":[{"label":"1 mollete","grams":120}],"aka":["mollete","molletes","mollete con frijoles y queso"]},
+  {"id":"b303","name":"Pambazo","per100":{"kcal":270,"p":8,"c":28,"f":14},"servings":[{"label":"1 pambazo","grams":230}],"aka":["pambazo","pambazos"]},
+  {"id":"b304","name":"Torta ahogada","per100":{"kcal":204,"p":9,"c":24,"f":8},"servings":[{"label":"1 torta","grams":350}],"aka":["torta ahogada","tortas ahogadas"]},
+  {"id":"b305","name":"Sincronizada","per100":{"kcal":244,"p":12,"c":22,"f":12},"servings":[{"label":"1 pieza","grams":160}],"aka":["sincronizada","sincronizadas"]},
+  {"id":"b306","name":"Burrito de carne con frijoles","per100":{"kcal":225,"p":9,"c":27,"f":9},"servings":[{"label":"1 burrito","grams":250}],"aka":["burrito de carne","burrito de frijol","burrito","burritos","burrito de machaca"]},
+  {"id":"b307","name":"Fajitas de pollo con verduras","per100":{"kcal":137,"p":17,"c":6,"f":5},"servings":[{"label":"1 plato","grams":250}],"aka":["fajitas","fajitas de pollo","fajitas de res","fajitas con verduras"]},
+  {"id":"b308","name":"Ensalada César con pollo","per100":{"kcal":168,"p":9,"c":6,"f":12},"servings":[{"label":"1 plato","grams":250}],"aka":["ensalada cesar","ensalada cesar con pollo","cesar","ensalada de pollo"]},
+  {"id":"b309","name":"Ensalada de verduras","per100":{"kcal":23,"p":1.2,"c":4,"f":0.2},"servings":[{"label":"1 plato","grams":150}],"aka":["ensalada","ensalada verde","ensalada de lechuga","ensalada mixta","ensalada de verduras","ensalada simple","ensalada fresca"]},
+  {"id":"b310","name":"Sopa de verduras","per100":{"kcal":28,"p":1,"c":5,"f":0.5},"servings":[{"label":"1 plato","grams":300}],"aka":["sopa de verduras","sopa de verdura","verduras al vapor","verduras cocidas","verduras salteadas","verduras","verdura","crema de verduras"]},
+  {"id":"b311","name":"Crema de elote o champiñones","per100":{"kcal":76,"p":2,"c":8,"f":4},"servings":[{"label":"1 plato","grams":250}],"aka":["crema de elote","crema de champinones","crema de calabaza","crema de brocoli","sopa crema","crema de verduras","crema de espinacas"]},
+  {"id":"b312","name":"Arroz con pollo","per100":{"kcal":157,"p":8,"c":20,"f":5},"servings":[{"label":"1 plato","grams":300}],"aka":["arroz con pollo","pollo con arroz"]},
+  {"id":"b313","name":"Lasaña de carne","per100":{"kcal":164,"p":9,"c":14,"f":8},"servings":[{"label":"1 porción","grams":250}],"aka":["lasaña","lasana","lasaña de carne"]},
+  {"id":"b314","name":"Espagueti a la boloñesa","per100":{"kcal":161,"p":7,"c":22,"f":5},"servings":[{"label":"1 plato","grams":300}],"aka":["espagueti a la bolonesa","pasta boloñesa","pasta a la bolonesa","spaghetti bolognese","pasta con carne"]},
+  {"id":"b315","name":"Sushi roll","per100":{"kcal":150,"p":5,"c":28,"f":2},"servings":[{"label":"6 piezas","grams":180},{"label":"1 rollo","grams":240}],"aka":["sushi","sushi roll","maki","rollo de sushi","california roll","rollo california","roll","rolls","nigiri"]},
+  {"id":"b316","name":"Sushi roll empanizado","per100":{"kcal":209,"p":5,"c":27,"f":9},"servings":[{"label":"6 piezas","grams":210},{"label":"1 rollo","grams":280}],"aka":["sushi empanizado","roll empanizado","tempura roll","sushi frito","roll tempura","maki empanizado","sushi con queso crema","roll con queso crema","roll especial"]},
+  {"id":"b317","name":"Pizza de queso","per100":{"kcal":266,"p":11,"c":33,"f":10},"servings":[{"label":"1 rebanada","grams":107}],"aka":["pizza de queso","pizza margarita","pizza margherita","pizza simple","pizza de 4 quesos","pizza cuatro quesos"]},
+  {"id":"b318","name":"Pizza hawaiana","per100":{"kcal":257,"p":11,"c":33,"f":9},"servings":[{"label":"1 rebanada","grams":107}],"aka":["pizza hawaiana","pizza con piña","pizza de jamon","pizza de jamon y pina"]},
+  {"id":"b319","name":"Pizza mexicana","per100":{"kcal":271,"p":12,"c":31,"f":11},"servings":[{"label":"1 rebanada","grams":115}],"aka":["pizza mexicana","pizza de chorizo","pizza vegetariana","pizza suprema","pizza de carnes"]},
+  {"id":"b320","name":"Nachos con queso","per100":{"kcal":326,"p":6,"c":35,"f":18},"servings":[{"label":"1 porción","grams":150}],"aka":["nachos","nachos con queso","nacho","nachos con carne"]},
+  {"id":"b321","name":"Ensalada de atún","per100":{"kcal":184,"p":17,"c":2,"f":12},"servings":[{"label":"1 porción","grams":100}],"aka":["ensalada de atun","atun con mayonesa","atun preparado","atun a la mexicana","atun con verduras"]},
+  {"id":"b322","name":"Taco de canasta","per100":{"kcal":204,"p":6,"c":27,"f":8},"servings":[{"label":"1 taco","grams":45}],"aka":["taco de canasta","tacos de canasta","tacos sudados","taco sudado","canasta"]},
+  {"id":"b323","name":"Sopa instantánea","per100":{"kcal":460,"p":9,"c":61,"f":20},"servings":[{"label":"1 vaso","grams":64}],"aka":["sopa instantanea","maruchan","sopa maruchan","sopa nissin","sopa de vaso","sopa instantanea de vaso","ramen instantaneo","cup noodles"]},
+  {"id":"b324","name":"Ramen","per100":{"kcal":91,"p":4,"c":12,"f":3},"servings":[{"label":"1 plato","grams":500}],"aka":["ramen","ramen de restaurante","sopa de fideos japonesa"]},
+  {"id":"b325","name":"Papas con chorizo","per100":{"kcal":219,"p":8,"c":13,"f":15},"servings":[{"label":"1 porción","grams":150}],"aka":["papas con chorizo","chorizo con papas"]},
+  {"id":"b326","name":"Pan con aguacate","per100":{"kcal":186,"p":4,"c":20,"f":10},"servings":[{"label":"1 tostada","grams":100}],"aka":["pan con aguacate","tostada de aguacate","avocado toast"]},
+  {"id":"b327","name":"Carne con papas","per100":{"kcal":156,"p":12,"c":9,"f":8},"servings":[{"label":"1 plato","grams":250}],"aka":["carne con papas","carne guisada","carne en su jugo","guisado de res","bistec a la mexicana","bistec ranchero","guisado","picadillo"]},
+  {"id":"b328","name":"Cilantro","per100":{"kcal":23,"p":2.1,"c":3.7,"f":0.5},"servings":[{"label":"1 puño","grams":10}],"aka":["cilantro","perejil","epazote","hierbabuena","hierbas"]},
+  {"id":"b329","name":"Flor de calabaza","per100":{"kcal":15,"p":1,"c":3,"f":0.1},"servings":[{"label":"½ taza","grams":40}],"aka":["flor de calabaza","flores de calabaza"]}
 ]

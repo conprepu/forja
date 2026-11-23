@@ -100,7 +100,8 @@ describe('describeMeal', () => {
     expect(one('una coca').food?.name).toBe('Refresco de cola')
   })
   it('adjetivos que no están en el nombre no estorban', () => {
-    expect(one('2 huevos revueltos').food?.name).toBe('Huevo entero')
+    expect(one('2 huevos revueltos').food?.name).toBe('Huevo revuelto')
+    expect(one('1 taza de arroz casero').food?.name).toBe('Arroz blanco cocido')
     expect(one('pollo a la plancha').food?.name).toBe('Pechuga de pollo cocida')
   })
   it('especifica el tipo cuando lo dicen', () => {
@@ -109,15 +110,15 @@ describe('describeMeal', () => {
     expect(one('leche descremada').food?.name).toBe('Leche descremada')
   })
   it('lo que no existe queda sin alimento y sin gramos', () => {
-    const r = one('sushi')
+    const r = one('unicornio')
     expect(r.food).toBeNull()
     expect(r.grams).toBe(0)
-    expect(r.query).toBe('sushi')
+    expect(r.query).toBe('unicornio')
   })
   it('mezcla lo encontrado con lo no encontrado', () => {
-    const r = run('un plátano, sushi y 2 tacos al pastor')
-    expect(r.map((i) => i.food?.name ?? null)).toEqual(['Plátano', null, 'Taco al pastor'])
-    expect(r[2]!.grams).toBe(160)
+    const r = run('un plátano, unicornio y una manzana grande')
+    expect(r.map((i) => i.food?.name ?? null)).toEqual(['Plátano', null, 'Manzana'])
+    expect(r[2]!.grams).toBe(243) // 180 g × 1.35
   })
   it('lo reciente desempata', () => {
     const a = foods.find((f) => f.name === 'Queso Oaxaca')!
@@ -131,6 +132,20 @@ describe('describeMeal', () => {
   })
   it('frases con acentos y mayúsculas', () => {
     expect(run('Media TAZA de Avena').map((i) => [i.food?.name, i.grams])).toEqual([['Avena en hojuelas', 40]])
+  })
+  it('"papas" a secas son papas fritas; "una papa" es la papa', () => {
+    expect(one('unas papas').food?.name).toBe('Papas a la francesa')
+    expect(one('una papa').food?.name).toBe('Papa cocida')
+    expect(one('papas cocidas').food?.name).toBe('Papa cocida')
+  })
+  it('sin cantidad, una porción entera del alimento', () => {
+    expect(one('granola').grams).toBe(40) // ⅓ taza, no una taza entera
+    expect(one('nuggets').grams).toBe(100) // 6 piezas
+    expect(one('10 nuggets').grams).toBe(167)
+  })
+  it('perdona erratas en palabras largas', () => {
+    expect(one('mantequila').food?.name).toBe('Mantequilla')
+    expect(one('2 cucharadas de crema de cacahuate').food?.name).toBe('Crema de cacahuate')
   })
   it('vacío o solo muletillas', () => {
     expect(run('')).toEqual([])

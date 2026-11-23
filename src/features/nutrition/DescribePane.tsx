@@ -7,7 +7,7 @@ import type { DiarySlot, Food } from '../../db/schema'
 import { describeMeal, rankWebResults, withFood, type DescribedItem } from '../../lib/describe'
 import { entryFromFood, macrosFor, sumMacros } from '../../lib/nutrition'
 import { searchOff } from '../../lib/off'
-import { btn, btnPri, field } from '../../ui/cls'
+import { btn, btnGhost, btnPri, field } from '../../ui/cls'
 import { NumField } from '../../ui/NumField'
 import { Sheet } from '../../ui/Sheet'
 import { FoodChooser } from './FoodChooser'
@@ -44,6 +44,10 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
 
   const found = (items ?? []).filter((i) => i.food && i.grams > 0)
   const total = sumMacros(found.map((i) => macrosFor(i.food!.per100, i.grams)))
+  /** Cada platillo armado ("Hamburguesa con tocino") se guarda como una sola entrada del diario. */
+  const entryCount = new Set(found.map((i) => (i.groupKey ? `g${i.groupKey}` : `r${i.key}`))).size
+  const groupTotal = (groupKey: number) =>
+    sumMacros((items ?? []).filter((i) => i.groupKey === groupKey && i.food).map((i) => macrosFor(i.food!.per100, i.grams)))
   const patchRow = (key: number, patch: Partial<Row>) => setItems((xs) => xs?.map((x) => (x.key === key ? { ...x, ...patch } : x)) ?? null)
 
   async function lookupWeb(row: Row, gen: number) {
@@ -69,11 +73,23 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
   async function addAll() {
     setSaving(true)
     try {
+      const done = new Set<number>()
+      let names = ''
       for (const i of found) {
+        if (i.groupKey) {
+          if (done.has(i.groupKey)) continue
+          done.add(i.groupKey)
+          const parts = found.filter((x) => x.groupKey === i.groupKey)
+          const sum = sumMacros(parts.map((x) => macrosFor(x.food!.per100, x.grams)))
+          names = i.group ?? i.food!.name
+          await addEntry(db, date, slot, { name: names, grams: parts.reduce((g, x) => g + x.grams, 0), ...sum })
+          continue
+        }
         const food = i.food!.source === 'off' ? await cacheOffFood(db, i.food!) : i.food!
+        names = food.name
         await addEntry(db, date, slot, entryFromFood(food, i.grams))
       }
-      onAdded(found.length === 1 ? found[0]!.food!.name : `${found.length} alimentos`)
+      onAdded(entryCount === 1 ? names : `${entryCount} alimentos`)
       onDone()
     } finally {
       setSaving(false)
@@ -90,7 +106,7 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
         <textarea
           className={`${field} min-h-28 resize-none py-2.5 text-ink`}
           rows={4}
-          placeholder="Ej. 2 huevos con 3 tortillas y un vaso de leche"
+          placeholder="Ej. hamburguesa con tocino y jitomate, 2 tacos de bistec y un refresco"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
@@ -103,15 +119,36 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
         Interpretar
       </button>
 
-      {items && items.length === 0 && <p role="status" className="py-2 text-center text-mut">No entendí qué comiste. Prueba con algo como “150 g de pollo y una taza de arroz”.</p>}
+      {items && items.length === 0 && <p role="status" className="py-2 text-center text-mut">No entendí qué comiste. Prueba con algo como “2 tacos de pastor y una coca” o “150 g de pollo y una taza de arroz”.</p>}
 
       {items && items.length > 0 && (
         <>
           <ul className="grid gap-2" aria-label="Alimentos interpretados">
-            {items.map((it) => {
+            {items.map((it, idx) => {
               const m = it.food ? macrosFor(it.food.per100, it.grams) : null
+              const startsGroup = !!it.groupKey && items[idx - 1]?.groupKey !== it.groupKey
+              const gt = it.groupKey ? groupTotal(it.groupKey) : null
               return (
-                <li key={it.key} className="hud p-3">
+                <li key={it.key} className={it.groupKey ? 'ml-3' : ''}>
+                  {startsGroup && gt && (
+                    <div className="-ml-3 mb-2 mt-1">
+                      <div className="flex items-start gap-2">
+                        <div className="min-w-0 flex-1">
+                          <h3 className="text-accfg">{it.group}</h3>
+                          <p className="font-num text-sm">
+                            <b>{gt.kcal} kcal</b>
+                            <span className="text-mut"> · P {gt.p} · C {gt.c} · G {gt.f}</span>
+                          </p>
+                        </div>
+                        <button type="button" className="min-h-11 cut-sm px-3 font-num text-sm font-bold uppercase tracking-wider text-p" onClick={() => setItems((xs) => xs?.filter((x) => x.groupKey !== it.groupKey) ?? null)}>
+                          Quitar platillo
+                        </button>
+                      </div>
+                      {it.groupNote && <p className="text-xs text-mut">{it.groupNote}</p>}
+                      <div className="hud-rule mt-1" aria-hidden="true" />
+                    </div>
+                  )}
+                  <div className="hud p-3">
                   <div className="flex items-start gap-2">
                     <div className="min-w-0 flex-1">
                       {it.food ? (
@@ -121,9 +158,11 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
                       ) : (
                         <p className="font-semibold text-warn">No encontré “{it.query}”</p>
                       )}
-                      <p className="truncate text-xs text-mut">
-                        “{it.text}”{it.fromWeb && <b className="ml-1 text-accfg">· de internet, revísalo</b>}
-                      </p>
+                      {!it.groupKey && (
+                        <p className="truncate text-xs text-mut">
+                          “{it.text}”{it.fromWeb && <b className="ml-1 text-accfg">· de internet, revísalo</b>}
+                        </p>
+                      )}
                     </div>
                     <button type="button" className="min-h-11 min-w-11 cut-sm text-p" aria-label={`Quitar ${it.query}`} onClick={() => setItems((xs) => xs?.filter((x) => x.key !== it.key) ?? null)}>
                       ✕
@@ -153,8 +192,8 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
                       </p>
                     )}
                   </div>
-                  <div className={`mt-2 grid gap-2 ${it.web && it.web.length > 1 ? 'grid-cols-2' : ''}`}>
-                    <button type="button" className={btn} onClick={() => setChoosing(it.key)}>
+                  <div className={`${it.groupKey ? 'mt-0' : 'mt-2'} grid gap-2 ${it.web && it.web.length > 1 ? 'grid-cols-2' : ''}`}>
+                    <button type="button" className={it.groupKey ? `${btnGhost} justify-self-start` : btn} onClick={() => setChoosing(it.key)}>
                       {it.food ? 'Cambiar alimento' : 'Elegir alimento'}
                     </button>
                     {it.web && it.web.length > 1 && (
@@ -168,6 +207,7 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
                       Buscar de nuevo en internet
                     </button>
                   )}
+                  </div>
                 </li>
               )
             })}
@@ -178,7 +218,7 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
             <p className="text-sm"><span className="text-p">P {total.p}</span> · <span className="text-c">C {total.c}</span> · <span className="text-f">G {total.f}</span></p>
           </div>
           <button type="button" className={btnPri} disabled={found.length === 0 || saving || items.some((i) => i.searching)} onClick={() => void addAll()}>
-            Agregar {found.length} a {slotLabel}
+            Agregar {entryCount} a {slotLabel}
           </button>
         </>
       )}

@@ -12,14 +12,20 @@ export async function cacheOffFood(db: ForjaDB, food: Food): Promise<Food> {
 
 const PROXY_KEY = 'offProxy'
 
-/** URL del proxy de búsqueda por nombre, si ya la configuraste en Perfil. */
+/** Proxy de Open Food Facts ya desplegado (worker/): la app viene con la búsqueda en internet lista. */
+export const DEFAULT_OFF_PROXY = 'https://forja-off-proxy.woduqusia.workers.dev'
+
+/**
+ * URL del proxy de búsqueda por nombre. Sin nada guardado se usa el de fábrica;
+ * si la quitaste en Perfil (se guarda vacía) la búsqueda en internet queda apagada.
+ */
 export async function getOffProxy(db: ForjaDB): Promise<string | null> {
   const row = await db.settings.get(PROXY_KEY)
-  return typeof row?.value === 'string' && row.value ? row.value : null
+  if (!row) return DEFAULT_OFF_PROXY
+  return typeof row.value === 'string' && row.value ? row.value : null
 }
 
-export const setOffProxy = (db: ForjaDB, url: string | null) =>
-  url ? db.settings.put({ key: PROXY_KEY, value: url }) : db.settings.delete(PROXY_KEY)
+export const setOffProxy = (db: ForjaDB, url: string | null) => db.settings.put({ key: PROXY_KEY, value: url ?? '' })
 
 export const findByBarcode = (db: ForjaDB, barcode: string) => db.foods.where('barcode').equals(barcode).first()
 

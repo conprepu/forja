@@ -53,8 +53,8 @@ export function WebSearchSection() {
     <section aria-labelledby="web-h" className={card}>
       <h2 id="web-h">Búsqueda en internet</h2>
       <p className="mt-1 text-sm text-mut">
-        Para buscar alimentos por nombre en Open Food Facts (por ejemplo lo que “Describir” no encuentre) hace falta un mini proxy gratis en
-        Cloudflare. Los pasos están en <b>worker/README.md</b>. El código de barras funciona sin esto.
+        Busca por nombre en Open Food Facts lo que “Describir” no encuentra. Ya viene con el proxy de Forja (un mini servicio gratis en Cloudflare, ver
+        <b> worker/README.md</b>); pega otra URL para usar el tuyo o déjala vacía y guarda para apagarlo. El código de barras funciona sin esto.
       </p>
       <label className="mt-3 grid gap-1 text-sm text-mut">
         URL del proxy

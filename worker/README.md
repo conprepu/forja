@@ -16,7 +16,7 @@ Open Food Facts no deja buscar alimentos **por nombre** desde una app web (CORS)
 
    `login` abre el navegador para que autorices. Al terminar, `deploy` imprime una URL como
    `https://forja-off-proxy.<tu-subdominio>.workers.dev`.
-3. En Forja: **Perfil → Búsqueda en internet**, pega esa URL, pulsa **Probar** y **Guardar**.
+3. La app ya trae como valor de fábrica la URL del proxy de esta cuenta (`DEFAULT_OFF_PROXY` en `src/db/off.ts`). Si lo despliegas en otra cuenta, cámbiala ahí o pega tu URL en **Perfil → Búsqueda en internet**, **Probar** y **Guardar**.
 
 ## Probarlo
 

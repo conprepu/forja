@@ -81,7 +81,7 @@ export function BodyTab() {
                 </div>
                 <button
                   type="button"
-                  className="min-h-11 min-w-11 rounded-xl text-p"
+                  className="min-h-11 min-w-11 cut-sm text-p"
                   aria-label={`Eliminar medidas del ${formatDay(e.date)}`}
                   onClick={() => window.confirm('¿Eliminar estas medidas?') && void deleteBody(db, e.date)}
                 >

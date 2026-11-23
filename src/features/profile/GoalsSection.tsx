@@ -70,7 +70,7 @@ export function GoalsSection() {
         </select>
       </label>
 
-      <div className="mt-3 rounded-xl bg-soft p-3 text-sm" aria-live="polite">
+      <div className="mt-3 cut-sm bg-soft p-3 text-sm" aria-live="polite">
         <p className="text-mut">Mifflin-St Jeor · BMR {suggestion.bmr} · TDEE {suggestion.tdee} kcal</p>
         <p className="mt-1 font-semibold">
           Sugerido: {suggestion.kcal} kcal · P {suggestion.p} g · C {suggestion.c} g · G {suggestion.f} g

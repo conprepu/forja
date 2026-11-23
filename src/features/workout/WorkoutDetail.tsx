@@ -33,8 +33,8 @@ export function WorkoutDetail({ workout, onClose, canStart }: { workout: Workout
           {w.items.map((it, k) => {
             const ex = exercises.get(it.exerciseId)
             return (
-              <section key={k} className="rounded-[18px] border border-line bg-card p-4">
-                <h3 className="text-acc">{ex ? exerciseLabel(ex) : it.exerciseId}</h3>
+              <section key={k} className="hud p-4">
+                <h3 className="text-accfg">{ex ? exerciseLabel(ex) : it.exerciseId}</h3>
                 {it.note && <p className="text-sm text-mut">{it.note}</p>}
                 <ol className="mt-2 grid gap-1">
                   {it.sets.map((s, j) => (

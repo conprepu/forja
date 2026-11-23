@@ -11,9 +11,9 @@ describe('theme', () => {
     expect(['light', 'dark', 'auto', 'x', undefined, 3].map(parseTheme)).toEqual(['light', 'dark', 'auto', 'auto', 'auto', 'auto'])
   })
   it('themeColor sigue al tema o al sistema', () => {
-    expect(themeColor('dark', false)).toBe('#0f1112')
-    expect(themeColor('light', true)).toBe('#f4f4f1')
-    expect(themeColor('auto', true)).toBe('#0f1112')
+    expect(themeColor('dark', false)).toBe('#06070a')
+    expect(themeColor('light', true)).toBe('#efede0')
+    expect(themeColor('auto', true)).toBe('#06070a')
   })
   it('applyTheme pone y quita data-theme y deja los meta correctos', () => {
     const attrs = new Map<string, string>()
@@ -26,7 +26,7 @@ describe('theme', () => {
     } as unknown as Document
     applyTheme('dark', doc)
     expect(attrs.get('data-theme')).toBe('dark')
-    expect(metas.map((m) => m.content)).toEqual(['#0f1112'])
+    expect(metas.map((m) => m.content)).toEqual(['#06070a'])
     applyTheme('auto', doc)
     expect(attrs.has('data-theme')).toBe(false)
     expect(metas).toHaveLength(2)

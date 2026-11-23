@@ -35,11 +35,11 @@ export function MealsPane({ date, slot, onAdded, onDone }: Props) {
                   <span className="block truncate font-semibold">{m.name}</span>
                   <span className="block truncate text-xs text-mut">{m.entries.length} {m.entries.length === 1 ? 'alimento' : 'alimentos'} · {t.kcal} kcal · P {t.p}</span>
                 </span>
-                <span aria-hidden="true" className="text-xl text-acc">+</span>
+                <span aria-hidden="true" className="text-xl text-accfg">+</span>
               </button>
               <button
                 type="button"
-                className="min-h-11 min-w-11 rounded-xl text-p"
+                className="min-h-11 min-w-11 cut-sm text-p"
                 aria-label={`Eliminar ${m.name}`}
                 onClick={() => window.confirm(`¿Eliminar la comida guardada "${m.name}"?`) && void deleteMeal(db, m.id)}
               >

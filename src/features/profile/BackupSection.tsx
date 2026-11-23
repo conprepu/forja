@@ -100,7 +100,7 @@ export function BackupSection() {
     }
 
   return (
-    <section aria-labelledby="respaldo-h" className="my-3 rounded-[18px] border border-line bg-card p-4">
+    <section aria-labelledby="respaldo-h" className="my-3 hud p-4">
       <h2 id="respaldo-h">Respaldo</h2>
       <p className="mt-1 text-sm text-mut">
         Tus datos viven solo en este iPhone. Exporta un respaldo seguido: si Safari limpia el almacenamiento, es

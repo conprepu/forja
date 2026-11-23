@@ -52,7 +52,7 @@ export function NutritionTab() {
             </p>
             <dl className="mt-2 grid grid-cols-3 gap-2 text-center">
               {macros.map((m) => (
-                <div key={m.k} className="rounded-[14px] bg-soft px-2 py-2">
+                <div key={m.k} className="cut-sm bg-soft px-2 py-2">
                   <dt className="text-xs text-mut">{m.k}</dt>
                   <dd className={`font-num text-xl font-extrabold ${m.cls}`}>
                     {m.v}
@@ -86,7 +86,7 @@ export function NutritionTab() {
                     formatter={(v) => [`${v} kcal`, 'Calorías']}
                   />
                   <ReferenceLine y={goals.kcal} stroke="var(--c)" strokeDasharray="4 4" />
-                  <Bar dataKey="kcal" fill="var(--acc)" radius={[6, 6, 2, 2]} isAnimationActive={false} />
+                  <Bar dataKey="kcal" fill="var(--acc)" radius={0} isAnimationActive={false} />
                 </BarChart>
               </ResponsiveContainer>
             </figure>

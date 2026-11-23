@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#2b5cff"/>
-  <g fill="#fff">
-    <rect x="96" y="236" width="320" height="40" rx="12"/>
-    <rect x="120" y="168" width="52" height="176" rx="16"/>
-    <rect x="340" y="168" width="52" height="176" rx="16"/>
-    <rect x="72" y="204" width="40" height="104" rx="12"/>
-    <rect x="400" y="204" width="40" height="104" rx="12"/>
+  <rect width="512" height="512" fill="#06070a"/>
+  <path d="M40 40h360l72 72v360H112l-72-72z" fill="#0d0f14" stroke="#262b36" stroke-width="4"/>
+  <g fill="#fcee0a">
+    <path d="M96 236h320v40H96z"/>
+    <path d="M124 168h52v176h-52z"/>
+    <path d="M336 168h52v176h-52z"/>
+    <path d="M72 204h40v104H72z"/>
+    <path d="M400 204h40v104h-40z"/>
   </g>
+  <path d="M40 40h120M352 472h120" stroke="#00f0ff" stroke-width="8"/>
 </svg>

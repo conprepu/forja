@@ -8,6 +8,14 @@ export const SLOTS: { slot: DiarySlot; label: string }[] = [
   { slot: 'snack', label: 'Snacks' },
 ]
 
+/** Comida que toca según la hora: desayuno hasta las 11, comida hasta las 16, cena hasta las 22, si no snack. */
+export function slotForHour(hour: number): DiarySlot {
+  if (hour < 11) return 'desayuno'
+  if (hour < 16) return 'comida'
+  if (hour < 22) return 'cena'
+  return 'snack'
+}
+
 export const ACTIVITY: [number, string][] = [
   [1.2, 'Sedentario'],
   [1.375, 'Ligero (1–3 días)'],

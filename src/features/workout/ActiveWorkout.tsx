@@ -79,7 +79,7 @@ export function ActiveWorkoutView({ onFinished }: { onFinished: (r: FinishResult
             ['Volumen', `${fmtN(volume)} kg`],
             ['Series', String(done)],
           ].map(([k, v]) => (
-            <div key={k} className="rounded-[14px] border border-line bg-card px-2.5 py-2">
+            <div key={k} className="cut-sm border border-line bg-card px-2.5 py-2">
               <dt className="text-xs text-mut">{k}</dt>
               <dd className="whitespace-nowrap font-num text-xl font-extrabold">{v}</dd>
             </div>
@@ -88,7 +88,7 @@ export function ActiveWorkoutView({ onFinished }: { onFinished: (r: FinishResult
       </header>
 
       {a.items.length === 0 && (
-        <div className="my-3 rounded-[18px] border border-line bg-card px-2.5 py-6 text-center text-mut">
+        <div className="my-3 hud px-2.5 py-6 text-center text-mut">
           Agrega tu primer ejercicio para empezar.
         </div>
       )}

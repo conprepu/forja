@@ -111,7 +111,7 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
             {items.map((it) => {
               const m = it.food ? macrosFor(it.food.per100, it.grams) : null
               return (
-                <li key={it.key} className="rounded-[18px] border border-line bg-card p-3">
+                <li key={it.key} className="hud p-3">
                   <div className="flex items-start gap-2">
                     <div className="min-w-0 flex-1">
                       {it.food ? (
@@ -122,10 +122,10 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
                         <p className="font-semibold text-warn">No encontré “{it.query}”</p>
                       )}
                       <p className="truncate text-xs text-mut">
-                        “{it.text}”{it.fromWeb && <b className="ml-1 text-acc">· de internet, revísalo</b>}
+                        “{it.text}”{it.fromWeb && <b className="ml-1 text-accfg">· de internet, revísalo</b>}
                       </p>
                     </div>
-                    <button type="button" className="min-h-11 min-w-11 rounded-xl text-p" aria-label={`Quitar ${it.query}`} onClick={() => setItems((xs) => xs?.filter((x) => x.key !== it.key) ?? null)}>
+                    <button type="button" className="min-h-11 min-w-11 cut-sm text-p" aria-label={`Quitar ${it.query}`} onClick={() => setItems((xs) => xs?.filter((x) => x.key !== it.key) ?? null)}>
                       ✕
                     </button>
                   </div>
@@ -173,7 +173,7 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
             })}
           </ul>
 
-          <div className="rounded-[18px] border border-line bg-card p-4" aria-live="polite">
+          <div className="hud p-4" aria-live="polite">
             <p className="font-num text-2xl font-extrabold">{total.kcal} <span className="text-base font-semibold text-mut">kcal</span></p>
             <p className="text-sm"><span className="text-p">P {total.p}</span> · <span className="text-c">C {total.c}</span> · <span className="text-f">G {total.f}</span></p>
           </div>
@@ -208,7 +208,7 @@ export function DescribePane({ date, slot, slotLabel, onAdded, onDone }: Props) 
                   <span className="block truncate font-semibold">{f.name}</span>
                   <span className="block truncate text-xs text-mut">{f.brand ? `${f.brand} · ` : ''}{f.per100.kcal} kcal · P {f.per100.p} · C {f.per100.c} · G {f.per100.f}</span>
                 </span>
-                <span aria-hidden="true" className="text-xl text-acc">+</span>
+                <span aria-hidden="true" className="text-xl text-accfg">+</span>
               </button>
             </li>
           ))}

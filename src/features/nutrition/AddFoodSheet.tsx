@@ -6,7 +6,8 @@ import { addEntry, deleteCustomFood, getRecentFoodIds } from '../../db/nutrition
 import type { DiarySlot, Food, FoodEntry } from '../../db/schema'
 import { searchOff } from '../../lib/off'
 import { SLOTS, searchFoods } from '../../lib/nutrition'
-import { btn, btnGhost, chip, field } from '../../ui/cls'
+import { btn, btnGhost, btnPri, chip, field } from '../../ui/cls'
+import { IconScan } from '../../ui/icons'
 import { Sheet } from '../../ui/Sheet'
 import { DescribePane } from './DescribePane'
 import { FoodAmount } from './FoodAmount'
@@ -34,20 +35,23 @@ interface Props {
   date: string
   slot: DiarySlot
   onAdded: (name: string) => void
+  /** Abre directo el escáner (atajo desde Hoy y Comida). */
+  scan?: boolean
 }
 
 type Online = { status: 'idle' | 'loading' | 'done' | 'error'; results: Food[]; message: string }
 const IDLE: Online = { status: 'idle', results: [], message: '' }
 
-export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
+export function AddFoodSheet({ open, onClose, date, slot, onAdded, scan = false }: Props) {
   const foods = useLiveQuery(() => db.foods.toArray(), [])
   const recent = useLiveQuery(() => getRecentFoodIds(db), [])
   const proxy = useLiveQuery(() => getOffProxy(db), [])
-  const [tab, setTab] = useState<Tab>('describir')
+  // Con el atajo de escáner se empieza en "Buscar": ahí se muestran el resultado y el aviso de código no encontrado.
+  const [tab, setTab] = useState<Tab>(scan ? 'buscar' : 'describir')
   const [q, setQ] = useState('')
   const [picked, setPicked] = useState<Food | null>(null)
   const [creating, setCreating] = useState(false)
-  const [scanning, setScanning] = useState(false)
+  const [scanning, setScanning] = useState(scan)
   const [online, setOnline] = useState<Online>(IDLE)
   const [miss, setMiss] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -124,7 +128,7 @@ export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
       <>
         <div role="tablist" aria-label="Origen" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-2 [scrollbar-width:none]">
           {TABS.map((t) => (
-            <button key={t.value} type="button" role="tab" aria-selected={tab === t.value} className={`${chip} ${tab === t.value ? 'bg-ink text-bg' : ''}`} onClick={() => setTab(t.value)}>
+            <button key={t.value} type="button" role="tab" aria-selected={tab === t.value} className={`${chip} ${tab === t.value ? 'bg-acc text-accink' : ''}`} onClick={() => setTab(t.value)}>
               {t.label}
             </button>
           ))}
@@ -138,7 +142,10 @@ export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
         {(searchable || tab === 'recientes') && (
           <>
             {searchable && (
-              <div className="grid grid-cols-[1fr_44px] gap-2">
+              <div className="grid gap-2">
+                <button type="button" className={`${btnPri} w-full`} onClick={() => setScanning(true)}>
+                  <IconScan /> Escanear código de barras
+                </button>
                 <input
                   type="search"
                   className={field}
@@ -150,17 +157,12 @@ export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
                     if (online.status !== 'idle') setOnline(IDLE)
                   }}
                 />
-                <button type="button" className={`${btn} px-0`} aria-label="Escanear código de barras" onClick={() => setScanning(true)}>
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" aria-hidden="true">
-                    <path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M8 8v8M12 8v8M16 8v8" />
-                  </svg>
-                </button>
               </div>
             )}
 
             {busy && <p role="status" className="py-3 text-center text-sm text-mut">Buscando código…</p>}
             {miss && (
-              <div role="alert" className="mt-2 rounded-[18px] border border-line bg-card p-4">
+              <div role="alert" className="mt-2 hud p-4">
                 <p className="font-semibold">No encontramos el código {miss}.</p>
                 <p className="text-sm text-mut">Puedes crear el alimento con los datos de la etiqueta y quedará guardado con su código.</p>
                 <button type="button" className={`${btn} mt-2 w-full`} onClick={() => setCreating(true)}>Crear alimento con este código</button>
@@ -177,12 +179,12 @@ export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
                         {f.brand ? `${f.brand} · ` : ''}{f.servings[0] ? `${f.servings[0].label} · ` : ''}{f.per100.kcal} kcal / 100 g
                       </span>
                     </span>
-                    <span aria-hidden="true" className="text-xl text-acc">+</span>
+                    <span aria-hidden="true" className="text-xl text-accfg">+</span>
                   </button>
                   {tab === 'mios' && (
                     <button
                       type="button"
-                      className="min-h-11 min-w-11 rounded-xl text-p"
+                      className="min-h-11 min-w-11 cut-sm text-p"
                       aria-label={`Eliminar ${f.name}`}
                       onClick={() => window.confirm(`¿Eliminar "${f.name}"? Tu historial no cambia.`) && void deleteCustomFood(db, f.id)}
                     >
@@ -228,7 +230,7 @@ export function AddFoodSheet({ open, onClose, date, slot, onAdded }: Props) {
                               <span className="block truncate font-semibold">{f.name}</span>
                               <span className="block truncate text-xs text-mut">{f.brand ? `${f.brand} · ` : ''}{f.per100.kcal} kcal / 100 g</span>
                             </span>
-                            <span aria-hidden="true" className="text-xl text-acc">+</span>
+                            <span aria-hidden="true" className="text-xl text-accfg">+</span>
                           </button>
                         </li>
                       ))}

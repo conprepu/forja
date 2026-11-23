@@ -31,7 +31,7 @@ export function FoodChooser({ open, onClose, onPick }: { open: boolean; onClose:
                 <span className="block truncate font-semibold">{f.name}</span>
                 <span className="block truncate text-xs text-mut">{f.brand ? `${f.brand} · ` : ''}{f.per100.kcal} kcal / 100 g</span>
               </span>
-              <span aria-hidden="true" className="text-xl text-acc">+</span>
+              <span aria-hidden="true" className="text-xl text-accfg">+</span>
             </button>
           </li>
         ))}

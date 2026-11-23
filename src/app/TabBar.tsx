@@ -13,8 +13,10 @@ export function TabBar() {
             <NavLink
               to={path}
               className={({ isActive }) =>
-                `flex min-h-[var(--tabbar-h)] flex-col items-center justify-center gap-0.5 text-xs font-semibold ${
-                  isActive ? 'text-acc' : 'text-mut'
+                `relative flex min-h-[var(--tabbar-h)] flex-col items-center justify-center gap-0.5 font-num text-[12px] font-bold tracking-[0.1em] uppercase ${
+                  isActive
+                    ? 'text-accfg after:absolute after:inset-x-3 after:top-0 after:h-0.5 after:bg-acc after:shadow-[0_0_8px_var(--glow)] after:content-[""]'
+                    : 'text-mut'
                 }`
               }
             >

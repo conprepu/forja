@@ -8,6 +8,7 @@ import { formatDay, todayStr } from '../../lib/dates'
 import { ML_PER_GLASS, remaining, sumMacros } from '../../lib/nutrition'
 import { greeting, suggestRoutine, weekWorkoutDays } from '../../lib/today'
 import { btn, btnPri, card } from '../../ui/cls'
+import { IconScan } from '../../ui/icons'
 import { Ring } from '../../ui/Ring'
 import { Screen } from '../../ui/Screen'
 import { useDay } from '../nutrition/hooks'
@@ -120,9 +121,14 @@ export function TodayScreen() {
         </div>
 
         {entries.length === 0 && <p className="mt-3 text-sm text-mut">Todavía no registras nada hoy. Puedes describir lo que comiste y se calcula solo.</p>}
-        <button type="button" className={`${entries.length === 0 ? btnPri : btn} mt-3 w-full`} onClick={() => void navigate('/comida')}>
-          Registrar comida
-        </button>
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <button type="button" className={entries.length === 0 ? btnPri : btn} onClick={() => void navigate('/comida')}>
+            Registrar
+          </button>
+          <button type="button" className={btn} onClick={() => void navigate('/comida', { state: { scan: true } })}>
+            <IconScan /> Escanear
+          </button>
+        </div>
       </section>
 
       <section className={card} aria-labelledby="hoy-agua">

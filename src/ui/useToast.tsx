@@ -16,7 +16,7 @@ export function useToast(): { toast: ReactNode; show: (msg: string) => void } {
   const toast = msg ? (
     <div
       role="status"
-      className="fixed left-1/2 z-50 max-w-[90vw] -translate-x-1/2 rounded-xl bg-ink px-4 py-2.5 text-center text-sm font-semibold text-bg bottom-[calc(var(--tabbar-h)+84px+env(safe-area-inset-bottom))]"
+      className="fixed left-1/2 z-50 max-w-[90vw] -translate-x-1/2 cut-sm bg-ink px-4 py-2.5 text-center text-sm font-semibold text-bg bottom-[calc(var(--tabbar-h)+84px+env(safe-area-inset-bottom))]"
     >
       {msg}
     </div>

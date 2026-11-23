@@ -42,7 +42,7 @@ export function PlateSheet({ open, onClose, initialKg }: Props) {
           ))}
         </div>
 
-        <div className="rounded-[18px] border border-line bg-card p-4" aria-live="polite">
+        <div className="hud p-4" aria-live="polite">
           {kg < bar ? (
             <p className="text-mut">El peso es menor que la barra ({bar} kg).</p>
           ) : (

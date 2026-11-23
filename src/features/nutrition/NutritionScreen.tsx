@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router'
 import { db } from '../../db/db'
 import { clearSlot, copyEntries, copyYesterday, saveMealFromSlot } from '../../db/nutrition'
 import type { DiaryEntry, DiarySlot } from '../../db/schema'
 import { addDays, formatDay, todayStr } from '../../lib/dates'
-import { SLOTS, sumMacros } from '../../lib/nutrition'
+import { SLOTS, slotForHour, sumMacros } from '../../lib/nutrition'
 import { btn, btnDanger, btnPri, field } from '../../ui/cls'
+import { IconScan } from '../../ui/icons'
 import { Screen } from '../../ui/Screen'
 import { Sheet } from '../../ui/Sheet'
 import { useToast } from '../../ui/useToast'
@@ -20,6 +22,17 @@ export function NutritionScreen() {
   const foods = useFoodMap()
   const { toast, show } = useToast()
   const [adding, setAdding] = useState<DiarySlot | null>(null)
+  const [scanMode, setScanMode] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  // Atajo desde Hoy: llega con state.scan y abre el escáner de una vez.
+  useEffect(() => {
+    if (!(location.state as { scan?: boolean } | null)?.scan) return
+    setScanMode(true)
+    setAdding(slotForHour(new Date().getHours()))
+    void navigate('.', { replace: true, state: null })
+  }, [location.state, navigate])
   const [menu, setMenu] = useState<DiarySlot | null>(null)
   const [editing, setEditing] = useState<DiaryEntry | null>(null)
   const [saveMeal, setSaveMeal] = useState<DiarySlot | null>(null)
@@ -36,20 +49,32 @@ export function NutritionScreen() {
         <button type="button" className={`${btn} w-11 px-0`} aria-label="Día anterior" onClick={() => setDate(addDays(date, -1))}>‹</button>
         <div className="flex-1 text-center">
           <h2>{date === today ? 'Hoy' : formatDay(date)}</h2>
-          {date !== today && <button type="button" className="min-h-11 text-sm font-semibold text-acc" onClick={() => setDate(today)}>Ir a hoy</button>}
+          {date !== today && <button type="button" className="min-h-11 text-sm font-semibold text-accfg" onClick={() => setDate(today)}>Ir a hoy</button>}
         </div>
         <button type="button" className={`${btn} w-11 px-0`} aria-label="Día siguiente" disabled={date >= today} onClick={() => setDate(addDays(date, 1))}>›</button>
       </div>
 
       <DaySummary date={date} eaten={eaten} goals={goals} waterMl={waterMl} />
 
+      <button
+        type="button"
+        className={`${btnPri} my-3 w-full`}
+        onClick={() => {
+          setScanMode(true)
+          setAdding(slotForHour(new Date().getHours()))
+        }}
+      >
+        <IconScan /> Escanear código de barras
+      </button>
+
       {SLOTS.map(({ slot, label }) => (
-        <MealSection key={slot} slot={slot} label={label} entries={inSlot(slot)} onAdd={() => setAdding(slot)} onMenu={() => setMenu(slot)} onEdit={setEditing} />
+        <MealSection key={slot} slot={slot} label={label} entries={inSlot(slot)} onAdd={() => { setScanMode(false); setAdding(slot) }} onMenu={() => setMenu(slot)} onEdit={setEditing} />
       ))}
 
       <AddFoodSheet
-        key={adding ?? 'none'}
+        key={`${adding ?? 'none'}-${scanMode}`}
         open={adding != null}
+        scan={scanMode}
         onClose={() => setAdding(null)}
         date={date}
         slot={adding ?? 'snack'}

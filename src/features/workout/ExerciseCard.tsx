@@ -30,14 +30,14 @@ export function ExerciseCard({ item, i, ex, prev, showRpe, superLetter, onMenu, 
   return (
     <section
       aria-label={ex ? exerciseLabel(ex) : item.exerciseId}
-      className={`my-3 rounded-[18px] border border-line bg-card p-4 ${superLetter ? 'border-l-4 border-l-acc' : ''}`}
+      className="my-3 hud p-4"
     >
       <div className="flex items-start gap-2">
         <div className="min-w-0 flex-1">
-          <h3 className="text-acc">{ex ? exerciseLabel(ex) : 'Ejercicio eliminado'}</h3>
+          <h3 className="text-accfg">{ex ? exerciseLabel(ex) : 'Ejercicio eliminado'}</h3>
           <p className="text-xs text-mut">
             {ex?.muscle ?? item.exerciseId}
-            {superLetter && <b className="ml-2 text-acc">Superserie {superLetter}</b>}
+            {superLetter && <b className="ml-2 text-accfg">Superserie {superLetter}</b>}
           </p>
         </div>
         <button type="button" className={chip} onClick={() => st().setRest(i, nextRest)} aria-label="Cambiar descanso">

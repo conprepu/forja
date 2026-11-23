@@ -51,7 +51,7 @@ export function HistoryTab() {
         <button type="button" className={`${btn} w-11 px-0`} aria-label="Mes siguiente" disabled={month >= monthKey(today)} onClick={() => { setMonth(addMonths(month, 1)); setDay(null) }}>›</button>
       </div>
 
-      <div className="mt-3 rounded-[18px] border border-line bg-card p-2" role="grid" aria-label={`Calendario de ${monthLabel(month)}`}>
+      <div className="mt-3 hud p-2" role="grid" aria-label={`Calendario de ${monthLabel(month)}`}>
         <div className="grid grid-cols-7 text-center text-xs font-semibold text-mut" aria-hidden="true">
           {DOW.map((d, i) => <span key={i} className="py-1">{d}</span>)}
         </div>
@@ -69,7 +69,7 @@ export function HistoryTab() {
                   aria-label={`${formatDay(d)}${n ? `, ${n} ${n === 1 ? 'entreno' : 'entrenos'}` : ''}`}
                   aria-pressed={selected}
                   onClick={() => setDay(selected ? null : d)}
-                  className={`relative mx-auto grid h-11 w-11 place-items-center rounded-full text-sm ${selected ? 'bg-acc font-bold text-accink' : d === today ? 'font-bold text-acc' : ''}`}
+                  className={`relative mx-auto grid h-11 w-11 place-items-center rounded-full text-sm ${selected ? 'bg-acc font-bold text-accink' : d === today ? 'font-bold text-accfg' : ''}`}
                 >
                   {Number(d.slice(8))}
                   {n > 0 && <span aria-hidden="true" className={`absolute bottom-1 h-1.5 w-1.5 rounded-full ${selected ? 'bg-accink' : 'bg-ok'}`} />}

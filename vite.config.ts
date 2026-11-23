@@ -25,8 +25,8 @@ export default defineConfig({
         orientation: 'portrait',
         start_url: base,
         scope: base,
-        theme_color: '#2b5cff',
-        background_color: '#f4f4f1',
+        theme_color: '#fcee0a',
+        background_color: '#06070a',
         icons: [
           { src: 'pwa-64x64.png', sizes: '64x64', type: 'image/png' },
           { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
@@ -37,7 +37,7 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,webmanifest}'],
         navigateFallback: 'index.html',
-        // Archivo e Inter vienen de Google Fonts: se guardan en caché para abrir offline.
+        // Rajdhani, Share Tech Mono e Inter vienen de Google Fonts: se guardan en caché para abrir offline.
         runtimeCaching: [
           {
             urlPattern: ({ url }) =>

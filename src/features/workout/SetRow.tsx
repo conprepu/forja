@@ -58,7 +58,7 @@ export function SetRow({ i, j, sets, ex, cols, prev, showRpe, onTypeMenu, onMiss
 
   return (
     <div
-      className={`grid items-center gap-1 rounded-xl py-0.5 ${s.done ? 'bg-okbg' : ''}`}
+      className={`grid items-center gap-1 cut-sm py-0.5 ${s.done ? 'bg-okbg' : ''}`}
       style={{ gridTemplateColumns: gridTemplate(cols, showRpe) }}
     >
       <button
@@ -117,7 +117,7 @@ export function SetRow({ i, j, sets, ex, cols, prev, showRpe, onTypeMenu, onMiss
             onMissingReps()
           } else if (r === 'done') haptic('tap')
         }}
-        className={`grid h-11 w-11 place-items-center rounded-xl ${s.done ? 'bg-ok text-white' : 'bg-soft'}`}
+        className={`grid h-11 w-11 place-items-center cut-sm ${s.done ? 'bg-ok text-white' : 'bg-soft'}`}
       >
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M5 12.5l4.5 4.5L19 7" />

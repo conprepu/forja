@@ -47,7 +47,7 @@ export function RecipeEditor({ open, recipe, onClose }: Props) {
           </label>
 
           <h3>Ingredientes</h3>
-          {ings.length === 0 && <p className="rounded-[18px] border border-line bg-card px-3 py-5 text-center text-mut">Agrega los ingredientes con su peso.</p>}
+          {ings.length === 0 && <p className="hud px-3 py-5 text-center text-mut">Agrega los ingredientes con su peso.</p>}
           {ings.map((ing, i) => (
             <div key={i} className="grid grid-cols-[1fr_84px_44px] items-center gap-2">
               <span className="min-w-0 truncate font-semibold">{foods.get(ing.foodId)?.name ?? 'Alimento eliminado'}</span>
@@ -57,7 +57,7 @@ export function RecipeEditor({ open, recipe, onClose }: Props) {
           ))}
           <button type="button" className={btn} onClick={() => setChoosing(true)}>+ Agregar ingrediente</button>
 
-          <div className="rounded-[18px] border border-line bg-card p-4" aria-live="polite">
+          <div className="hud p-4" aria-live="polite">
             <p className="text-sm text-mut">Por porción ({Math.round(totals.grams / Math.max(1, servings ?? 1))} g aprox.)</p>
             <p className="font-num text-2xl font-extrabold">{totals.perServing.kcal} <span className="text-base font-semibold text-mut">kcal</span></p>
             <p className="text-sm">

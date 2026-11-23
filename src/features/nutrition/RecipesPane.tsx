@@ -35,7 +35,7 @@ export function RecipesPane({ date, slot, slotLabel, onAdded, onDone }: Props) {
           Porciones
           <NumField decimal label="Porciones" value={servings} onChange={setServings} className="!h-12 !text-lg" />
         </label>
-        <div className="rounded-[18px] border border-line bg-card p-4" aria-live="polite">
+        <div className="hud p-4" aria-live="polite">
           <p className="font-num text-3xl font-extrabold">{entry.kcal} <span className="text-base font-semibold text-mut">kcal</span></p>
           <p className="text-sm"><span className="text-p">P {entry.p}</span> · <span className="text-c">C {entry.c}</span> · <span className="text-f">G {entry.f}</span></p>
         </div>
@@ -82,7 +82,7 @@ export function RecipesPane({ date, slot, slotLabel, onAdded, onDone }: Props) {
                   <span className="block truncate font-semibold">{r.name}</span>
                   <span className="block text-xs text-mut">{r.servings} {r.servings === 1 ? 'porción' : 'porciones'} · {t.perServing.kcal} kcal c/u</span>
                 </span>
-                <span aria-hidden="true" className="text-xl text-acc">+</span>
+                <span aria-hidden="true" className="text-xl text-accfg">+</span>
               </button>
             </li>
           )

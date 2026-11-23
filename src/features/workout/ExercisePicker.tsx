@@ -138,7 +138,7 @@ export function ExercisePicker({ open, onClose, onConfirm }: Props) {
             })}
           </ul>
           {all && list.length === 0 && <p className="py-6 text-center text-mut">Sin resultados.</p>}
-          <div className="sticky bottom-0 -mx-4 mt-2 grid gap-2 bg-bg px-4 pt-2">
+          <div className="sticky -bottom-[calc(20px+env(safe-area-inset-bottom))] -mx-4 mt-2 grid gap-2 bg-bg px-4 pt-2 pb-[calc(20px+env(safe-area-inset-bottom))]">
             <button type="button" className={btnGhost} onClick={() => setCreating(true)}>+ Crear ejercicio propio</button>
             <button
               type="button"

@@ -11,8 +11,18 @@ import {
   recipeTotals,
   remaining,
   searchFoods,
+  slotForHour,
   sumMacros,
 } from '../../src/lib/nutrition'
+
+describe('slotForHour', () => {
+  it('elige la comida según la hora', () => {
+    expect(slotForHour(7)).toBe('desayuno')
+    expect(slotForHour(13)).toBe('comida')
+    expect(slotForHour(19)).toBe('cena')
+    expect(slotForHour(23)).toBe('snack')
+  })
+})
 
 const food = (id: string, name: string, kcal: number, p: number, c: number, f: number, extra: Partial<Food> = {}): Food => ({
   id, name, per100: { kcal, p, c, f }, servings: [], source: 'local', ...extra,

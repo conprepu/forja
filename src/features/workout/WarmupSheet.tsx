@@ -39,7 +39,7 @@ export function WarmupSheet({ open, onClose, exerciseName, initialKg, onAdd }: P
             </button>
           ))}
         </div>
-        <div className="rounded-[18px] border border-line bg-card p-4" aria-live="polite">
+        <div className="hud p-4" aria-live="polite">
           {sets.length ? (
             <ol className="grid gap-1">
               {sets.map((s, i) => (

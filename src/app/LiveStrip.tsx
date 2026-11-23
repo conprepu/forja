@@ -7,7 +7,8 @@ import { useNow } from '../ui/useNow'
 
 const strip =
   'fixed inset-x-0 z-30 bottom-[calc(var(--tabbar-h)+1px+env(safe-area-inset-bottom))]'
-const inner = 'relative mx-auto flex max-w-[640px] items-center gap-2 overflow-hidden bg-ink px-3 py-2 text-bg'
+const inner = 'relative mx-auto flex max-w-[640px] items-center gap-2 overflow-hidden border-t-2 border-acc bg-card px-3 py-2 text-ink'
+const mini = 'ui-btn ui-soft cut-sm relative min-h-11 px-3'
 
 /**
  * Franja sobre la tab bar: el descanso en curso (en cualquier pestaña) o, si no hay descanso,
@@ -36,13 +37,13 @@ export function LiveStrip() {
     return (
       <div className={strip} role="timer" aria-label="Descanso">
         <div className={inner}>
-          <div className="absolute inset-y-0 left-0 bg-acc opacity-35" style={{ width: `${pct}%` }} aria-hidden="true" />
-          <span className="relative text-xs">Descanso</span>
-          <b className="relative font-num text-2xl" aria-live="off">{fmtT(Math.ceil(left))}</b>
+          <div className="absolute inset-y-0 left-0 bg-acc opacity-20" style={{ width: `${pct}%` }} aria-hidden="true" />
+          <span className="relative font-num text-xs font-semibold tracking-[0.12em] text-mut uppercase">Descanso</span>
+          <b className="relative font-num text-3xl leading-none text-accfg" aria-live="off">{fmtT(Math.ceil(left))}</b>
           <span className="flex-1" />
-          <button type="button" className="relative min-h-11 rounded-xl bg-white/20 px-3 font-semibold" onClick={() => st().adjustRest(-15)}>−15</button>
-          <button type="button" className="relative min-h-11 rounded-xl bg-white/20 px-3 font-semibold" onClick={() => st().adjustRest(15)}>+15</button>
-          <button type="button" className="relative min-h-11 rounded-xl bg-white/20 px-3 font-semibold" onClick={() => st().endRest()}>Saltar</button>
+          <button type="button" className={mini} onClick={() => st().adjustRest(-15)}>−15</button>
+          <button type="button" className={mini} onClick={() => st().adjustRest(15)}>+15</button>
+          <button type="button" className={mini} onClick={() => st().endRest()}>Saltar</button>
         </div>
       </div>
     )
@@ -51,11 +52,11 @@ export function LiveStrip() {
   if (pathname !== '/entreno') {
     return (
       <div className={strip}>
-        <Link to="/entreno" className={`${inner} min-h-11 font-semibold`}>
+        <Link to="/entreno" className={`${inner} min-h-11 font-num font-bold tracking-[0.08em] uppercase`}>
           <span>Entreno en curso</span>
-          <b className="font-num">{fmtT((now - active.startedAt) / 1000)}</b>
+          <b className="font-num text-accfg">{fmtT((now - active.startedAt) / 1000)}</b>
           <span className="flex-1" />
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true" className="text-accfg">›</span>
         </Link>
       </div>
     )

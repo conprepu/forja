@@ -37,7 +37,7 @@ export function NumField({ value, onChange, decimal = false, placeholder, label,
         setText(t)
         onChange(parseDecimal(t))
       }}
-      className={`h-11 w-full rounded-xl border border-transparent bg-soft px-1 text-center font-semibold placeholder:font-normal placeholder:text-mut ${className}`}
+      className={`h-11 w-full cut-sm border border-transparent bg-soft px-1 text-center font-semibold placeholder:font-normal placeholder:text-mut ${className}`}
     />
   )
 }

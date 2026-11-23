@@ -35,7 +35,7 @@ describe('app shell', () => {
     ['/perfil', 'Perfil'],
   ])('%s abre la pantalla %s y marca su tab', async (path, title) => {
     const html = await render(path)
-    expect(html).toContain(`<h1>${title}</h1>`)
+    expect(html).toMatch(new RegExp(`<h1[^>]*>${title}</h1>`))
     expect(html).toMatch(new RegExp(`aria-current="page"[^>]*href="${path}"|href="${path}"[^>]*aria-current="page"`))
   })
 

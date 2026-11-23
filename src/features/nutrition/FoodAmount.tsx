@@ -48,7 +48,7 @@ export function FoodAmount({ food, initialGrams, confirmLabel, onConfirm, onBack
         ))}
       </div>
 
-      <div className="rounded-[18px] border border-line bg-card p-4" aria-live="polite">
+      <div className="hud p-4" aria-live="polite">
         <p className="font-num text-3xl font-extrabold">{entry.kcal} <span className="text-base font-semibold text-mut">kcal</span></p>
         <dl className="mt-2 grid grid-cols-3 gap-2 text-center">
           {MACROS.map(([label, key, color]) => (

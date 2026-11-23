@@ -33,7 +33,7 @@ export function FinishSummary({ result, onClose }: { result: FinishResult | null
               ['Volumen', `${fmtN(result.volume)} kg`],
               ['Series', String(result.sets)],
             ].map(([k, v]) => (
-              <div key={k} className="rounded-[14px] border border-line bg-card px-2.5 py-2">
+              <div key={k} className="cut-sm border border-line bg-card px-2.5 py-2">
                 <dt className="text-xs text-mut">{k}</dt>
                 <dd className="whitespace-nowrap font-num text-xl font-extrabold">{v}</dd>
               </div>
@@ -41,7 +41,7 @@ export function FinishSummary({ result, onClose }: { result: FinishResult | null
           </dl>
 
           {result.prs.length > 0 ? (
-            <section aria-label="Récords nuevos" className="rounded-[18px] border border-line bg-card p-4">
+            <section aria-label="Récords nuevos" className="hud p-4">
               <h3 className="text-c">🏆 {result.prs.length === 1 ? 'Récord nuevo' : `${result.prs.length} récords nuevos`}</h3>
               <ul className="mt-2 grid gap-1.5">
                 {result.prs.map((p) => (

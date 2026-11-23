@@ -1,16 +1,17 @@
 import type { ReactNode } from 'react'
 
-function Svg({ children }: { children: ReactNode }) {
+/** Iconos de trazo anguloso (esquinas rectas), un solo grosor para toda la app. */
+function Svg({ children, size = 24 }: { children: ReactNode; size?: number }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      width="24"
-      height="24"
+      width={size}
+      height={size}
       fill="none"
       stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      strokeWidth={1.75}
+      strokeLinecap="square"
+      strokeLinejoin="miter"
       aria-hidden="true"
     >
       {children}
@@ -20,8 +21,8 @@ function Svg({ children }: { children: ReactNode }) {
 
 export const IconHoy = () => (
   <Svg>
-    <circle cx="12" cy="12" r="4" />
-    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+    <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" />
+    <path d="M12 8.5v7M8.5 12h7" />
   </Svg>
 )
 
@@ -45,7 +46,14 @@ export const IconProgreso = () => (
 
 export const IconPerfil = () => (
   <Svg>
-    <circle cx="12" cy="8" r="4" />
-    <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" />
+    <path d="M8 8l2-4h4l2 4v3l-2 2h-4l-2-2z" />
+    <path d="M4 21l2-5 6-2 6 2 2 5" />
+  </Svg>
+)
+
+/** Visor de escáner: cuatro esquinas y una línea de lectura. */
+export const IconScan = ({ size = 22 }: { size?: number }) => (
+  <Svg size={size}>
+    <path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5M7 12h10" />
   </Svg>
 )

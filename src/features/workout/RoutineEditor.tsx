@@ -88,11 +88,11 @@ export function RoutineEditor({ open, routine, defaultFolderId, onClose }: Props
             </label>
           )}
 
-          {items.length === 0 && <p className="rounded-[18px] border border-line bg-card px-3 py-5 text-center text-mut">Sin ejercicios todavía.</p>}
+          {items.length === 0 && <p className="hud px-3 py-5 text-center text-mut">Sin ejercicios todavía.</p>}
           {items.map((it, i) => {
             const ex = exercises.get(it.exerciseId)
             return (
-              <section key={`${i}-${it.exerciseId}`} className="rounded-[18px] border border-line bg-card p-3" aria-label={ex?.name ?? it.exerciseId}>
+              <section key={`${i}-${it.exerciseId}`} className="hud p-3" aria-label={ex?.name ?? it.exerciseId}>
                 <div className="flex items-center gap-1">
                   <h3 className="min-w-0 flex-1 truncate">{ex ? exerciseLabel(ex) : it.exerciseId}</h3>
                   <button type="button" className={`${btn} w-11 px-0`} aria-label="Subir" disabled={i === 0} onClick={() => setItems((xs) => moveItem(xs, i, -1))}>↑</button>

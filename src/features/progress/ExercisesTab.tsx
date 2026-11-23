@@ -71,7 +71,7 @@ export function ExercisesTab() {
         <h3>Récords</h3>
         <dl className="mt-2 grid grid-cols-2 gap-2">
           {available.map((m) => (
-            <div key={m} className="rounded-xl bg-soft p-2.5">
+            <div key={m} className="cut-sm bg-soft p-2.5">
               <dt className="text-xs text-mut">{METRICS[m].label}</dt>
               <dd className="font-num text-xl font-extrabold">{r1(bests[m]!)}{METRICS[m].unit ? ` ${METRICS[m].unit}` : ''}</dd>
             </div>

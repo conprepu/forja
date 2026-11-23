@@ -66,9 +66,10 @@ export function Scanner({ open, onClose, onCode }: Props) {
   return (
     <Sheet open={open} onClose={onClose} title="Escanear código">
       <div className="grid gap-3">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-[18px] bg-black">
+        <div className="relative aspect-[4/3] overflow-hidden cut-sm bg-black">
           <video ref={video} className="h-full w-full object-cover" playsInline muted autoPlay aria-label="Vista de la cámara" />
-          {!error && <div className="pointer-events-none absolute inset-x-[10%] top-1/2 h-0.5 -translate-y-1/2 bg-p/80" aria-hidden="true" />}
+          <span className="pointer-events-none absolute inset-3 border border-acc/0 [background:linear-gradient(var(--acc),var(--acc))_0_0/22px_2px_no-repeat,linear-gradient(var(--acc),var(--acc))_0_0/2px_22px_no-repeat,linear-gradient(var(--acc),var(--acc))_100%_0/22px_2px_no-repeat,linear-gradient(var(--acc),var(--acc))_100%_0/2px_22px_no-repeat,linear-gradient(var(--acc),var(--acc))_0_100%/22px_2px_no-repeat,linear-gradient(var(--acc),var(--acc))_0_100%/2px_22px_no-repeat,linear-gradient(var(--acc),var(--acc))_100%_100%/22px_2px_no-repeat,linear-gradient(var(--acc),var(--acc))_100%_100%/2px_22px_no-repeat]" aria-hidden="true" />
+          {!error && <div className="pointer-events-none absolute inset-x-[8%] top-[15%] h-0.5 animate-scan bg-p shadow-[0_0_10px_var(--p)]" aria-hidden="true" />}
           {starting && !error && <p className="absolute inset-0 grid place-items-center text-sm text-white">Abriendo cámara…</p>}
         </div>
         {error && <p role="alert" className="text-sm font-semibold text-p">{error}</p>}

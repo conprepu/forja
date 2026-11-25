@@ -52,7 +52,12 @@ export default {
     const cache = typeof caches !== 'undefined' ? (caches as unknown as { default: Cache }).default : null
     const key = new Request(target)
     const hit = await cache?.match(key)
-    if (hit) return new Response(hit.body, { status: 200, headers: { ...Object.fromEntries(hit.headers), ...cors } })
+    if (hit) {
+      // los encabezados CORS se ponen con set(): copiarlos con un spread los duplica (distinta mayúscula) y el navegador rechaza la respuesta
+      const headers = new Headers(hit.headers)
+      for (const [k, v] of Object.entries(cors)) headers.set(k, v)
+      return new Response(hit.body, { status: 200, headers })
+    }
 
     let res: Response
     try {

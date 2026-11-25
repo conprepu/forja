@@ -1,5 +1,6 @@
 import { applyTheme, parseTheme, type Theme } from '../lib/theme'
 import { setHapticsEnabled } from '../lib/haptics'
+import type { WeightUnit } from '../lib/units'
 import type { ForjaDB } from './db'
 import { getSetting, setSetting } from './workouts'
 
@@ -28,4 +29,17 @@ export const markBackup = (db: ForjaDB, at = Date.now()) => setSetting(db, 'last
 export async function applyPrefs(db: ForjaDB): Promise<void> {
   applyTheme(await getTheme(db))
   setHapticsEnabled(await getHaptics(db))
+}
+
+const LB_KEY = 'lbExercises'
+
+/** Ejercicios cuyo peso se escribe y se ve en libras (el resto, kg). */
+export async function getLbExercises(db: ForjaDB): Promise<string[]> {
+  const v = await getSetting<unknown>(db, LB_KEY, [])
+  return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+}
+
+export async function setExerciseUnit(db: ForjaDB, exerciseId: string, unit: WeightUnit): Promise<void> {
+  const rest = (await getLbExercises(db)).filter((id) => id !== exerciseId)
+  await setSetting(db, LB_KEY, unit === 'lb' ? [...rest, exerciseId] : rest)
 }

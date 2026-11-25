@@ -2,16 +2,18 @@ import { useMemo, useState } from 'react'
 import { formatShort } from '../../lib/dates'
 import { exerciseLabel } from '../../lib/muscles'
 import { exerciseCounts, exerciseSeries, seriesBests, type ExercisePoint } from '../../lib/progress'
+import { fromKg } from '../../lib/units'
 import { card, chip, field } from '../../ui/cls'
-import { useExerciseMap } from '../workout/hooks'
+import { useExerciseMap, useUnits } from '../workout/hooks'
 import { LineSeries } from './charts'
 import { useWorkouts } from './hooks'
 
 type Metric = 'e1rm' | 'weight' | 'volume' | 'reps'
-const METRICS: Record<Metric, { label: string; unit: string }> = {
-  e1rm: { label: '1RM estimado', unit: 'kg' },
-  weight: { label: 'Peso máximo', unit: 'kg' },
-  volume: { label: 'Volumen', unit: 'kg' },
+/** unit 'w' = el peso del ejercicio (kg o lb, según lo que elegiste para él). */
+const METRICS: Record<Metric, { label: string; unit: 'w' | '' }> = {
+  e1rm: { label: '1RM estimado', unit: 'w' },
+  weight: { label: 'Peso máximo', unit: 'w' },
+  volume: { label: 'Volumen', unit: 'w' },
   reps: { label: 'Repeticiones', unit: '' },
 }
 const r1 = (n: number) => Math.round(n * 10) / 10
@@ -19,6 +21,7 @@ const r1 = (n: number) => Math.round(n * 10) / 10
 export function ExercisesTab() {
   const { workouts, loaded } = useWorkouts()
   const exercises = useExerciseMap()
+  const { unitOf } = useUnits()
   const [picked, setPicked] = useState('')
   const [metric, setMetric] = useState<Metric>('e1rm')
 
@@ -36,7 +39,10 @@ export function ExercisesTab() {
   const bests = seriesBests(series)
   const available = (Object.keys(METRICS) as Metric[]).filter((m) => bests[m] !== undefined)
   const active: Metric = available.includes(metric) ? metric : (available[0] ?? 'e1rm')
-  const data = series.map((p) => ({ fecha: formatShort(p.date), valor: r1(p[active] ?? 0) }))
+  const unit = unitOf(id)
+  const unitText = (m: Metric) => (METRICS[m].unit ? unit : '')
+  const shown = (m: Metric, v: number) => r1(METRICS[m].unit ? fromKg(v, unit) : v)
+  const data = series.map((p) => ({ fecha: formatShort(p.date), valor: shown(active, p[active] ?? 0) }))
 
   if (loaded && options.length === 0) {
     return <div className={`${card} text-center text-mut`}>Tus gráficas por ejercicio aparecerán después de tu primer entreno.</div>
@@ -64,7 +70,7 @@ export function ExercisesTab() {
 
       <section className={card} aria-label={`Gráfica de ${METRICS[active].label}`}>
         {series.length < 2 && <p className="mb-1 text-xs text-mut">Con dos entrenos o más se ve la tendencia.</p>}
-        <LineSeries data={data} xKey="fecha" yKey="valor" name={METRICS[active].label} unit={METRICS[active].unit} label={`${METRICS[active].label} de ${ex.name} a lo largo del tiempo`} />
+        <LineSeries data={data} xKey="fecha" yKey="valor" name={METRICS[active].label} unit={unitText(active)} label={`${METRICS[active].label} de ${ex.name} a lo largo del tiempo`} />
       </section>
 
       <section className={card} aria-label="Récords">
@@ -73,7 +79,7 @@ export function ExercisesTab() {
           {available.map((m) => (
             <div key={m} className="cut-sm bg-soft p-2.5">
               <dt className="text-xs text-mut">{METRICS[m].label}</dt>
-              <dd className="font-num text-xl font-extrabold">{r1(bests[m]!)}{METRICS[m].unit ? ` ${METRICS[m].unit}` : ''}</dd>
+              <dd className="font-num text-xl font-extrabold">{shown(m, bests[m]!)}{unitText(m) ? ` ${unitText(m)}` : ''}</dd>
             </div>
           ))}
         </dl>
@@ -85,7 +91,7 @@ export function ExercisesTab() {
           {[...series].reverse().slice(0, 8).map((p: ExercisePoint) => (
             <li key={p.workoutId} className="flex justify-between border-t border-line py-2 first:border-t-0">
               <span className="text-mut">{formatShort(p.date)}</span>
-              <span className="font-num font-bold">{r1(p[active] ?? 0)}{METRICS[active].unit ? ` ${METRICS[active].unit}` : ''}</span>
+              <span className="font-num font-bold">{shown(active, p[active] ?? 0)}{unitText(active) ? ` ${unitText(active)}` : ''}</span>
             </li>
           ))}
         </ul>

@@ -1,4 +1,5 @@
 import type { ActiveSet, Exercise, WorkoutSet } from '../../db/schema'
+import { fromKg, toKg, type WeightUnit } from '../../lib/units'
 import { setLabel } from '../../lib/workout'
 import { NumField } from '../../ui/NumField'
 import { haptic } from '../../lib/haptics'
@@ -12,7 +13,7 @@ export interface SetColumns {
   decimalReps: boolean
 }
 
-export function columnsFor(ex: Exercise | undefined): SetColumns {
+export function columnsFor(ex: Exercise | undefined, unit: WeightUnit = 'kg'): SetColumns {
   switch (ex?.type) {
     case 'time':
       return { weight: false, weightLabel: '', repsLabel: 'SEG', decimalReps: false }
@@ -21,7 +22,7 @@ export function columnsFor(ex: Exercise | undefined): SetColumns {
     case 'reps':
       return { weight: false, weightLabel: '', repsLabel: 'REPS', decimalReps: false }
     default:
-      return { weight: true, weightLabel: ex?.bodyweight ? '+KG' : 'KG', repsLabel: 'REPS', decimalReps: false }
+      return { weight: true, weightLabel: `${ex?.bodyweight ? '+' : ''}${unit.toUpperCase()}`, repsLabel: 'REPS', decimalReps: false }
   }
 }
 
@@ -30,10 +31,10 @@ export function gridTemplate(cols: SetColumns, showRpe: boolean): string {
 }
 
 /** Texto de la columna "Anterior". */
-export function prevText(ex: Exercise | undefined, p: WorkoutSet): string {
+export function prevText(ex: Exercise | undefined, p: WorkoutSet, unit: WeightUnit = 'kg'): string {
   if (ex?.type === 'time') return `${p.reps}s`
   if (ex?.type === 'distance') return `${p.weight}km·${p.reps}m`
-  return p.weight > 0 ? `${p.weight}×${p.reps}` : `${p.reps}`
+  return p.weight > 0 ? `${fromKg(p.weight, unit)}×${p.reps}` : `${p.reps}`
 }
 
 const TYPE_COLOR: Record<ActiveSet['type'], string> = { normal: 'text-ink', warmup: 'text-c', drop: 'text-f', failure: 'text-p' }
@@ -44,17 +45,18 @@ interface Props {
   sets: ActiveSet[]
   ex: Exercise | undefined
   cols: SetColumns
+  unit: WeightUnit
   prev: WorkoutSet | undefined
   showRpe: boolean
   onTypeMenu: () => void
   onMissingReps: () => void
 }
 
-export function SetRow({ i, j, sets, ex, cols, prev, showRpe, onTypeMenu, onMissingReps }: Props) {
+export function SetRow({ i, j, sets, ex, cols, unit, prev, showRpe, onTypeMenu, onMissingReps }: Props) {
   const s = sets[j]!
   const st = useWorkout.getState
   const label = setLabel(sets, j)
-  const prevLabel = prev ? prevText(ex, prev) : '—'
+  const prevLabel = prev ? prevText(ex, prev, unit) : '—'
 
   return (
     <div
@@ -82,9 +84,9 @@ export function SetRow({ i, j, sets, ex, cols, prev, showRpe, onTypeMenu, onMiss
         <NumField
           decimal
           label={cols.weightLabel}
-          value={s.weight}
-          placeholder={prev && prev.weight > 0 ? String(prev.weight) : s.targetWeight != null ? String(s.targetWeight) : ''}
-          onChange={(v) => st().updateSet(i, j, { weight: v })}
+          value={s.weight == null ? null : fromKg(s.weight, unit)}
+          placeholder={prev && prev.weight > 0 ? String(fromKg(prev.weight, unit)) : s.targetWeight != null ? String(fromKg(s.targetWeight, unit)) : ''}
+          onChange={(v) => st().updateSet(i, j, { weight: v == null ? null : toKg(v, unit) })}
           className={s.done ? '!bg-transparent' : ''}
         />
       )}

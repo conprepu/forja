@@ -8,7 +8,7 @@ import { useNow } from '../../ui/useNow'
 import { useToast } from '../../ui/useToast'
 import { ExerciseCard } from './ExerciseCard'
 import { ExercisePicker } from './ExercisePicker'
-import { countsVolume, useExerciseMap } from './hooks'
+import { countsVolume, useExerciseMap, useUnits } from './hooks'
 import { PlateSheet } from './PlateSheet'
 import { useWorkout } from './store'
 import { WarmupSheet } from './WarmupSheet'
@@ -19,6 +19,7 @@ export function ActiveWorkoutView({ onFinished }: { onFinished: (r: FinishResult
   const showRpe = useWorkout((s) => s.showRpe)
   const st = useWorkout.getState
   const exercises = useExerciseMap()
+  const { unitOf, setUnit } = useUnits()
   const now = useNow(1000)
   const { toast, show } = useToast()
 
@@ -98,6 +99,8 @@ export function ActiveWorkoutView({ onFinished }: { onFinished: (r: FinishResult
           item={item}
           i={i}
           ex={exercises.get(item.exerciseId)}
+          unit={unitOf(item.exerciseId)}
+          onUnit={(u) => void setUnit(item.exerciseId, u)}
           prev={prev[item.exerciseId]}
           showRpe={showRpe}
           superLetter={supersetLetter(a.items, i)}
@@ -128,6 +131,7 @@ export function ActiveWorkoutView({ onFinished }: { onFinished: (r: FinishResult
           onClose={() => setWarm(null)}
           exerciseName={warmEx ? warmEx.name : warmItem.exerciseId}
           initialKg={warmKg ?? undefined}
+          unit={warmItem ? unitOf(warmItem.exerciseId) : 'kg'}
           onAdd={(sets) => st().insertWarmups(warm, sets)}
         />
       )}

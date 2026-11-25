@@ -55,6 +55,8 @@ export default defineConfig({
   ],
   test: {
     environment: 'node',
+    // Las pantallas se importan de forma perezosa: con toda la suite en paralelo la primera carga en frío pasa de los 5 s.
+    testTimeout: 15000,
     // Dexie lee indexedDB al importarse: el fake tiene que cargarse antes que cualquier test.
     setupFiles: ['fake-indexeddb/auto'],
     include: ['tests/**/*.test.{ts,tsx}', 'src/**/*.test.{ts,tsx}'],

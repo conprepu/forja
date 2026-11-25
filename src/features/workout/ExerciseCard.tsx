@@ -1,6 +1,7 @@
 import type { ActiveItem, Exercise, WorkoutSet } from '../../db/schema'
 import { exerciseLabel } from '../../lib/muscles'
 import { fmtT } from '../../lib/time'
+import type { WeightUnit } from '../../lib/units'
 import { btn, chip } from '../../ui/cls'
 import { columnsFor, gridTemplate, SetRow } from './SetRow'
 import { useWorkout } from './store'
@@ -11,6 +12,8 @@ interface Props {
   item: ActiveItem
   i: number
   ex: Exercise | undefined
+  unit: WeightUnit
+  onUnit: (u: WeightUnit) => void
   prev: WorkoutSet[] | undefined
   showRpe: boolean
   /** "A", "B"… si el ejercicio está en una superserie. */
@@ -20,9 +23,10 @@ interface Props {
   onMissingReps: () => void
 }
 
-export function ExerciseCard({ item, i, ex, prev, showRpe, superLetter, onMenu, onSetMenu, onMissingReps }: Props) {
+export function ExerciseCard({ item, i, ex, unit, onUnit, prev, showRpe, superLetter, onMenu, onSetMenu, onMissingReps }: Props) {
   const st = useWorkout.getState
-  const cols = columnsFor(ex)
+  const cols = columnsFor(ex, unit)
+  const canSwitchUnit = cols.weight && (!ex || ex.type === 'weight_reps')
   const rest = item.restSec ?? 90
   const nextRest = REST_OPTIONS[(REST_OPTIONS.indexOf(rest) + 1) % REST_OPTIONS.length] ?? 90
   const template = { gridTemplateColumns: gridTemplate(cols, showRpe) }
@@ -48,13 +52,31 @@ export function ExerciseCard({ item, i, ex, prev, showRpe, superLetter, onMenu, 
         </button>
       </div>
 
-      <input
-        className="mt-1 min-h-11 w-full bg-transparent text-sm placeholder:text-mut"
-        placeholder="Agregar nota"
-        aria-label="Nota del ejercicio"
-        value={item.note ?? ''}
-        onChange={(e) => st().setNote(i, e.target.value)}
-      />
+      <div className="mt-1 flex items-center gap-2">
+        <input
+          className="min-h-11 min-w-0 flex-1 bg-transparent text-sm placeholder:text-mut"
+          placeholder="Agregar nota"
+          aria-label="Nota del ejercicio"
+          value={item.note ?? ''}
+          onChange={(e) => st().setNote(i, e.target.value)}
+        />
+        {canSwitchUnit && (
+          <div role="group" aria-label="Unidad de peso" className="cut-sm grid shrink-0 grid-cols-2 gap-[3px] bg-soft p-[3px] shadow-[inset_0_0_0_1px_var(--line)]">
+            {(['kg', 'lb'] as const).map((u) => (
+              <button
+                key={u}
+                type="button"
+                aria-pressed={unit === u}
+                aria-label={u === 'kg' ? 'Kilos' : 'Libras'}
+                onClick={() => unit !== u && onUnit(u)}
+                className={`min-h-11 min-w-11 px-2 font-num text-[14px] font-bold uppercase tracking-wider ${unit === u ? 'bg-acc text-accink' : 'text-mut'}`}
+              >
+                {u}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
 
       <div className="mt-1 grid gap-1 px-0" role="group" aria-label="Series">
         <div className="grid gap-1 text-center text-xs font-semibold text-mut" style={template} aria-hidden="true">
@@ -73,6 +95,7 @@ export function ExerciseCard({ item, i, ex, prev, showRpe, superLetter, onMenu, 
             sets={item.sets}
             ex={ex}
             cols={cols}
+            unit={unit}
             prev={prev?.[j]}
             showRpe={showRpe}
             onTypeMenu={() => onSetMenu(j)}

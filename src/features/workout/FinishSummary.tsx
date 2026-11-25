@@ -4,13 +4,17 @@ import { createRoutineFromWorkout, type FinishResult } from '../../db/workouts'
 import { haptic } from '../../lib/haptics'
 import { PR_LABEL } from '../../lib/prs'
 import { fmtN, fmtT } from '../../lib/time'
+import { fmtWeight, type WeightUnit } from '../../lib/units'
 import { routineItemsFromWorkout } from '../../lib/workout'
 import { btn, btnPri } from '../../ui/cls'
 import { Sheet } from '../../ui/Sheet'
+import { useUnits } from './hooks'
+import { WorkoutAnalysis } from './WorkoutAnalysis'
 
-const fmtPr = (kind: string, v: number) => (kind === 'reps' ? `${v}` : `${Math.round(v * 10) / 10} kg`)
+const fmtPr = (kind: string, v: number, unit: WeightUnit) => (kind === 'reps' ? `${v}` : fmtWeight(v, unit))
 
 export function FinishSummary({ result, onClose }: { result: FinishResult | null; onClose: () => void }) {
+  const { unitOf } = useUnits()
   const [saved, setSaved] = useState(false)
   const close = () => {
     setSaved(false)
@@ -47,7 +51,7 @@ export function FinishSummary({ result, onClose }: { result: FinishResult | null
                 {result.prs.map((p) => (
                   <li key={`${p.exerciseId}-${p.kind}`} className="flex items-baseline justify-between gap-3">
                     <span className="min-w-0 truncate">{p.exerciseName} <span className="text-xs text-mut">· {PR_LABEL[p.kind]}</span></span>
-                    <b className="font-num">{fmtPr(p.kind, p.value)}</b>
+                    <b className="font-num">{fmtPr(p.kind, p.value, unitOf(p.exerciseId))}</b>
                   </li>
                 ))}
               </ul>
@@ -55,6 +59,8 @@ export function FinishSummary({ result, onClose }: { result: FinishResult | null
           ) : (
             <p className="text-sm text-mut">Sin récords esta vez. Se registran al superar tu historial en cada ejercicio.</p>
           )}
+
+          <WorkoutAnalysis workout={w} compact />
 
           {!w.routineId && (
             <button

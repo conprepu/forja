@@ -7,14 +7,16 @@ import { fmtN, fmtT } from '../../lib/time'
 import { routineItemsFromWorkout, setLabel, workoutVolume } from '../../lib/workout'
 import { btn, btnDanger, btnPri } from '../../ui/cls'
 import { Sheet } from '../../ui/Sheet'
-import { countsVolume, useExerciseMap } from './hooks'
+import { countsVolume, useExerciseMap, useUnits } from './hooks'
 import { prevText } from './SetRow'
 import { useWorkout } from './store'
+import { WorkoutAnalysis } from './WorkoutAnalysis'
 
 const dateText = (ms: number) => new Date(ms).toLocaleDateString('es-MX', { weekday: 'short', day: 'numeric', month: 'short' })
 
 export function WorkoutDetail({ workout, onClose, canStart }: { workout: Workout | null; onClose: () => void; canStart: boolean }) {
   const exercises = useExerciseMap()
+  const { unitOf } = useUnits()
   const [saved, setSaved] = useState(false)
   const close = () => {
     setSaved(false)
@@ -30,6 +32,7 @@ export function WorkoutDetail({ workout, onClose, canStart }: { workout: Workout
             {dateText(w.startedAt)} · {fmtT((w.endedAt - w.startedAt) / 1000)} ·{' '}
             {fmtN(workoutVolume(w.items.map((i) => ({ exerciseId: i.exerciseId, sets: i.sets })), (id) => countsVolume(exercises.get(id))))} kg
           </p>
+          <WorkoutAnalysis workout={w} />
           {w.items.map((it, k) => {
             const ex = exercises.get(it.exerciseId)
             return (
@@ -40,7 +43,7 @@ export function WorkoutDetail({ workout, onClose, canStart }: { workout: Workout
                   {it.sets.map((s, j) => (
                     <li key={j} className="flex justify-between text-sm">
                       <span className="font-num font-bold text-mut">{setLabel(it.sets, j)}</span>
-                      <span className="font-num font-bold">{prevText(ex, s)}{s.rpe != null ? ` @${s.rpe}` : ''}</span>
+                      <span className="font-num font-bold">{prevText(ex, s, unitOf(it.exerciseId))}{s.rpe != null ? ` @${s.rpe}` : ''}</span>
                     </li>
                   ))}
                 </ol>

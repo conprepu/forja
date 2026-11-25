@@ -1,5 +1,7 @@
 export const PLATES = [25, 20, 15, 10, 5, 2.5, 1.25] as const
 export const BARS = [20, 15, 10] as const
+/** Barras en libras (olímpica, de 35 y de 25). */
+export const BARS_LB = [45, 35, 25] as const
 
 export interface PlateResult {
   /** kg que se cargan en cada lado. */
@@ -43,8 +45,9 @@ const roundTo = (kg: number, step: number) => Math.round(kg / step) * step
  * Escalera de calentamiento hacia un peso de trabajo: barra sola ×10 (si el peso es de 60 kg o más),
  * y luego 40 % ×8, 60 % ×5, 75 % ×3 y 90 % ×1, redondeados a 2.5 kg.
  * Se descartan los escalones que no superen a la barra ni al anterior, o que lleguen al peso de trabajo.
+ * En libras se llama con otros `step` (5) y `minForBar` (135): los pesos salen en la misma unidad que entran.
  */
-export function warmupSets(workKg: number, barKg = 20): WarmupSet[] {
+export function warmupSets(workKg: number, barKg = 20, { step = ROUND_KG, minForBar = 60 } = {}): WarmupSet[] {
   if (workKg <= barKg) return []
   const steps: [number, number][] = [
     [0.4, 8],
@@ -53,9 +56,9 @@ export function warmupSets(workKg: number, barKg = 20): WarmupSet[] {
     [0.9, 1],
   ]
   const out: WarmupSet[] = []
-  if (workKg >= 60) out.push({ kg: barKg, reps: 10 })
+  if (workKg >= minForBar) out.push({ kg: barKg, reps: 10 })
   for (const [pct, reps] of steps) {
-    const kg = roundTo(workKg * pct, ROUND_KG)
+    const kg = roundTo(workKg * pct, step)
     const last = out[out.length - 1]
     if (kg > barKg && kg < workKg && (!last || kg > last.kg)) out.push({ kg, reps })
   }
